@@ -1,0 +1,11 @@
+framework module VmaxDisplayHelper {
+  umbrella header "VmaxDisplayHelper.h"
+  export *
+
+  module * { export * }
+}
+
+module VmaxDisplayHelper.Swift {
+  header "VmaxDisplayHelper-Swift.h"
+  requires objc
+}

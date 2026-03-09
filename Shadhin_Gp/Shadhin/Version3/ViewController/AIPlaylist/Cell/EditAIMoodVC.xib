@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditAIMoodVC" customModule="Shadhin_Gp" customModuleProvider="target">
+            <connections>
+                <outlet property="aiLbl" destination="0C2-ik-3po" id="Yz0-aP-j3N"/>
+                <outlet property="collectionView" destination="YQ3-q9-Nz7" id="nEL-d5-5So"/>
+                <outlet property="editMoodBgView" destination="uy1-ZJ-C9t" id="hQd-26-nqQ"/>
+                <outlet property="feelingLbl" destination="xsQ-Zs-dUM" id="BAc-TI-nsD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="381"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Dc-21-IpX">
+                    <rect key="frame" x="148" y="16" width="64" height="3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="evz-4n-0I9"/>
+                        <constraint firstAttribute="height" constant="3" id="ozo-x6-Xov"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uy1-ZJ-C9t">
+                    <rect key="frame" x="0.0" y="29" width="360" height="318"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nsi-BY-iwy">
+                            <rect key="frame" x="16" y="16.000000000000004" width="87.666666666666671" height="44.333333333333343"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AI Playlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0C2-ik-3po">
+                                    <rect key="frame" x="0.0" y="0.0" width="61" height="16.333333333333332"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am feeling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsQ-Zs-dUM">
+                                    <rect key="frame" x="0.0" y="24.333333333333329" width="87.666666666666671" height="20"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </stackView>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YQ3-q9-Nz7">
+                            <rect key="frame" x="8" y="76.333333333333329" width="344" height="233.66666666666669"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WWF-UX-LEg">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="YQ3-q9-Nz7" secondAttribute="bottom" constant="8" id="Gwp-hz-IfT"/>
+                        <constraint firstItem="YQ3-q9-Nz7" firstAttribute="leading" secondItem="uy1-ZJ-C9t" secondAttribute="leading" constant="8" id="Qsm-rP-9ga"/>
+                        <constraint firstItem="nsi-BY-iwy" firstAttribute="leading" secondItem="uy1-ZJ-C9t" secondAttribute="leading" constant="16" id="ghZ-Hf-ZVC"/>
+                        <constraint firstAttribute="trailing" secondItem="YQ3-q9-Nz7" secondAttribute="trailing" constant="8" id="iq5-5A-WOy"/>
+                        <constraint firstItem="nsi-BY-iwy" firstAttribute="top" secondItem="uy1-ZJ-C9t" secondAttribute="top" constant="16" id="lj3-6A-GOD"/>
+                        <constraint firstItem="YQ3-q9-Nz7" firstAttribute="top" secondItem="nsi-BY-iwy" secondAttribute="bottom" constant="16" id="uIG-MD-uq0"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="7Dc-21-IpX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="GkT-3v-NoS"/>
+                <constraint firstItem="uy1-ZJ-C9t" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XDX-2k-1Ug"/>
+                <constraint firstItem="uy1-ZJ-C9t" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="fUv-Q3-4cu"/>
+                <constraint firstItem="uy1-ZJ-C9t" firstAttribute="top" secondItem="7Dc-21-IpX" secondAttribute="bottom" constant="10" id="mkr-7Z-DZd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uy1-ZJ-C9t" secondAttribute="trailing" id="sfq-kU-ZFn"/>
+                <constraint firstItem="7Dc-21-IpX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uR3-ov-1Fc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="16"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="175.57251908396947" y="-191.90140845070422"/>
+        </view>
+    </objects>
+</document>

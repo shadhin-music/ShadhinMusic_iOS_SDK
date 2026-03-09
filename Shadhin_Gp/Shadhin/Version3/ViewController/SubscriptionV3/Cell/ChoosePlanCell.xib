@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ChoosePlanCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="307" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="307" height="75"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YDs-xI-ssE">
+                        <rect key="frame" x="0.0" y="0.0" width="307" height="75"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daily_plan" translatesAutoresizingMaskIntoConstraints="NO" id="N40-vV-VbP">
+                                <rect key="frame" x="16" y="21.666666666666671" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="5kC-hg-WKC"/>
+                                    <constraint firstAttribute="height" constant="32" id="SV6-gf-tJj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF7-qy-45S">
+                                <rect key="frame" x="56" y="26.666666666666671" width="40.666666666666657" height="22"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" red="0.29534018039999999" green="0.64407867190000001" blue="0.96867030860000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dd4-iw-5zm">
+                                <rect key="frame" x="216" y="0.0" width="75" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGa-LC-3K4">
+                                        <rect key="frame" x="6.3333333333333393" y="3.333333333333333" width="62.666666666666657" height="13.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="mostPopular_bg"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Mym-Vr-25j"/>
+                                    <constraint firstItem="xGa-LC-3K4" firstAttribute="centerX" secondItem="Dd4-iw-5zm" secondAttribute="centerX" id="ZWP-a3-5Dd"/>
+                                    <constraint firstAttribute="width" constant="75" id="cRV-Ra-ycm"/>
+                                    <constraint firstItem="xGa-LC-3K4" firstAttribute="centerY" secondItem="Dd4-iw-5zm" secondAttribute="centerY" id="xo3-Uz-usH"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OC8-6J-YD6">
+                                <rect key="frame" x="243" y="28" width="52" height="19.333333333333329"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="৳3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHK-Ti-sOa">
+                                        <rect key="frame" x="0.0" y="0.0" width="17.333333333333332" height="19.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="/1 day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13k-qV-3VS">
+                                        <rect key="frame" x="17.333333333333311" y="0.0" width="34.666666666666657" height="19.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="choosePlan_bg"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OC8-6J-YD6" secondAttribute="trailing" constant="12" id="9UE-sb-3An"/>
+                            <constraint firstItem="Dd4-iw-5zm" firstAttribute="top" secondItem="YDs-xI-ssE" secondAttribute="top" id="AcT-EK-WxD"/>
+                            <constraint firstItem="OF7-qy-45S" firstAttribute="leading" secondItem="N40-vV-VbP" secondAttribute="trailing" constant="8" id="XEq-yr-jWY"/>
+                            <constraint firstItem="OC8-6J-YD6" firstAttribute="centerY" secondItem="YDs-xI-ssE" secondAttribute="centerY" id="YW6-uJ-39h"/>
+                            <constraint firstItem="N40-vV-VbP" firstAttribute="leading" secondItem="YDs-xI-ssE" secondAttribute="leading" constant="16" id="v67-Oh-nj9"/>
+                            <constraint firstItem="N40-vV-VbP" firstAttribute="centerY" secondItem="YDs-xI-ssE" secondAttribute="centerY" id="vZO-xQ-LAW"/>
+                            <constraint firstAttribute="trailing" secondItem="Dd4-iw-5zm" secondAttribute="trailing" constant="16" id="waI-P0-Rwv"/>
+                            <constraint firstItem="OF7-qy-45S" firstAttribute="centerY" secondItem="YDs-xI-ssE" secondAttribute="centerY" id="yJy-md-LGN"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="YDs-xI-ssE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="A6M-GR-80I"/>
+                <constraint firstAttribute="trailing" secondItem="YDs-xI-ssE" secondAttribute="trailing" id="cGx-7u-sYZ"/>
+                <constraint firstAttribute="bottom" secondItem="YDs-xI-ssE" secondAttribute="bottom" id="kcg-H5-0xD"/>
+                <constraint firstItem="YDs-xI-ssE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wCy-7o-lCX"/>
+            </constraints>
+            <size key="customSize" width="307" height="75"/>
+            <connections>
+                <outlet property="durationInDaysLabel" destination="13k-qV-3VS" id="ijF-eP-L82"/>
+                <outlet property="mostPopularView" destination="Dd4-iw-5zm" id="aXX-ys-O9r"/>
+                <outlet property="planInPriceLabel" destination="BHK-Ti-sOa" id="4rK-nn-ewP"/>
+                <outlet property="planNameLabel" destination="OF7-qy-45S" id="3bj-w5-fZp"/>
+            </connections>
+            <point key="canvasLocation" x="196.18320610687022" y="28.52112676056338"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="daily_plan" width="36" height="36"/>
+        <namedColor name="choosePlan_bg">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="mostPopular_bg">
+            <color red="1" green="0.80000001192092896" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

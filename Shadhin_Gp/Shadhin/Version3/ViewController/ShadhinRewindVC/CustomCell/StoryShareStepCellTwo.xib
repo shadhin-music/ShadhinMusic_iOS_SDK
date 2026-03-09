@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StoryShareStepCellTwo" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="293" height="585"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="293" height="585"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmg-GC-dqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="293" height="585"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start_one" translatesAutoresizingMaskIntoConstraints="NO" id="ZuN-q1-EfE">
+                                <rect key="frame" x="193" y="37.666666666666657" width="100" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="bqz-Hn-9ZP"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="halfCircle" translatesAutoresizingMaskIntoConstraints="NO" id="JVA-tT-i3k">
+                                <rect key="frame" x="0.0" y="354.66666666666669" width="37" height="214.33333333333331"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sVc-8G-aiX">
+                                <rect key="frame" x="20" y="237.66666666666663" width="253" height="101"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Ahmed Istiaq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag2-wG-3UW">
+                                        <rect key="frame" x="0.0" y="0.0" width="253" height="38.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It’s Shadhin 2023 Rewind. A Look Back at Your Year" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwI-PN-7oI">
+                                        <rect key="frame" x="5.3333333333333286" y="46.333333333333343" width="242.66666666666669" height="54.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95214015249999995" green="0.69580692050000004" blue="0.58820432420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="JVA-tT-i3k" firstAttribute="leading" secondItem="qmg-GC-dqJ" secondAttribute="leading" id="710-BM-ec9"/>
+                            <constraint firstAttribute="bottom" secondItem="JVA-tT-i3k" secondAttribute="bottom" constant="16" id="AnE-wF-Dnj"/>
+                            <constraint firstAttribute="trailing" secondItem="ZuN-q1-EfE" secondAttribute="trailing" id="MBD-fw-Nuz"/>
+                            <constraint firstItem="ag2-wG-3UW" firstAttribute="top" secondItem="ZuN-q1-EfE" secondAttribute="bottom" id="Szk-8P-WSZ"/>
+                            <constraint firstItem="JVA-tT-i3k" firstAttribute="top" secondItem="sVc-8G-aiX" secondAttribute="bottom" constant="16" id="W3f-GH-hVk"/>
+                            <constraint firstAttribute="trailing" secondItem="sVc-8G-aiX" secondAttribute="trailing" constant="20" id="d4W-Ss-m9w"/>
+                            <constraint firstItem="sVc-8G-aiX" firstAttribute="centerX" secondItem="qmg-GC-dqJ" secondAttribute="centerX" id="e9U-Vi-Zl2"/>
+                            <constraint firstItem="sVc-8G-aiX" firstAttribute="centerY" secondItem="qmg-GC-dqJ" secondAttribute="centerY" constant="-4.3333333333321775" id="qcG-pA-5y3"/>
+                            <constraint firstItem="sVc-8G-aiX" firstAttribute="leading" secondItem="qmg-GC-dqJ" secondAttribute="leading" constant="20" id="qj0-FH-bzw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="qmg-GC-dqJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XNz-4c-oNR"/>
+                <constraint firstItem="qmg-GC-dqJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YFW-QY-gtr"/>
+                <constraint firstAttribute="trailing" secondItem="qmg-GC-dqJ" secondAttribute="trailing" id="ehu-kI-l7d"/>
+                <constraint firstAttribute="bottom" secondItem="qmg-GC-dqJ" secondAttribute="bottom" id="nuo-Qc-Xn0"/>
+            </constraints>
+            <size key="customSize" width="293" height="585"/>
+            <connections>
+                <outlet property="userName" destination="ag2-wG-3UW" id="HfY-yi-sEv"/>
+            </connections>
+            <point key="canvasLocation" x="125.85836909871246" y="-14.651162790697674"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="halfCircle" width="37" height="200"/>
+        <image name="start_one" width="100" height="200"/>
+    </resources>
+</document>

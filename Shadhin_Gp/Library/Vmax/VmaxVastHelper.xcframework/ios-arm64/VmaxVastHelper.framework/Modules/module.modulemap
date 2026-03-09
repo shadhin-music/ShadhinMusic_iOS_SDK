@@ -1,0 +1,11 @@
+framework module VmaxVastHelper {
+  umbrella header "VmaxVastHelper.h"
+  export *
+
+  module * { export * }
+}
+
+module VmaxVastHelper.Swift {
+  header "VmaxVastHelper-Swift.h"
+  requires objc
+}

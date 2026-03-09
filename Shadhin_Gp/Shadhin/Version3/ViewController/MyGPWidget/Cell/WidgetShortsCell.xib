@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WidgetShortsCell" customModule="Shadhin_Gp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="251" height="260"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="251" height="260"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Sj-Q7-Zs3" userLabel="bgView">
+                        <rect key="frame" x="0.0" y="0.0" width="251" height="260"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eSy-eR-5pI">
+                                <rect key="frame" x="0.0" y="0.0" width="251" height="260"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDe-hi-tFg">
+                                <rect key="frame" x="205" y="10" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="9xq-Nr-Npb"/>
+                                    <constraint firstAttribute="height" constant="36" id="gy0-sM-s2w"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="noSound"/>
+                                <connections>
+                                    <action selector="muteUnMuteBtnAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="R3M-bK-rMp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="eSy-eR-5pI" firstAttribute="leading" secondItem="7Sj-Q7-Zs3" secondAttribute="leading" id="3bO-DP-9qS"/>
+                            <constraint firstAttribute="bottom" secondItem="eSy-eR-5pI" secondAttribute="bottom" id="6K2-dT-hjR"/>
+                            <constraint firstItem="NDe-hi-tFg" firstAttribute="top" secondItem="7Sj-Q7-Zs3" secondAttribute="top" constant="10" id="K8K-1n-5K3"/>
+                            <constraint firstItem="eSy-eR-5pI" firstAttribute="top" secondItem="7Sj-Q7-Zs3" secondAttribute="top" id="O5d-3a-TXy"/>
+                            <constraint firstAttribute="trailing" secondItem="NDe-hi-tFg" secondAttribute="trailing" constant="10" id="Obd-Xd-sEN"/>
+                            <constraint firstAttribute="trailing" secondItem="eSy-eR-5pI" secondAttribute="trailing" id="qef-gj-h2M"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="7Sj-Q7-Zs3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3k2-Ti-yAL"/>
+                <constraint firstItem="7Sj-Q7-Zs3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="EXe-oI-UmR"/>
+                <constraint firstAttribute="bottom" secondItem="7Sj-Q7-Zs3" secondAttribute="bottom" id="PSv-jf-7MN"/>
+                <constraint firstAttribute="trailing" secondItem="7Sj-Q7-Zs3" secondAttribute="trailing" id="d5n-th-Vve"/>
+            </constraints>
+            <size key="customSize" width="165" height="164"/>
+            <connections>
+                <outlet property="bgView" destination="7Sj-Q7-Zs3" id="dLg-g8-fcf"/>
+                <outlet property="imgView" destination="eSy-eR-5pI" id="yVb-g2-zxF"/>
+                <outlet property="muteUnmuteBtn" destination="NDe-hi-tFg" id="5Mw-KN-Alw"/>
+            </connections>
+            <point key="canvasLocation" x="129.00763358778624" y="151.40845070422537"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="noSound" width="32" height="32"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

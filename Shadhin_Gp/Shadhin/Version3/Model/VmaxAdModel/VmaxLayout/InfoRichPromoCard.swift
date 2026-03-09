@@ -1,0 +1,99 @@
+//
+//  HeadlineFirstCard.swift
+//  Shadhin_GP
+//
+//  Created by MD Murad Hossain on 15/02/26.
+//  Copyright © 2025 GrammenPhone Limited. All rights reserved.
+//
+
+import UIKit
+import Vmax
+import VmaxNativeHelper
+
+class InfoRichPromoCard: UIView, NativeLayout {
+    
+    // MARK: -- Outlets
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var nativeView: UIView!
+    @IBOutlet weak var mediaView: UIView?
+    @IBOutlet weak var adBadgeLabel: UILabel?
+    @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var subTitleLabel: UILabel?
+    @IBOutlet weak var buttonCTA: UIButton?
+    
+    // MARK: -- Properties
+    let actionButton = with(UIButton()) {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        do {
+            try setUpNib()
+            commonInit()
+            addDropShadows()
+        } catch let error {
+            log("\(error)", .error)
+        }
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        do {
+            try setUpNib()
+            commonInit()
+            addDropShadows()
+        } catch let error {
+            log("\(error)", .error)
+        }
+    }
+
+    var layoutHeight: CGFloat {
+        imageHeight + 82
+    }
+}
+
+// MARK: -- VmaxNativeLayout Delegate
+extension InfoRichPromoCard: VmaxNativeLayout {
+
+    func set(delegate: VmaxLayoutDelegate) {
+    }
+
+    func getParentContainer() -> UIView? {
+        return self.contentView
+    }
+
+    func setUpInitialState() {
+        titleLabel?.font = .medium(14)
+        subTitleLabel?.font = .normal(11)
+    }
+
+    func getTitle() -> UILabel? {
+        return self.titleLabel
+    }
+
+    func setDescription(text: String?) {
+        self.subTitleLabel?.text = text
+    }
+
+    func getCTA() -> UIButton? {
+        return self.actionButton
+    }
+
+    func setCTA(text: String?) {
+        self.buttonCTA?.setTitle(String(text?.prefix(16) ?? ""), for: .normal)
+    }
+
+    func getMediaView() -> UIView? {
+        return self.mediaView
+    }
+
+    func getAdLayoutSize() -> CGSize {
+        let width = UIScreen.main.bounds.width
+        return CGSize(width: width, height: layoutHeight)
+    }
+
+    func setMainImageContentMode() -> UIView.ContentMode {
+        return UIView.ContentMode.scaleAspectFill
+    }
+}

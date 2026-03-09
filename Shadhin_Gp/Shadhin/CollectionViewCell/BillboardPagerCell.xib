@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BillboardPagerCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="271" height="249"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="271" height="249"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIZ-pm-ymQ">
+                        <rect key="frame" x="0.0" y="0.0" width="271" height="249"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccz-89-yj9">
+                                <rect key="frame" x="0.0" y="0.0" width="271" height="249"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dFl-pf-buT">
+                                <rect key="frame" x="0.0" y="0.0" width="271" height="249"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fk5-y7-gYT">
+                                <rect key="frame" x="179" y="8" width="84" height="34"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ic_live_tag" translatesAutoresizingMaskIntoConstraints="NO" id="jfn-8L-AHM">
+                                        <rect key="frame" x="6" y="3" width="72" height="28"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jfn-8L-AHM" firstAttribute="top" secondItem="fk5-y7-gYT" secondAttribute="top" constant="3" id="4wu-c8-1dZ"/>
+                                    <constraint firstAttribute="height" constant="34" id="6oa-mg-VOj"/>
+                                    <constraint firstAttribute="trailing" secondItem="jfn-8L-AHM" secondAttribute="trailing" constant="6" id="7Dt-33-45K"/>
+                                    <constraint firstAttribute="bottom" secondItem="jfn-8L-AHM" secondAttribute="bottom" constant="3" id="IYj-JV-drO"/>
+                                    <constraint firstItem="jfn-8L-AHM" firstAttribute="leading" secondItem="fk5-y7-gYT" secondAttribute="leading" constant="6" id="hOX-RX-DzQ"/>
+                                    <constraint firstAttribute="width" constant="84" id="uhm-Bz-etQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ccz-89-yj9" secondAttribute="trailing" id="6kU-DQ-gZG"/>
+                            <constraint firstAttribute="bottom" secondItem="ccz-89-yj9" secondAttribute="bottom" id="921-QH-6H6"/>
+                            <constraint firstItem="fk5-y7-gYT" firstAttribute="top" secondItem="CIZ-pm-ymQ" secondAttribute="top" constant="8" id="NEt-08-COh"/>
+                            <constraint firstAttribute="trailing" secondItem="fk5-y7-gYT" secondAttribute="trailing" constant="8" id="OSv-X6-fdB"/>
+                            <constraint firstAttribute="bottom" secondItem="dFl-pf-buT" secondAttribute="bottom" id="Pq8-f6-AYm"/>
+                            <constraint firstItem="ccz-89-yj9" firstAttribute="top" secondItem="CIZ-pm-ymQ" secondAttribute="top" id="jX7-9a-JbQ"/>
+                            <constraint firstItem="dFl-pf-buT" firstAttribute="top" secondItem="CIZ-pm-ymQ" secondAttribute="top" id="pQ8-p2-fCl"/>
+                            <constraint firstItem="dFl-pf-buT" firstAttribute="leading" secondItem="CIZ-pm-ymQ" secondAttribute="leading" id="s9f-cN-tDc"/>
+                            <constraint firstAttribute="trailing" secondItem="dFl-pf-buT" secondAttribute="trailing" id="ta4-aY-Wne"/>
+                            <constraint firstItem="ccz-89-yj9" firstAttribute="leading" secondItem="CIZ-pm-ymQ" secondAttribute="leading" id="x8X-RR-KBq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="CIZ-pm-ymQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OdC-jf-s1C"/>
+                <constraint firstAttribute="bottom" secondItem="CIZ-pm-ymQ" secondAttribute="bottom" id="cP5-Ah-hOi"/>
+                <constraint firstAttribute="trailing" secondItem="CIZ-pm-ymQ" secondAttribute="trailing" id="gSZ-OW-RME"/>
+                <constraint firstItem="CIZ-pm-ymQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="h3b-6y-u30"/>
+            </constraints>
+            <size key="customSize" width="271" height="249"/>
+            <connections>
+                <outlet property="liveSeg" destination="fk5-y7-gYT" id="a0S-em-3ET"/>
+                <outlet property="mainImg" destination="dFl-pf-buT" id="7Le-Yn-V1c"/>
+                <outlet property="videoHolder" destination="ccz-89-yj9" id="jSc-n7-5mA"/>
+            </connections>
+            <point key="canvasLocation" x="297.82608695652175" y="180.46875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Ic_live_tag" width="512" height="198"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

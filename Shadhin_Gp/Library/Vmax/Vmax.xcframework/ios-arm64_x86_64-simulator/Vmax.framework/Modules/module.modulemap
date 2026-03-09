@@ -1,0 +1,11 @@
+framework module Vmax {
+  umbrella header "Vmax.h"
+  export *
+
+  module * { export * }
+}
+
+module Vmax.Swift {
+  header "Vmax-Swift.h"
+  requires objc
+}

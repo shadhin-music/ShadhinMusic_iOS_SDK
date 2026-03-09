@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SingleImageItemCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="489" height="310"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="489" height="310"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="gFd-xy-OIT">
+                        <rect key="frame" x="0.0" y="0.0" width="489" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Favorite Playlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIL-4T-Ieb">
+                                <rect key="frame" x="0.0" y="0.0" width="189" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="va8-a2-6Am">
+                                <rect key="frame" x="441" y="0.0" width="48" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="SEE ALL">
+                                    <color key="titleColor" name="tintColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="XWK-zy-xDp"/>
+                        </constraints>
+                    </stackView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="S3a-PH-4uo">
+                        <rect key="frame" x="0.0" y="40" width="489" height="270"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o4J-lz-Rpx">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="S3a-PH-4uo" secondAttribute="trailing" id="0at-Cg-dKk"/>
+                <constraint firstItem="S3a-PH-4uo" firstAttribute="top" secondItem="gFd-xy-OIT" secondAttribute="bottom" id="ILp-d0-X0a"/>
+                <constraint firstItem="gFd-xy-OIT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Igq-yg-ezF"/>
+                <constraint firstItem="S3a-PH-4uo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QeJ-on-Cdj"/>
+                <constraint firstAttribute="bottom" secondItem="S3a-PH-4uo" secondAttribute="bottom" id="kVr-SX-OdT"/>
+                <constraint firstAttribute="trailing" secondItem="gFd-xy-OIT" secondAttribute="trailing" id="pIu-QC-st4"/>
+                <constraint firstItem="S3a-PH-4uo" firstAttribute="top" secondItem="gFd-xy-OIT" secondAttribute="bottom" id="s4C-As-Bwp"/>
+                <constraint firstItem="gFd-xy-OIT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yjG-Nw-3Xg"/>
+            </constraints>
+            <size key="customSize" width="489" height="310"/>
+            <connections>
+                <outlet property="collectionView" destination="S3a-PH-4uo" id="54j-JB-Mgx"/>
+                <outlet property="seeAllButton" destination="va8-a2-6Am" id="L7z-Ks-zUk"/>
+                <outlet property="titleLabel" destination="wIL-4T-Ieb" id="Qby-qk-WRl"/>
+            </connections>
+            <point key="canvasLocation" x="348.85496183206106" y="111.26760563380282"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="tintColor">
+            <color red="0.0" green="0.68999999761581421" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

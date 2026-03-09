@@ -1,0 +1,2048 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "VmaxDisplayHelper",
+    "printedName": "VmaxDisplayHelper",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Vmax",
+        "printedName": "Vmax",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper"
+      },
+      {
+        "kind": "Import",
+        "name": "Vmax",
+        "printedName": "Vmax",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VmaxAdDisplay",
+        "printedName": "VmaxAdDisplay",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "prepare",
+            "printedName": "prepare(adResponse:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdDelegate",
+                "printedName": "any Vmax.VmaxAdDelegate",
+                "usr": "s:4Vmax0A10AdDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C7prepare10adResponse8delegateySS_0A00aD8Delegate_ptF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C7prepare10adResponse8delegateySS_0A00aD8Delegate_ptF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "render",
+            "printedName": "render(container:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C6render9containerySo6UIViewC_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C6render9containerySo6UIViewC_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSignatures",
+            "printedName": "getSignatures()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C13getSignaturesSaySSGyFZ",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C13getSignaturesSaySSGyFZ",
+            "moduleName": "VmaxDisplayHelper",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getRegexPatternSignatures",
+            "printedName": "getRegexPatternSignatures()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C25getRegexPatternSignaturesSaySSGyFZ",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C25getRegexPatternSignaturesSaySSGyFZ",
+            "moduleName": "VmaxDisplayHelper",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pause",
+            "printedName": "pause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C5pauseyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C5pauseyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resume",
+            "printedName": "resume()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C6resumeyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C6resumeyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "close",
+            "printedName": "close()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C5closeyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C5closeyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(adClickBrowser:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AdClickBrowser",
+                "printedName": "Vmax.AdClickBrowser",
+                "usr": "s:4Vmax14AdClickBrowserO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C3set14adClickBrowsery0A00dgH0O_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C3set14adClickBrowsery0A00dgH0O_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(adInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdInfo",
+                "printedName": "Vmax.VmaxAdInfo",
+                "usr": "s:4Vmax0A6AdInfoC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C3set6adInfoy0A00adG0C_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C3set6adInfoy0A00adG0C_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getVmaxAdInfo",
+            "printedName": "getVmaxAdInfo()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Vmax.VmaxAdInfo?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxAdInfo",
+                    "printedName": "Vmax.VmaxAdInfo",
+                    "usr": "s:4Vmax0A6AdInfoC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C03getaD4Info0A00adF0CSgyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C03getaD4Info0A00adF0CSgyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "shouldProcessRefresh",
+            "printedName": "shouldProcessRefresh()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C20shouldProcessRefreshSbyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C20shouldProcessRefreshSbyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "add",
+            "printedName": "add(viewability:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdViewability",
+                "printedName": "any Vmax.VmaxAdViewability",
+                "usr": "s:4Vmax0A13AdViewabilityP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C3add11viewabilityy0A00aD11Viewability_p_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C3add11viewabilityy0A00aD11Viewability_p_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(adParameters:height:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C3set12adParameters6heightySiSg_AGtF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C3set12adParameters6heightySiSg_AGtF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPrepared",
+            "printedName": "onPrepared(asset:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C10onPrepared5asset6resulty0A00ad5AssetC0_p_xtlF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C10onPrepared5asset6resulty0A00ad5AssetC0_p_xtlF",
+            "moduleName": "VmaxDisplayHelper",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPrepareFailed",
+            "printedName": "onPrepareFailed(asset:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxError",
+                "printedName": "Vmax.VmaxError",
+                "usr": "s:4Vmax0A5ErrorC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C15onPrepareFailed5asset5errory0A00ad5AssetC0_p_AG0A5ErrorCtF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C15onPrepareFailed5asset5errory0A00ad5AssetC0_p_AG0A5ErrorCtF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onRendered",
+            "printedName": "onRendered(asset:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C10onRendered5asset6resulty0A00ad5AssetC0_p_xtlF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C10onRendered5asset6resulty0A00ad5AssetC0_p_xtlF",
+            "moduleName": "VmaxDisplayHelper",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onRenderFailed",
+            "printedName": "onRenderFailed(asset:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxError",
+                "printedName": "Vmax.VmaxError",
+                "usr": "s:4Vmax0A5ErrorC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C14onRenderFailed5asset5errory0A00ad5AssetC0_p_AG0A5ErrorCtF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C14onRenderFailed5asset5errory0A00ad5AssetC0_p_AG0A5ErrorCtF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onClicked",
+            "printedName": "onClicked(asset:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C9onClicked5assety0A00ad5AssetC0_p_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C9onClicked5assety0A00ad5AssetC0_p_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onClickedComplete",
+            "printedName": "onClickedComplete(asset:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C17onClickedComplete5assety0A00ad5AssetC0_p_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C17onClickedComplete5assety0A00ad5AssetC0_p_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onClosed",
+            "printedName": "onClosed(asset:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C8onClosed5assety0A00ad5AssetC0_p_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C8onClosed5assety0A00ad5AssetC0_p_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addObserverToScrollViews",
+            "printedName": "addObserverToScrollViews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C24addObserverToScrollViewsyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C24addObserverToScrollViewsyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeObserverFromScrollViews",
+            "printedName": "removeObserverFromScrollViews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C29removeObserverFromScrollViewsyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C29removeObserverFromScrollViewsyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "observeValue",
+            "printedName": "observeValue(forKeyPath:of:change:context:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Foundation.NSKeyValueChangeKey : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Foundation.NSKeyValueChangeKey : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSKeyValueChangeKey",
+                        "printedName": "Foundation.NSKeyValueChangeKey",
+                        "usr": "c:@T@NSKeyValueChangeKey"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.UnsafeMutableRawPointer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnsafeMutableRawPointer",
+                    "printedName": "Swift.UnsafeMutableRawPointer",
+                    "usr": "s:Sv"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@VmaxDisplayHelper@objc(cs)VmaxAdDisplay(im)observeValueForKeyPath:ofObject:change:context:",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C12observeValue10forKeyPath2of6change7contextySSSg_ypSgSDySo05NSKeyf6ChangeH0aypGSgSvSgtF",
+            "moduleName": "VmaxDisplayHelper",
+            "overriding": true,
+            "objc_name": "observeValueForKeyPath:ofObject:change:context:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onAdPaused",
+            "printedName": "onAdPaused()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C02onD6PausedyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C02onD6PausedyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onAdResumed",
+            "printedName": "onAdResumed()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C02onD7ResumedyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C02onD7ResumedyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onAdComplete",
+            "printedName": "onAdComplete()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C02onD8CompleteyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C02onD8CompleteyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isCardActive",
+            "printedName": "isCardActive()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C12isCardActiveSbyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C12isCardActiveSbyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "swipeMode",
+            "printedName": "swipeMode()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxCarouselSwipeMode",
+                "printedName": "Vmax.VmaxCarouselSwipeMode",
+                "usr": "s:4Vmax0A17CarouselSwipeModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C9swipeMode0A00a13CarouselSwipeF0OyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C9swipeMode0A00a13CarouselSwipeF0OyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isAdLoaded",
+            "printedName": "isAdLoaded()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C02isD6LoadedSbyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C02isD6LoadedSbyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAdWidth",
+            "printedName": "getAdWidth()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C03getD5WidthSiyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C03getD5WidthSiyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAdHeight",
+            "printedName": "getAdHeight()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C03getD6HeightSiyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C03getD6HeightSiyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setAdCompletionListener",
+            "printedName": "setAdCompletionListener(adCompletionListener:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxCarouselAdCompletionListener",
+                "printedName": "any Vmax.VmaxCarouselAdCompletionListener",
+                "usr": "s:4Vmax0A28CarouselAdCompletionListenerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C03setD18CompletionListener02adfG0y0A00a8CarouseldfG0_p_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C03setD18CompletionListener02adfG0y0A00a8CarouseldfG0_p_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setAdFocus",
+            "printedName": "setAdFocus()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C03setD5FocusyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C03setD5FocusyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setAdOutOfFocus",
+            "printedName": "setAdOutOfFocus()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C03setD10OutOfFocusyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C03setD10OutOfFocusyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setAdIsDisplayedInCarousel",
+            "printedName": "setAdIsDisplayedInCarousel(flag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C03setD21IsDisplayedInCarousel4flagySb_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C03setD21IsDisplayedInCarousel4flagySb_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onAdLoaded",
+            "printedName": "onAdLoaded()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB0C02onD6LoadedyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB0C02onD6LoadedyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VmaxDisplayHelper@objc(cs)VmaxAdDisplay",
+        "mangledName": "$s17VmaxDisplayHelper0a2AdB0C",
+        "moduleName": "VmaxDisplayHelper",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "VmaxAd",
+            "printedName": "VmaxAd",
+            "usr": "s:4Vmax0A2AdP",
+            "mangledName": "$s4Vmax0A2AdP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VmaxRefreshableAd",
+            "printedName": "VmaxRefreshableAd",
+            "usr": "s:4Vmax0A13RefreshableAdP",
+            "mangledName": "$s4Vmax0A13RefreshableAdP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VmaxViewabilityProtocol",
+            "printedName": "VmaxViewabilityProtocol",
+            "usr": "s:4Vmax0A19ViewabilityProtocolP",
+            "mangledName": "$s4Vmax0A19ViewabilityProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VmaxCompanionParams",
+            "printedName": "VmaxCompanionParams",
+            "usr": "s:4Vmax0A15CompanionParamsP",
+            "mangledName": "$s4Vmax0A15CompanionParamsP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VmaxWebAssetDelegate",
+            "printedName": "VmaxWebAssetDelegate",
+            "usr": "s:4Vmax0A16WebAssetDelegateP",
+            "mangledName": "$s4Vmax0A16WebAssetDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VmaxAdAssetDelegate",
+            "printedName": "VmaxAdAssetDelegate",
+            "usr": "s:4Vmax0A15AdAssetDelegateP",
+            "mangledName": "$s4Vmax0A15AdAssetDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ViewPortManager",
+            "printedName": "ViewPortManager",
+            "usr": "s:4Vmax15ViewPortManagerP",
+            "mangledName": "$s4Vmax15ViewPortManagerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VmaxRefreshableAssetDelegate",
+            "printedName": "VmaxRefreshableAssetDelegate",
+            "usr": "s:4Vmax0A24RefreshableAssetDelegateP",
+            "mangledName": "$s4Vmax0A24RefreshableAssetDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VmaxCarouselAd",
+            "printedName": "VmaxCarouselAd",
+            "usr": "s:4Vmax0A10CarouselAdP",
+            "mangledName": "$s4Vmax0A10CarouselAdP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Vmax",
+        "printedName": "Vmax",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VmaxAdDisplayInterstitial",
+        "printedName": "VmaxAdDisplayInterstitial",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "prepare",
+            "printedName": "prepare(adResponse:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdDelegate",
+                "printedName": "any Vmax.VmaxAdDelegate",
+                "usr": "s:4Vmax0A10AdDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC7prepare10adResponse8delegateySS_0A00aD8Delegate_ptF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC7prepare10adResponse8delegateySS_0A00aD8Delegate_ptF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "render",
+            "printedName": "render(container:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC6render9containerySo6UIViewC_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC6render9containerySo6UIViewC_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSignatures",
+            "printedName": "getSignatures()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC13getSignaturesSaySSGyFZ",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC13getSignaturesSaySSGyFZ",
+            "moduleName": "VmaxDisplayHelper",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pause",
+            "printedName": "pause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC5pauseyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC5pauseyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resume",
+            "printedName": "resume()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC6resumeyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC6resumeyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "close",
+            "printedName": "close()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC5closeyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC5closeyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(adClickBrowser:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AdClickBrowser",
+                "printedName": "Vmax.AdClickBrowser",
+                "usr": "s:4Vmax14AdClickBrowserO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC3set14adClickBrowsery0A00dhI0O_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC3set14adClickBrowsery0A00dhI0O_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(adInfo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdInfo",
+                "printedName": "Vmax.VmaxAdInfo",
+                "usr": "s:4Vmax0A6AdInfoC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC3set6adInfoy0A00adH0C_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC3set6adInfoy0A00adH0C_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getVmaxAdInfo",
+            "printedName": "getVmaxAdInfo()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Vmax.VmaxAdInfo?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxAdInfo",
+                    "printedName": "Vmax.VmaxAdInfo",
+                    "usr": "s:4Vmax0A6AdInfoC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC03getaD4Info0A00adG0CSgyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC03getaD4Info0A00adG0CSgyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "add",
+            "printedName": "add(viewability:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdViewability",
+                "printedName": "any Vmax.VmaxAdViewability",
+                "usr": "s:4Vmax0A13AdViewabilityP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC3add11viewabilityy0A00aD11Viewability_p_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC3add11viewabilityy0A00aD11Viewability_p_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPrepared",
+            "printedName": "onPrepared(asset:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC10onPrepared5asset6resulty0A00ad5AssetC0_p_xtlF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC10onPrepared5asset6resulty0A00ad5AssetC0_p_xtlF",
+            "moduleName": "VmaxDisplayHelper",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPrepareFailed",
+            "printedName": "onPrepareFailed(asset:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxError",
+                "printedName": "Vmax.VmaxError",
+                "usr": "s:4Vmax0A5ErrorC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC15onPrepareFailed5asset5errory0A00ad5AssetC0_p_AG0A5ErrorCtF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC15onPrepareFailed5asset5errory0A00ad5AssetC0_p_AG0A5ErrorCtF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onRendered",
+            "printedName": "onRendered(asset:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC10onRendered5asset6resulty0A00ad5AssetC0_p_xtlF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC10onRendered5asset6resulty0A00ad5AssetC0_p_xtlF",
+            "moduleName": "VmaxDisplayHelper",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<T>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onRenderFailed",
+            "printedName": "onRenderFailed(asset:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxError",
+                "printedName": "Vmax.VmaxError",
+                "usr": "s:4Vmax0A5ErrorC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC14onRenderFailed5asset5errory0A00ad5AssetC0_p_AG0A5ErrorCtF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC14onRenderFailed5asset5errory0A00ad5AssetC0_p_AG0A5ErrorCtF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onClicked",
+            "printedName": "onClicked(asset:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC9onClicked5assety0A00ad5AssetC0_p_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC9onClicked5assety0A00ad5AssetC0_p_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onClickedComplete",
+            "printedName": "onClickedComplete(asset:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC17onClickedComplete5assety0A00ad5AssetC0_p_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC17onClickedComplete5assety0A00ad5AssetC0_p_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onClosed",
+            "printedName": "onClosed(asset:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdAssetHelper",
+                "printedName": "any Vmax.VmaxAdAssetHelper",
+                "usr": "s:4Vmax0A13AdAssetHelperP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC8onClosed5assety0A00ad5AssetC0_p_tF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC8onClosed5assety0A00ad5AssetC0_p_tF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onAdInterstitialClose",
+            "printedName": "onAdInterstitialClose()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VmaxDisplayHelper0a2AdB12InterstitialC02ondE5CloseyyF",
+            "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC02ondE5CloseyyF",
+            "moduleName": "VmaxDisplayHelper",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VmaxDisplayHelper@objc(cs)VmaxAdDisplayInterstitial",
+        "mangledName": "$s17VmaxDisplayHelper0a2AdB12InterstitialC",
+        "moduleName": "VmaxDisplayHelper",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "VmaxAd",
+            "printedName": "VmaxAd",
+            "usr": "s:4Vmax0A2AdP",
+            "mangledName": "$s4Vmax0A2AdP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VmaxViewabilityProtocol",
+            "printedName": "VmaxViewabilityProtocol",
+            "usr": "s:4Vmax0A19ViewabilityProtocolP",
+            "mangledName": "$s4Vmax0A19ViewabilityProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VmaxWebAssetDelegate",
+            "printedName": "VmaxWebAssetDelegate",
+            "usr": "s:4Vmax0A16WebAssetDelegateP",
+            "mangledName": "$s4Vmax0A16WebAssetDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VmaxAdAssetDelegate",
+            "printedName": "VmaxAdAssetDelegate",
+            "usr": "s:4Vmax0A15AdAssetDelegateP",
+            "mangledName": "$s4Vmax0A15AdAssetDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VmaxInterstitialDelegate",
+            "printedName": "VmaxInterstitialDelegate",
+            "usr": "s:4Vmax0A20InterstitialDelegateP",
+            "mangledName": "$s4Vmax0A20InterstitialDelegateP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Vmax",
+        "printedName": "Vmax",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper"
+      },
+      {
+        "kind": "Import",
+        "name": "DeveloperToolsSupport",
+        "printedName": "DeveloperToolsSupport",
+        "declKind": "Import",
+        "moduleName": "VmaxDisplayHelper"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxAdDisplay.swift",
+      "kind": "BooleanLiteral",
+      "offset": 548,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxAdDisplay.swift",
+      "kind": "BooleanLiteral",
+      "offset": 731,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxAdDisplay.swift",
+      "kind": "BooleanLiteral",
+      "offset": 829,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxAdDisplay.swift",
+      "kind": "BooleanLiteral",
+      "offset": 877,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxAdDisplay.swift",
+      "kind": "StringLiteral",
+      "offset": 1059,
+      "length": 8,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxAdDisplay.swift",
+      "kind": "StringLiteral",
+      "offset": 1066,
+      "length": 10,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxAdDisplayInterstitial.swift",
+      "kind": "BooleanLiteral",
+      "offset": 572,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxAdDisplayInterstitial.swift",
+      "kind": "BooleanLiteral",
+      "offset": 652,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxAdDisplayInterstitial.swift",
+      "kind": "StringLiteral",
+      "offset": 786,
+      "length": 8,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxAdDisplayInterstitial.swift",
+      "kind": "StringLiteral",
+      "offset": 793,
+      "length": 10,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxWebViewAssetHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 557,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxWebViewAssetHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 606,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxWebViewAssetHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5498,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxWebViewAssetHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5590,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxWebViewAssetHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5637,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxWebViewAssetHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5681,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxWebViewAssetHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5958,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxWebViewAssetHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5976,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxWebViewAssetHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6058,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxWebViewAssetHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6144,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxWebViewAssetHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6437,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-display\/VmaxDisplayHelper\/VmaxDisplayHelper\/Source\/VmaxWebViewAssetHelper.swift",
+      "kind": "StringLiteral",
+      "offset": 6505,
+      "length": 67,
+      "value": "\"Couldn't calculate height for WKWebView using evaluateJavaScript.\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/Library\/Developer\/Xcode\/DerivedData\/VmaxDisplayHelper-gwefdinamwkklhbrbayrdcyrhsrb\/Build\/Intermediates.noindex\/ArchiveIntermediates\/VmaxDisplayHelper\/IntermediateBuildFilesPath\/VmaxDisplayHelper.build\/Release-iphoneos\/VmaxDisplayHelper.build\/DerivedSources\/GeneratedAssetSymbols.swift",
+      "kind": "StringLiteral",
+      "offset": 732,
+      "length": 12,
+      "value": "\"close_icon\""
+    }
+  ]
+}

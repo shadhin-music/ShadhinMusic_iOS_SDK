@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_gp.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

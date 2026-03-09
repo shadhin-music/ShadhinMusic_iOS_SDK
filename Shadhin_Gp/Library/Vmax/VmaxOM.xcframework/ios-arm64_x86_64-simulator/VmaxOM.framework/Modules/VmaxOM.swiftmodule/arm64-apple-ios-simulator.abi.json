@@ -1,0 +1,339 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "VmaxOM",
+    "printedName": "VmaxOM",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VmaxOM",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Vmax",
+        "printedName": "Vmax",
+        "declKind": "Import",
+        "moduleName": "VmaxOM"
+      },
+      {
+        "kind": "Import",
+        "name": "OMSDK_Vmax2",
+        "printedName": "OMSDK_Vmax2",
+        "declKind": "Import",
+        "moduleName": "VmaxOM"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VmaxOMViewability",
+        "printedName": "VmaxOMViewability",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxOMViewability",
+                "printedName": "VmaxOM.VmaxOMViewability",
+                "usr": "c:@M@VmaxOM@objc(cs)VmaxOMViewability"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VmaxOM@objc(cs)VmaxOMViewability(im)init",
+            "mangledName": "$s6VmaxOM0A13OMViewabilityCACycfc",
+            "moduleName": "VmaxOM",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "register",
+            "printedName": "register(dict:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSDictionary",
+                "printedName": "Foundation.NSDictionary",
+                "usr": "c:objc(cs)NSDictionary"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6VmaxOM0A13OMViewabilityC8register4dictySo12NSDictionaryC_tF",
+            "mangledName": "$s6VmaxOM0A13OMViewabilityC8register4dictySo12NSDictionaryC_tF",
+            "moduleName": "VmaxOM",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startSession",
+            "printedName": "startSession(dict:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxViewabilityMeta",
+                "printedName": "Vmax.VmaxViewabilityMeta",
+                "usr": "s:4Vmax0A15ViewabilityMetaV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6VmaxOM0A13OMViewabilityC12startSession4dicty0A00A15ViewabilityMetaV_tF",
+            "mangledName": "$s6VmaxOM0A13OMViewabilityC12startSession4dicty0A00A15ViewabilityMetaV_tF",
+            "moduleName": "VmaxOM",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "emitEvent",
+            "printedName": "emitEvent(name:dict:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSDictionary?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSDictionary",
+                    "printedName": "Foundation.NSDictionary",
+                    "usr": "c:objc(cs)NSDictionary"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6VmaxOM0A13OMViewabilityC9emitEvent4name4dictySS_So12NSDictionaryCSgtF",
+            "mangledName": "$s6VmaxOM0A13OMViewabilityC9emitEvent4name4dictySS_So12NSDictionaryCSgtF",
+            "moduleName": "VmaxOM",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "endSession",
+            "printedName": "endSession()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6VmaxOM0A13OMViewabilityC10endSessionyyF",
+            "mangledName": "$s6VmaxOM0A13OMViewabilityC10endSessionyyF",
+            "moduleName": "VmaxOM",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "injectScriptInHTMLAds",
+            "printedName": "injectScriptInHTMLAds(html:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6VmaxOM0A13OMViewabilityC21injectScriptInHTMLAds4htmlSSSgSS_tF",
+            "mangledName": "$s6VmaxOM0A13OMViewabilityC21injectScriptInHTMLAds4htmlSSSgSS_tF",
+            "moduleName": "VmaxOM",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getVersion",
+            "printedName": "getVersion()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6VmaxOM0A13OMViewabilityC10getVersionSSyFZ",
+            "mangledName": "$s6VmaxOM0A13OMViewabilityC10getVersionSSyFZ",
+            "moduleName": "VmaxOM",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VmaxOM@objc(cs)VmaxOMViewability",
+        "mangledName": "$s6VmaxOM0A13OMViewabilityC",
+        "moduleName": "VmaxOM",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VmaxAdViewability",
+            "printedName": "VmaxAdViewability",
+            "usr": "s:4Vmax0A13AdViewabilityP",
+            "mangledName": "$s4Vmax0A13AdViewabilityP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-helper-ios-om\/VmaxOM\/VmaxOM\/Source\/VmaxOMViewability.swift",
+      "kind": "StringLiteral",
+      "offset": 833,
+      "length": 7,
+      "value": "\"Vmax2\""
+    }
+  ]
+}

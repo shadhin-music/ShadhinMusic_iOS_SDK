@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenreAndFeaturePlaylistCell" id="gTV-IL-0wX" customClass="GenreAndFeaturePlaylistCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKm-ic-3c0">
+                        <rect key="frame" x="5" y="5" width="110" height="110"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration" translatesAutoresizingMaskIntoConstraints="NO" id="PnS-Zx-S6l">
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PnS-Zx-S6l" firstAttribute="top" secondItem="wKm-ic-3c0" secondAttribute="top" id="aRO-m2-HhV"/>
+                            <constraint firstAttribute="trailing" secondItem="PnS-Zx-S6l" secondAttribute="trailing" id="bWX-PR-iz0"/>
+                            <constraint firstAttribute="bottom" secondItem="PnS-Zx-S6l" secondAttribute="bottom" id="haK-zl-7V1"/>
+                            <constraint firstItem="PnS-Zx-S6l" firstAttribute="leading" secondItem="wKm-ic-3c0" secondAttribute="leading" id="rSF-GC-N9g"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wKm-ic-3c0" secondAttribute="trailing" constant="5" id="JTe-Bq-3lg"/>
+                <constraint firstAttribute="bottom" secondItem="wKm-ic-3c0" secondAttribute="bottom" constant="5" id="K52-u7-Tyb"/>
+                <constraint firstItem="wKm-ic-3c0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="p1r-cF-IyA"/>
+                <constraint firstItem="wKm-ic-3c0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="qPt-cq-GTP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="138" height="138"/>
+            <connections>
+                <outlet property="genreAndFeaturePlaylistImgView" destination="PnS-Zx-S6l" id="hYR-22-Fyh"/>
+            </connections>
+            <point key="canvasLocation" x="200" y="188.00599700149925"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Illustration" width="360" height="359"/>
+    </resources>
+</document>

@@ -1,0 +1,11 @@
+framework module VmaxOM {
+  umbrella header "VmaxOM.h"
+  export *
+
+  module * { export * }
+}
+
+module VmaxOM.Swift {
+  header "VmaxOM-Swift.h"
+  requires objc
+}

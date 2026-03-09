@@ -1,0 +1,11 @@
+framework module VmaxVideoHelper {
+  umbrella header "VmaxVideoHelper.h"
+  export *
+
+  module * { export * }
+}
+
+module VmaxVideoHelper.Swift {
+  header "VmaxVideoHelper-Swift.h"
+  requires objc
+}

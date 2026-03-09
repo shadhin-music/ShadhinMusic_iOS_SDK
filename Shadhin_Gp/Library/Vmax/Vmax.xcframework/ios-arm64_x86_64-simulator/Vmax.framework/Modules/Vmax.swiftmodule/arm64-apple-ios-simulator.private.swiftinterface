@@ -1,0 +1,2067 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name Vmax
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVKit
+import AdSupport
+import AppTrackingTransparency
+import CommonCrypto
+import CoreLocation
+import CoreTelephony
+import CryptoKit
+import Foundation
+import Network
+import SafariServices
+import Swift
+import UIKit
+@_exported import Vmax
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum VmaxAdAssetType {
+  case instreamVideo, outstreamVideo, display, imamediation
+  public static func == (a: Vmax.VmaxAdAssetType, b: Vmax.VmaxAdAssetType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class VmaxAdAssetHelperFactory {
+  public init()
+  public func get(type: Vmax.VmaxAdAssetType) -> (any Vmax.VmaxAdAssetHelper)?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class VmaxClassBasedAdLayout : Vmax.VmaxAdLayout {
+  override public init(adLayoutRegistrationType: Vmax.VmaxAdLayoutRegistrationType)
+  override public func addAdLayout<T>(experience: T, adLayout: any Vmax.VmaxLayout)
+  @objc deinit
+}
+public enum ExpandCollapse : Swift.Int {
+  case expand
+  case collapse
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol VmaxInstreamAd : AnyObject {
+  func update(container view: UIKit.UIView)
+  func getPictureInPictureDelegate() -> (any Vmax.VmaxPictureInPictureDelegate)?
+}
+extension Vmax.VmaxInstreamAd {
+  public func getPictureInPictureDelegate() -> (any Vmax.VmaxPictureInPictureDelegate)?
+}
+public enum FamilyParenting : Swift.Int {
+  case adoption
+  case babiesToddlers
+  case daycarePreSchool
+  case familyInternet
+  case parentingK6Kids
+  case parentingTeens
+  case pregnancy
+  case specialNeedsKids
+  case eldercare
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.FamilyParenting : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.FamilyParenting]
+  nonisolated public static var allCases: [Vmax.FamilyParenting] {
+    get
+  }
+}
+@objc public class VmaxPagesFamilyParenting : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.FamilyParenting)
+  @objc deinit
+}
+public protocol VmaxCarouselAd : AnyObject {
+  func isCardActive() -> Swift.Bool
+  func swipeMode() -> Vmax.VmaxCarouselSwipeMode
+  func isAdLoaded() -> Swift.Bool
+  func getAdWidth() -> Swift.Int
+  func getAdHeight() -> Swift.Int
+  func setAdCompletionListener(adCompletionListener: any Vmax.VmaxCarouselAdCompletionListener)
+  func setAdFocus()
+  func setAdOutOfFocus()
+  func setAdIsDisplayedInCarousel(flag: Swift.Bool)
+  func onAdLoaded()
+}
+public protocol VmaxCarouselAdCompletionListener : AnyObject {
+  func onAdCompleted()
+}
+public enum VmaxCarouselSwipeMode {
+  case adComplete
+  case adCompleteUnknown
+  public static func == (a: Vmax.VmaxCarouselSwipeMode, b: Vmax.VmaxCarouselSwipeMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum Sports : Swift.Int {
+  case autoRacing
+  case baseball
+  case bicycling
+  case bodybuilding
+  case boxing
+  case canoeingKayaking
+  case cheerleading
+  case climbing
+  case cricket
+  case figureSkating
+  case flyFishing
+  case football
+  case freshwaterFishing
+  case gameFish
+  case golf
+  case horseRacing
+  case horses
+  case huntingShooting
+  case inlineSkating
+  case martialArts
+  case mountainBiking
+  case nascarRacing
+  case olympics
+  case paintball
+  case powerMotorcycles
+  case proBasketball
+  case proIceHockey
+  case rodeo
+  case rugby
+  case runningJogging
+  case sailing
+  case saltwaterFishing
+  case scubaDiving
+  case skateboarding
+  case skiing
+  case snowboarding
+  case surfingBodyboarding
+  case swimming
+  case tableTennisPingPong
+  case tennis
+  case volleyball
+  case walking
+  case waterskiWakeboard
+  case worldSoccer
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.Sports : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.Sports]
+  nonisolated public static var allCases: [Vmax.Sports] {
+    get
+  }
+}
+@objc public class VmaxPagesSports : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.Sports)
+  @objc deinit
+}
+public protocol VmaxMediaEventsDelegate {
+  func set(vmaxMediaEvents: [any Vmax.VmaxMediaEvents])
+  func update(vmaxMediaEvents: [any Vmax.VmaxMediaEvents])
+}
+extension Vmax.VmaxMediaEventsDelegate {
+  public func update(vmaxMediaEvents: [any Vmax.VmaxMediaEvents])
+}
+public protocol VmaxMediaEvents : AnyObject {
+  func onImpression<T>(info: T?)
+  func onStart<T>(info: T?)
+  func onFirstQuartile<T>(info: T?)
+  func onMidPoint<T>(info: T?)
+  func onThirdQuartile<T>(info: T?)
+  func onProgress<T>(info: T?, currentTime: Swift.Double, totalDuration: Swift.Double)
+  func onResume<T>(info: T?)
+  func onPause<T>(info: T?)
+  func onMute<T>(info: T?)
+  func onUnmute<T>(info: T?)
+  func onComplete<T>(info: T?)
+  func onFullscreen<T>(info: T?)
+  func onExitFullscreen<T>(info: T?)
+  func onClose<T>(info: T?)
+  func onClick<T>(info: T?)
+  func onClickComplete<T>(info: T?)
+  func onSkip<T>(info: T?)
+  func onError<T>(info: T?, error: Vmax.VmaxError)
+  func onSkippableStateChange<T>(info: T?)
+}
+extension Vmax.VmaxMediaEvents {
+  public func onImpression<T>(info: T?)
+  public func onStart<T>(info: T?)
+  public func onFirstQuartile<T>(info: T?)
+  public func onMidPoint<T>(info: T?)
+  public func onThirdQuartile<T>(info: T?)
+  public func onProgress<T>(info: T?, currentTime: Swift.Double, totalDuration: Swift.Double)
+  public func onResume<T>(info: T?)
+  public func onPause<T>(info: T?)
+  public func onMute<T>(info: T?)
+  public func onUnmute<T>(info: T?)
+  public func onComplete<T>(info: T?)
+  public func onFullscreen<T>(info: T?)
+  public func onExitFullscreen<T>(info: T?)
+  public func onClose<T>(info: T?)
+  public func onClick<T>(info: T?)
+  public func onClickComplete<T>(info: T?)
+  public func onSkip<T>(info: T?)
+  public func onError<T>(info: T?, error: Vmax.VmaxError)
+  public func onSkippableStateChange<T>(info: T?)
+}
+public class VmaxMediaEventsObserver {
+  public init()
+  public init(observers: [any Vmax.VmaxMediaEvents])
+  public func add(observer: any Vmax.VmaxMediaEvents)
+  public func remove(observer: any Vmax.VmaxMediaEvents)
+  public func removeAll()
+  @objc deinit
+}
+extension Vmax.VmaxMediaEventsObserver : Vmax.VmaxMediaEvents {
+  public func onImpression<T>(info: T?)
+  public func onStart<T>(info: T?)
+  public func onFirstQuartile<T>(info: T?)
+  public func onMidPoint<T>(info: T?)
+  public func onThirdQuartile<T>(info: T?)
+  public func onProgress<T>(info: T?, currentTime: Swift.Double, totalDuration: Swift.Double)
+  public func onResume<T>(info: T?)
+  public func onPause<T>(info: T?)
+  public func onMute<T>(info: T?)
+  public func onUnmute<T>(info: T?)
+  public func onComplete<T>(info: T?)
+  public func onFullscreen<T>(info: T?)
+  public func onExitFullscreen<T>(info: T?)
+  public func onClose<T>(info: T?)
+  public func onClick<T>(info: T?)
+  public func onSkip<T>(info: T?)
+  public func onError<T>(info: T?, error: Vmax.VmaxError)
+  public func onSkippableStateChange<T>(info: T?)
+}
+public class VmaxEvent {
+  public init(name: Swift.String, httpUrls: [Swift.String])
+  @objc deinit
+}
+public enum VmaxViewabilityType {
+  case vastVideo
+  case vastAudio
+  case native
+  case display
+  public static func == (a: Vmax.VmaxViewabilityType, b: Vmax.VmaxViewabilityType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ConnectionType : Swift.Int {
+  case unknown
+  case ethernet
+  case wifi
+  case cellularNetworkUnkownGeneration
+  case cellularNetwork2G
+  case cellularNetwork3G
+  case cellularNetwork4G
+  case cellularNetwork5G
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.ConnectionType : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.ConnectionType]
+  nonisolated public static var allCases: [Vmax.ConnectionType] {
+    get
+  }
+}
+public enum FoodDrink : Swift.Int {
+  case americanCuisine
+  case barbecuesGrilling
+  case cajunCreole
+  case chineseCuisine
+  case cocktailsBeer
+  case coffeeTea
+  case cuisineSpecific
+  case dessertsBaking
+  case diningOut
+  case foodAllergies
+  case frenchCuisine
+  case healthLowfatCooking
+  case italianCuisine
+  case japaneseCuisine
+  case mexicanCuisine
+  case vegan
+  case vegetarian
+  case wine
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.FoodDrink : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.FoodDrink]
+  nonisolated public static var allCases: [Vmax.FoodDrink] {
+    get
+  }
+}
+@objc public class VmaxPagesFoodDrink : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.FoodDrink)
+  @objc deinit
+}
+public protocol InitializationStatusDelegate {
+  func onSuccess()
+  func onFailure(error: Vmax.VmaxError)
+}
+public enum DeviceType : Swift.Int {
+  case mobileTablet
+  case personalComputer
+  case connectedTV
+  case phone
+  case tablet
+  case connectedDevice
+  case setupBox
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.DeviceType : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.DeviceType]
+  nonisolated public static var allCases: [Vmax.DeviceType] {
+    get
+  }
+}
+public enum HomeGarden : Swift.Int {
+  case appliances
+  case entertaining
+  case environmentalSafety
+  case gardening
+  case homeRepair
+  case homeTheater
+  case interiorDecorating
+  case landscaping
+  case remodelingConstruction
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.HomeGarden : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.HomeGarden]
+  nonisolated public static var allCases: [Vmax.HomeGarden] {
+    get
+  }
+}
+@objc public class VmaxPagesHomeGarden : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.HomeGarden)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxRegistry : ObjectiveC.NSObject {
+  public static var shared: Vmax.VmaxRegistry
+  public func addVmaxAds(vmaxAds: [any Vmax.VmaxAd.Type])
+  public func addCustomSignatureForVmaxAd(signature: Swift.String, vmaxAd: any Vmax.VmaxAd.Type)
+  public func registerViewability(viewability: any Vmax.VmaxAdViewability.Type)
+  public func registerPictureInPictureController(pictureInPictureController: Vmax.VmaxPictureInPictureController)
+  public func unregisterPictureInPictureController()
+  public func getViewabilityVersion() -> Swift.String?
+  public func getVmaxAdLayout(adLayoutRegistrationType: Vmax.VmaxAdLayoutRegistrationType) -> Vmax.VmaxAdLayout
+  public func getAllSignatures() -> [Swift.String]
+  public func getVmaxAd(format: Swift.String) -> (any Vmax.VmaxAd)?
+  @objc deinit
+}
+public enum TechnologyComputing : Swift.Int {
+  case graphics3d
+  case animation
+  case antivirusSoftware
+  case cCplusplus
+  case camerasCamcorders
+  case cellPhones
+  case computerCertification
+  case computerNetworking
+  case computerPeripherals
+  case computerReviews
+  case dataCenters
+  case databases
+  case desktopPublishing
+  case desktopVideo
+  case email
+  case graphicsSoftware
+  case homeVideoDvd
+  case internetTechnology
+  case java
+  case javascript
+  case macSupport
+  case mp3Midi
+  case netConferencing
+  case netForBeginners
+  case networkSecurity
+  case palmtopsPdas
+  case pcSupport
+  case portable
+  case entertainment
+  case sharewareFreeware
+  case unix
+  case visualBasic
+  case webClipArt
+  case webDesignHtml
+  case webSearch
+  case windows
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.TechnologyComputing : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.TechnologyComputing]
+  nonisolated public static var allCases: [Vmax.TechnologyComputing] {
+    get
+  }
+}
+@objc public class VmaxPagesTechnologyComputing : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.TechnologyComputing)
+  @objc deinit
+}
+public enum VmaxSkipState {
+  case nonSkippable
+  case skippable(Swift.Int)
+}
+public enum Shopping : Swift.Int {
+  case contestsFreebies
+  case couponing
+  case comparison
+  case engines
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.Shopping : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.Shopping]
+  nonisolated public static var allCases: [Vmax.Shopping] {
+    get
+  }
+}
+@objc public class VmaxPagesShopping : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.Shopping)
+  @objc deinit
+}
+public enum Orientation : Swift.Int {
+  case unknown
+  case potrait
+  case landscape
+  case adaptive
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.Orientation : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.Orientation]
+  nonisolated public static var allCases: [Vmax.Orientation] {
+    get
+  }
+}
+public enum PauseResume : Swift.Int {
+  case pause
+  case resume
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class VmaxExperienceBasedAdLayout : Vmax.VmaxAdLayout {
+  override public init(adLayoutRegistrationType: Vmax.VmaxAdLayoutRegistrationType)
+  override public func addAdLayout<T>(experience: T, adLayout: any Vmax.VmaxLayout)
+  @objc deinit
+}
+public enum Travel : Swift.Int {
+  case adventureTravel
+  case africa
+  case airTravel
+  case australiaNewZealand
+  case bedBreakfasts
+  case budgetTravel
+  case businessTravel
+  case byUsLocale
+  case camping
+  case canada
+  case caribbean
+  case cruises
+  case easternEurope
+  case europe
+  case france
+  case greece
+  case honeymoonsGetaways
+  case hotels
+  case italy
+  case japan
+  case mexicoCentralAmerica
+  case nationalParks
+  case southAmerica
+  case spas
+  case themeParks
+  case travelingWithKids
+  case unitedKingdom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.Travel : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.Travel]
+  nonisolated public static var allCases: [Vmax.Travel] {
+    get
+  }
+}
+@objc public class VmaxPagesTravel : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.Travel)
+  @objc deinit
+}
+public enum Business : Swift.Int {
+  case advertising
+  case agriculture
+  case biotechBiomedical
+  case businessSoftware
+  case construction
+  case forestry
+  case government
+  case greenSolutions
+  case humanResources
+  case logistics
+  case marketing
+  case metals
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.Business : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.Business]
+  nonisolated public static var allCases: [Vmax.Business] {
+    get
+  }
+}
+@objc public class VmaxPagesBusiness : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.Business)
+  @objc deinit
+}
+public protocol VmaxAdViewability : ObjectiveC.NSObject {
+  func register(dict: Foundation.NSDictionary)
+  func startSession(dict: Vmax.VmaxViewabilityMeta)
+  func emitEvent(name: Swift.String, dict: Foundation.NSDictionary?)
+  func endSession()
+  func injectScriptInHTMLAds(html: Swift.String) -> Swift.String?
+  static func getVersion() -> Swift.String
+}
+public protocol VmaxViewabilityProtocol {
+  func add(viewability: any Vmax.VmaxAdViewability)
+  func update(viewability: any Vmax.VmaxAdViewability)
+}
+extension Vmax.VmaxViewabilityProtocol {
+  public func update(viewability: any Vmax.VmaxAdViewability)
+}
+public enum AdClickBrowser : Swift.Int {
+  case embedded
+  case native
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.AdClickBrowser : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.AdClickBrowser]
+  nonisolated public static var allCases: [Vmax.AdClickBrowser] {
+    get
+  }
+}
+public class VmaxAdLayout {
+  public init(adLayoutRegistrationType: Vmax.VmaxAdLayoutRegistrationType)
+  public func addAdLayout<T>(experience: T, adLayout: any Vmax.VmaxLayout)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VmaxManager {
+  public var isAppMuted: Swift.Bool
+  public static var shared: Vmax.VmaxManager
+  @objc deinit
+}
+extension Vmax.VmaxManager {
+  public func initialize(accountKey: Swift.String, appId: Swift.String, privateKey: Swift.String, keyId: Swift.String, delegate: any Vmax.InitializationStatusDelegate)
+  public func createVmaxAdSpace(tagId: Swift.String) -> Vmax.VmaxAdSpace?
+  public func createVmaxAdspotRequestBuilder() -> Vmax.VmaxAdspotRequestBuilder
+  public func createAdsInsertionRequestBuilder() -> Vmax.VmaxAdsInsertionRequestBuilder
+  public func process(vmaxRequest: Vmax.VmaxRequest)
+  public func process(adsInsertionRequest: Vmax.VmaxAdsInsertionRequest, avPlayer: AVFoundation.AVPlayer, adContainer: UIKit.UIView, customLayout: (any Vmax.VmaxLayout)?, adsInsertionProcessDelegate: (any Vmax.VmaxAdsInsertionProcessDelegate)?, adsInsertionDelegate: (any Vmax.VmaxAdsInsertionDelegate)?)
+  public func getVmaxUser() -> Vmax.VmaxUser
+  public func getVmaxApplication() -> Vmax.VmaxApplication
+  public func getVmaxDevice() -> Vmax.VmaxDevice
+  public func getVmaxRegistry() -> Vmax.VmaxRegistry
+  public func getVersion() -> Swift.String
+  public func getAdvertisingId() -> Swift.String?
+  public func getSourceConfiguration() -> [Swift.String : Any]?
+}
+public enum IllegalContent : Swift.Int {
+  case illegaleContent
+  case warez
+  case spywareMalware
+  case copyrightinfringement
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.IllegalContent : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.IllegalContent]
+  nonisolated public static var allCases: [Vmax.IllegalContent] {
+    get
+  }
+}
+@objc public class VmaxPagesIllegalContent : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.IllegalContent)
+  @objc deinit
+}
+public enum VmaxAdLayoutRegistrationType : Swift.CaseIterable {
+  case classBased
+  case experienceBased
+  public static func == (a: Vmax.VmaxAdLayoutRegistrationType, b: Vmax.VmaxAdLayoutRegistrationType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [Vmax.VmaxAdLayoutRegistrationType]
+  nonisolated public static var allCases: [Vmax.VmaxAdLayoutRegistrationType] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+open class VmaxError : Swift.Error {
+  final public let code: Swift.Int
+  final public let errorDescription: Swift.String
+  final public let recoveryMessage: Swift.String
+  public init(code: Swift.Int, errorDescription: Swift.String, recoveryMessage: Swift.String)
+  @objc deinit
+}
+extension Vmax.VmaxError : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum VmaxLogType : Swift.String {
+  case debug
+  case error
+  case info
+  case verbose
+  case warning
+  case severe
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public func log(_ mes: Swift.String, _ type: Vmax.VmaxLogType = .info, lNo: Swift.Int = #line, fun: Swift.String = #function, file: Swift.String = #file)
+public protocol VmaxNetworkAd : AnyObject {
+  func set(keywords: [Swift.String])
+  func set(customTargeting: [Swift.String : Swift.String])
+}
+final public class VmaxSDKError : Vmax.VmaxError {
+  public enum Codes : Swift.Int {
+    case adManagerInitFailed
+    case prepareVmaxAdFailed
+    case adRequestBlockedByAdvisor
+    case invalidAdSpaces
+    case prepareVmaxAdAssetFailed
+    case renditionAssetFailed
+    case invalidCTAurl
+    case universalLinkFailed
+    case requestAttributeBuilderEmpty
+    case requestAttributeValueNotSetForKey
+    case requestAttributesMissing
+    case requestAttributesValueCastMismatch
+    case requestAttributesKeyNotFoundInBuilder
+    case requestAttributesValueInvalid
+    case adspacesCountZero
+    case adRequestBuildBodyFailed
+    case renditionFailed
+    case adRequestResponseFailed
+    case invalidUserAgent
+    case invalidMarketingName
+    case invalidPlatformName
+    case executionStopped
+    case assetHelperNotInMemory
+    case assetDelegateNotInMemory
+    case delegateNotInMemory
+    case vppNotInMemory
+    case appNotInMemory
+    case containerIsMissingParentViewController
+    case requiredDependencyNotFound
+    case adSpotInActive
+    case adSpotUnAvailable
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public init(code: Vmax.VmaxSDKError.Codes)
+  public init(code: Vmax.VmaxSDKError.Codes, errorDescription: Swift.String)
+  public init(code: Vmax.VmaxSDKError.Codes, errorDescription: Swift.String, recoveryMessage: Swift.String)
+  @objc deinit
+}
+@objc public class VmaxCTAHandler : ObjectiveC.NSObject {
+  public init(urls: [Swift.String], viewControllerToPresent: UIKit.UIViewController, delegate: any Vmax.VmaxCTAHandlerEvents, adClickBrowser: Vmax.AdClickBrowser)
+  @objc deinit
+  public func open()
+}
+extension Vmax.VmaxCTAHandler : Vmax.VmaxCTAHandlerEvents {
+  public func onSuccessRedirect(event: Vmax.VmaxCTAaction)
+  public func onFailureRedirect(error: Vmax.VmaxError)
+  public func onCompleteCTA()
+}
+public protocol ViewPortManager {
+  func getParentWindow(from view: UIKit.UIView) -> UIKit.UIView?
+  func getParentScrollViews(from view: UIKit.UIView) -> [UIKit.UIView]
+  func addObserverToScrollViews()
+  func removeObserverFromScrollViews()
+  func isViewVisible(view: UIKit.UIView) -> Swift.Bool
+}
+extension Vmax.ViewPortManager {
+  public func getParentWindow(from view: UIKit.UIView) -> UIKit.UIView?
+  public func getParentScrollViews(from view: UIKit.UIView) -> [UIKit.UIView]
+  public func isViewVisible(view: UIKit.UIView) -> Swift.Bool
+}
+public enum VmaxHttpMethod : Swift.String {
+  case get
+  case post
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct VmaxHttpClientModel {
+  public init(endpoint: Swift.String)
+  public init(endpoint: Swift.String, method: Vmax.VmaxHttpMethod)
+  public init(endpoint: Swift.String, method: Vmax.VmaxHttpMethod, body: Foundation.Data)
+  public init(endpoint: Swift.String, method: Vmax.VmaxHttpMethod, headers: [Swift.String : Swift.String])
+  public init(endpoint: Swift.String, method: Vmax.VmaxHttpMethod, body: Foundation.Data, headers: [Swift.String : Swift.String])
+}
+public enum News : Swift.Int {
+  case internationalNews
+  case nationalNews
+  case localNews
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.News : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.News]
+  nonisolated public static var allCases: [Vmax.News] {
+    get
+  }
+}
+@objc public class VmaxPagesNews : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.News)
+  @objc deinit
+}
+public protocol VmaxRefreshableAd : AnyObject {
+  func shouldProcessRefresh() -> Swift.Bool
+}
+public protocol VmaxRefreshableAsset : AnyObject {
+  func set(adRefreshAsset: any Vmax.VmaxRefreshableAssetDelegate)
+}
+public protocol VmaxRefreshableAssetDelegate : AnyObject {
+  func onAdPaused()
+  func onAdResumed()
+  func onAdComplete()
+}
+public enum Gender : Swift.Int {
+  case male
+  case female
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.Gender : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.Gender]
+  nonisolated public static var allCases: [Vmax.Gender] {
+    get
+  }
+}
+public enum PersonalFinance : Swift.Int {
+  case beginningInvesting
+  case creditDebtLoans
+  case financialNews
+  case financialPlanning
+  case hedgeFund
+  case insurance
+  case investing
+  case mutualFunds
+  case options
+  case retirementPlanning
+  case stocks
+  case taxPlanning
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.PersonalFinance : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.PersonalFinance]
+  nonisolated public static var allCases: [Vmax.PersonalFinance] {
+    get
+  }
+}
+@objc public class VmaxPagesPersonalFinance : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.PersonalFinance)
+  @objc deinit
+}
+public enum VmaxVastEvent : Swift.String {
+  case impression
+  case click
+  case complete
+  case start
+  case firstQuartile
+  case midpoint
+  case thirdQuartile
+  case mute
+  case unmute
+  case pause
+  case resume
+  case expand
+  case collapse
+  case fullscreen
+  case exitfullscreen
+  case close
+  case skip
+  case skippableStateChange
+  case error
+  case fill
+  case nofill
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension Vmax.VmaxVastEvent : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.VmaxVastEvent]
+  nonisolated public static var allCases: [Vmax.VmaxVastEvent] {
+    get
+  }
+}
+public protocol VmaxAdsInsertion : ObjectiveC.NSObject {
+  var disableAdsOnBreakContinuation: Swift.Bool { get set }
+  func process(vmaxAdsInsertionModel: Vmax.VmaxAdsInsertionModel)
+  func pauseProcessing()
+  func resumeProcessing()
+  func stopProcessing()
+}
+public struct VmaxAdsInsertionModel {
+  public var avPlayer: AVFoundation.AVPlayer?
+  public var adContainer: UIKit.UIView?
+  public var customLayout: (any Vmax.VmaxLayout)?
+  public var bumperAdSpaceList: [Vmax.VmaxAdSpace]?
+  public var regularAdSpaceList: [Vmax.VmaxAdSpace]?
+  public var recurrence: Vmax.AdRecurrence?
+  public var minBreakDuration: Swift.Int?
+  public var maxBreakDuration: Swift.Int?
+  public var autoloadAfter: Swift.Int
+  public var loadOnPreloadSignal: Swift.Bool
+  public var allowReloadForNofill: Swift.Bool
+  public var maxDeficitRetries: Swift.Int
+  public var adsInsertionDelegate: (any Vmax.VmaxAdsInsertionDelegate)?
+}
+public enum AdRecurrence {
+  case once
+  case loop
+  public static func == (a: Vmax.AdRecurrence, b: Vmax.AdRecurrence) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol VmaxAdsInsertionDelegate : ObjectiveC.NSObject {
+  func onStart()
+  func onEnd()
+}
+public protocol VmaxAdsInsertionProcessDelegate : ObjectiveC.NSObject {
+  func onSuccess(adsInsertionHandler: Vmax.VmaxAdsInsertionHandler)
+  func onError(vmaxError: Vmax.VmaxError)
+}
+@_hasMissingDesignatedInitializers public class VmaxAdsInsertionHandler {
+  public func pause()
+  public func resume()
+  public func destroy()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxAdsInsertionRequest : Vmax.VmaxRequest {
+  @objc deinit
+}
+public class DampeningRequest {
+  public init()
+  public init(maxSleepValue: Swift.Int)
+  public func set(delegate: any Vmax.DampeningRequestDelegate)
+  public func dampenAdRequest()
+  public func resetDampen()
+  public func releaseObject()
+  @objc deinit
+}
+public protocol DampeningRequestDelegate {
+  func attemptAdRequest(dampeningRequest: Vmax.DampeningRequest)
+}
+extension CoreFoundation.CGAffineTransform {
+  public init(fromVmaxSource source: CoreFoundation.CGRect, toVmaxDestination destination: CoreFoundation.CGRect)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func vmax_findViewController() -> UIKit.UIViewController?
+}
+extension Swift.Array where Element : Swift.Comparable {
+  public func containsSameElements(fromVmax other: [Element]) -> Swift.Bool
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var vmax_heightConstraint: UIKit.NSLayoutConstraint? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var vmax_widthConstraint: UIKit.NSLayoutConstraint? {
+    get
+    set
+  }
+}
+extension UIKit.UIResponder {
+  @_Concurrency.MainActor @preconcurrency public var vmax_parentViewController: UIKit.UIViewController? {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var vmax_parentView: UIKit.UIView? {
+    get
+  }
+}
+extension UIKit.UIButton {
+  @_Concurrency.MainActor @preconcurrency public func vmax_addSkipableBorder(_ color: UIKit.UIColor = .white)
+}
+public enum Science : Swift.Int {
+  case astrology
+  case bviology
+  case chemistry
+  case geology
+  case paranormalPhenomena
+  case physics
+  case spaceAstronomy
+  case geography
+  case botany
+  case weather
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.Science : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.Science]
+  nonisolated public static var allCases: [Vmax.Science] {
+    get
+  }
+}
+@objc public class VmaxPagesScience : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.Science)
+  @objc deinit
+}
+public protocol VmaxCTAHandlerEvents : AnyObject {
+  func onSuccessRedirect(event: Vmax.VmaxCTAaction)
+  func onFailureRedirect(error: Vmax.VmaxError)
+  func onCompleteCTA()
+}
+public protocol VmaxCtaHelper {
+  init(url: Swift.String, event: any Vmax.VmaxCTAHandlerEvents, viewController: UIKit.UIViewController)
+  func open()
+}
+public enum MuteUnmute : Swift.Int {
+  case mute
+  case unmute
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol VmaxPictureInPictureDelegate : AnyObject {
+  func startPip(avPictureInPictureController: AVKit.AVPictureInPictureController)
+  func stopPip()
+}
+final public class VmaxPictureInPictureController {
+  public init(avPictureInPictureController: AVKit.AVPictureInPictureController)
+  final public func startPip()
+  final public func stopPip()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxPictureInPictureRegistry : ObjectiveC.NSObject {
+  public static var shared: Vmax.VmaxPictureInPictureRegistry
+  public func register(instreamAd: any Vmax.VmaxInstreamAd)
+  public func unregister(instreamAd: any Vmax.VmaxInstreamAd)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VmaxPictureInPictureManager {
+  public static var shared: Vmax.VmaxPictureInPictureManager
+  public var isPipEnabled: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class VmaxAdView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension Vmax.VmaxAdView {
+  @_Concurrency.MainActor @preconcurrency public func set(tag id: Swift.String, refresh interval: Swift.Int = 0, adClick browser: Vmax.AdClickBrowser = .embedded, layout: (any Vmax.VmaxLayout)?)
+  @_Concurrency.MainActor @preconcurrency public func loadAd()
+  @_Concurrency.MainActor @preconcurrency public func pauseAd()
+  @_Concurrency.MainActor @preconcurrency public func resumeAd()
+  @_Concurrency.MainActor @preconcurrency public func closeAd()
+}
+extension Vmax.VmaxAdView : Vmax.VmaxMediaEvents {
+  @_Concurrency.MainActor @preconcurrency public func onImpression<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onStart<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onFirstQuartile<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onMidPoint<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onThirdQuartile<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onProgress<T>(info: T?, currentTime: Swift.Double, totalDuration: Swift.Double)
+  @_Concurrency.MainActor @preconcurrency public func onResume<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onPause<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onMute<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onUnmute<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onComplete<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onFullscreen<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onExitFullscreen<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onClose<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onClick<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onSkip<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onSkippableStateChange<T>(info: T?)
+  @_Concurrency.MainActor @preconcurrency public func onError<T>(info: T?, error: Vmax.VmaxError)
+}
+extension Vmax.VmaxAdView : Vmax.VmaxCompanionEvents {
+  @_Concurrency.MainActor @preconcurrency public func onCompanionReady<T>(obj: T)
+  @_Concurrency.MainActor @preconcurrency public func onCompanionRender<T>(obj: T)
+  @_Concurrency.MainActor @preconcurrency public func onCompanionClose<T>(obj: T)
+  @_Concurrency.MainActor @preconcurrency public func onCompanionClick<T>(obj: T)
+  @_Concurrency.MainActor @preconcurrency public func onCompanionError<T>(obj: T, error: Vmax.VmaxError)
+  @_Concurrency.MainActor @preconcurrency public func onCompanionSkip<T>(obj: T)
+  @_Concurrency.MainActor @preconcurrency public func onCompanionComplete<T>(obj: T)
+}
+extension Vmax.VmaxAdView : Vmax.VmaxAdEventDelegate {
+  @_Concurrency.MainActor @preconcurrency public func onAdReady(vmaxAdSpace: Vmax.VmaxAdSpace)
+  @_Concurrency.MainActor @preconcurrency public func onAdError(vmaxAdSpace: Vmax.VmaxAdSpace, vmaxError: Vmax.VmaxError)
+  @_Concurrency.MainActor @preconcurrency public func onAdRender(vmaxAdSpace: Vmax.VmaxAdSpace)
+  @_Concurrency.MainActor @preconcurrency public func onAdRefresh(vmaxAdSpace: Vmax.VmaxAdSpace)
+  @_Concurrency.MainActor @preconcurrency public func onAdClick(vmaxAdSpace: Vmax.VmaxAdSpace)
+  @_Concurrency.MainActor @preconcurrency public func onAdClose(vmaxAdSpace: Vmax.VmaxAdSpace)
+}
+public protocol VmaxInterstitialDelegate : AnyObject {
+  func onAdInterstitialClose()
+}
+@_hasMissingDesignatedInitializers public class VmaxUser {
+  @objc deinit
+}
+extension Vmax.VmaxUser {
+  public func setId(id: Swift.String)
+  public func setGender(gender: Swift.String)
+  public func setAge(age: Swift.String)
+  public func setCity(city: Swift.String)
+  public func setRegion(region: Swift.String)
+  public func setCountry(country: Swift.String)
+  public func setZipCode(zipCode: Swift.String)
+  public func setKeywords(keywords: [Swift.String])
+}
+public protocol VmaxAdAssetHelper : ObjectiveC.NSObject {
+  func set<T>(delegate: T) where T : Vmax.VmaxAdAssetDelegate
+  func prepare<T>(data: T)
+  func show<T>(container: T)
+  func getAssetView() -> UIKit.UIView?
+  func set(layout: any Vmax.VmaxLayout)
+  func set(adInfo: Vmax.VmaxAdInfo)
+  func set(adClickBrowser: Vmax.AdClickBrowser)
+  func set(cacheMode: Vmax.VmaxCacheMode)
+  func set(mediaLoadTimeout: Swift.Int)
+  func getVmaxAdInfo() -> Vmax.VmaxAdInfo?
+  func set(adInteractionState: Vmax.InteractionState)
+  func pause()
+  func resume()
+  func close()
+  func handleAdClick()
+  func cacheMediaIfNotCached()
+}
+extension Vmax.VmaxAdAssetHelper {
+  public func set(layout: any Vmax.VmaxLayout)
+  public func set(adInfo: Vmax.VmaxAdInfo)
+  public func set(adClickBrowser: Vmax.AdClickBrowser)
+  public func set(cacheMode: Vmax.VmaxCacheMode)
+  public func set(mediaLoadTimeout: Swift.Int)
+  public func set(adInteractionState: Vmax.InteractionState)
+  public func getVmaxAdInfo() -> Vmax.VmaxAdInfo?
+  public func handleAdClick()
+  public func cacheMediaIfNotCached()
+}
+public protocol VmaxAdAssetDelegate : AnyObject {
+  func onPrepared<T>(asset: any Vmax.VmaxAdAssetHelper, result: T)
+  func onPrepareFailed(asset: any Vmax.VmaxAdAssetHelper, error: Vmax.VmaxError)
+  func onRendered<T>(asset: any Vmax.VmaxAdAssetHelper, result: T)
+  func onRenderFailed(asset: any Vmax.VmaxAdAssetHelper, error: Vmax.VmaxError)
+  func onClicked(asset: any Vmax.VmaxAdAssetHelper)
+  func onClickedComplete(asset: any Vmax.VmaxAdAssetHelper)
+  func onClosed(asset: any Vmax.VmaxAdAssetHelper)
+}
+public protocol VmaxWebAssetDelegate : Vmax.VmaxAdAssetDelegate {
+}
+public struct VmaxViewabilityResource {
+  public var javaScriptResource: Swift.String?
+  public var vendorKey: Swift.String?
+  public var verificationParam: Swift.String?
+  public init(javaScriptResource: Swift.String?, vendorKey: Swift.String?, verificationParam: Swift.String?)
+}
+public protocol VmaxTrackerManager {
+  func prepare<T>(data: T) -> any Vmax.VmaxTrackerManager
+  func get() -> Vmax.VmaxTracker?
+}
+public enum Careers : Swift.Int {
+  case careerPlanning
+  case college
+  case financialAid
+  case jobFairs
+  case jobSearch
+  case resumeWritingAdvice
+  case nursing
+  case scholarships
+  case telecommuting
+  case usMilitary
+  case careerAdvice
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.Careers : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.Careers]
+  nonisolated public static var allCases: [Vmax.Careers] {
+    get
+  }
+}
+@objc public class VmaxPagesCareers : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.Careers)
+  @objc deinit
+}
+public protocol VmaxAdEventDelegate : AnyObject {
+  func onAdReady(vmaxAdSpace: Vmax.VmaxAdSpace)
+  func onAdError(vmaxAdSpace: Vmax.VmaxAdSpace, vmaxError: Vmax.VmaxError)
+  func onAdRender(vmaxAdSpace: Vmax.VmaxAdSpace)
+  func onAdImpression(vmaxAdSpace: Vmax.VmaxAdSpace)
+  func onAdRefresh(vmaxAdSpace: Vmax.VmaxAdSpace)
+  func onAdClick(vmaxAdSpace: Vmax.VmaxAdSpace)
+  func onAdClose(vmaxAdSpace: Vmax.VmaxAdSpace)
+}
+extension Vmax.VmaxAdEventDelegate {
+  public func onAdImpression(vmaxAdSpace: Vmax.VmaxAdSpace)
+}
+public enum Education : Swift.Int {
+  case education7to12
+  case adultEducation
+  case artHistory
+  case colledgeAdministration
+  case collegeLife
+  case distanceLearning
+  case englishAsA2ndLanguage
+  case languageLearning
+  case graduateSchool
+  case homeschooling
+  case homeworkStudyTips
+  case k6Educators
+  case privateSchool
+  case specialEducation
+  case studyingBusiness
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.Education : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.Education]
+  nonisolated public static var allCases: [Vmax.Education] {
+    get
+  }
+}
+@objc public class VmaxPagesEducation : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.Education)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VmaxDevice {
+  @objc deinit
+}
+extension Vmax.VmaxDevice {
+  public func setConnectionType(connectionType: Vmax.ConnectionType)
+  public func getDeviceType() -> Vmax.DeviceType?
+  public func getConnectionType() -> Vmax.ConnectionType?
+  public func getDeviceModel() -> Swift.String?
+  public func setDeviceType(type: Vmax.DeviceType)
+  public func setMake(make: Swift.String)
+  public func setModel(model: Swift.String)
+  public func setOS(operatingSystem: Swift.String)
+  public func setOSVersion(version: Swift.String)
+  public func setLocation(location: CoreLocation.CLLocation)
+  public func setPlatform(platform: Swift.Int)
+  public func setMarketingName(marketingName: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxAdsInsertionRequestBuilder : Vmax.VMaxRequestBuilder {
+  public var disableAdsOnBreakContinuation: Swift.Bool
+  @discardableResult
+  public func addBumperAdSpace(adSpace: Vmax.VmaxAdSpace) -> Vmax.VmaxAdsInsertionRequestBuilder
+  @discardableResult
+  public func setAdSpaceRecurrence(_ adRecurrence: Vmax.AdRecurrence) -> Vmax.VmaxAdsInsertionRequestBuilder
+  @discardableResult
+  public func setMinBreakDuration(_ duration: Swift.Int) -> Vmax.VmaxAdsInsertionRequestBuilder
+  @discardableResult
+  public func setMaxBreakDuration(_ duration: Swift.Int) -> Vmax.VmaxAdsInsertionRequestBuilder
+  @discardableResult
+  public func setAutoLoadAfter(_ autoloadAfter: Swift.Int) -> Vmax.VmaxAdsInsertionRequestBuilder
+  @discardableResult
+  public func setMaxDeficitRetries(_ maxDeficitRetries: Swift.Int) -> Vmax.VmaxAdsInsertionRequestBuilder
+  override public func build() -> Vmax.VmaxAdsInsertionRequest
+  @objc deinit
+}
+public enum VmaxSections : Swift.Int {
+  case artsEntertainment
+  case automotive
+  case business
+  case careers
+  case education
+  case familyParenting
+  case healthFitness
+  case foodDrink
+  case hobbiesInterests
+  case homeGarden
+  case lawGovtPolitics
+  case news
+  case personalFinance
+  case society
+  case science
+  case pets
+  case sports
+  case styleFashion
+  case technologyComputing
+  case travel
+  case realEstate
+  case shopping
+  case religionSpirituality
+  case nonStandardContent
+  case illegalContent
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.VmaxSections : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.VmaxSections]
+  nonisolated public static var allCases: [Vmax.VmaxSections] {
+    get
+  }
+}
+public protocol VmaxLayout : UIKit.UIView {
+  func getNibName() -> Swift.String
+  func getParentContainer() -> UIKit.UIView?
+  func setUpNib() throws
+  func setUpInitialState()
+  func set(delegate: any Vmax.VmaxLayoutDelegate)
+}
+public protocol VmaxLayoutDelegate : AnyObject {
+  func onAdClick()
+}
+extension Vmax.VmaxLayout {
+  public func getNibName() -> Swift.String
+  public func getParentContainer() -> UIKit.UIView?
+  public func setUpNib() throws
+  public func setUpInitialState()
+  public func set(delegate: any Vmax.VmaxLayoutDelegate)
+}
+public enum AdPosition : Swift.Int {
+  case unknown
+  case aboveTheFold
+  case deprecated
+  case belowTheFold
+  case header
+  case footer
+  case sidebar
+  case fullScreen
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.AdPosition : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.AdPosition]
+  nonisolated public static var allCases: [Vmax.AdPosition] {
+    get
+  }
+}
+public enum VmaxCTAaction {
+  case native
+  case embedded
+  case deepLink
+  case operation
+  public static func == (a: Vmax.VmaxCTAaction, b: Vmax.VmaxCTAaction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum StyleFashion : Swift.Int {
+  case beauty
+  case bodyArt
+  case fashion
+  case jewelry
+  case clothing
+  case accessories
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.StyleFashion : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.StyleFashion]
+  nonisolated public static var allCases: [Vmax.StyleFashion] {
+    get
+  }
+}
+@objc public class VmaxPagesStyleFashion : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.StyleFashion)
+  @objc deinit
+}
+final public class VmaxClientError : Swift.Error {
+  final public let errorDescription: Swift.String
+  public enum Codes {
+    case badURL
+    case unknownError(error: Swift.String)
+    case errorHttpResponse
+    case notFound
+    case unknownResponseCode(code: Swift.Int)
+    case invalidData
+  }
+  public init(code: Vmax.VmaxClientError.Codes)
+  @objc deinit
+}
+public enum Society : Swift.Int {
+  case dating
+  case divorceSupport
+  case gayLife
+  case marriage
+  case seniorLiving
+  case teens
+  case weddings
+  case ethnicSpecific
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.Society : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.Society]
+  nonisolated public static var allCases: [Vmax.Society] {
+    get
+  }
+}
+@objc public class VmaxPagesSociety : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.Society)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VmaxApplication {
+  @objc deinit
+}
+extension Vmax.VmaxApplication {
+  public func setPageCategory(pageCategory: [any Vmax.VmaxPages])
+  public func setSectionCategory(sectionCategory: [Vmax.VmaxSections])
+  public func setCustomData(customData: [Swift.String : Swift.String])
+  public func setKeywords(keywords: [Swift.String])
+}
+public enum ReligionSpirituality : Swift.Int {
+  case alternativeReligions
+  case atheismAgnosticism
+  case buddhism
+  case catholicism
+  case christianity
+  case hinduism
+  case islam
+  case judaism
+  case latterDaySaints
+  case paganWiccan
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.ReligionSpirituality : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.ReligionSpirituality]
+  nonisolated public static var allCases: [Vmax.ReligionSpirituality] {
+    get
+  }
+}
+@objc public class VmaxPagesReligionSpirituality : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.ReligionSpirituality)
+  @objc deinit
+}
+public enum InteractionState {
+  case sdk
+  case user
+  case none
+  public static func == (a: Vmax.InteractionState, b: Vmax.InteractionState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol VmaxCompanionEventDelegate {
+  func set(companionEvents: any Vmax.VmaxCompanionEvents)
+}
+public protocol VmaxCompanionEvents : AnyObject {
+  func onCompanionReady<T>(obj: T)
+  func onCompanionRender<T>(obj: T)
+  func onCompanionClose<T>(obj: T)
+  func onCompanionClick<T>(obj: T)
+  func onCompanionError<T>(obj: T, error: Vmax.VmaxError)
+  func onCompanionSkip<T>(obj: T)
+  func onCompanionComplete<T>(obj: T)
+}
+public protocol VmaxCompanionParams {
+  func set(adParameters width: Swift.Int?, height: Swift.Int?)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VMaxRequestBuilder : ObjectiveC.NSObject {
+  @objc deinit
+  @discardableResult
+  public func addAdSpace(adSpace: Vmax.VmaxAdSpace) -> Vmax.VMaxRequestBuilder
+  @discardableResult
+  public func setTimeout(timeout: Swift.Int) -> Vmax.VMaxRequestBuilder
+  @discardableResult
+  public func setCache(cacheEnabled: Swift.Bool) -> Vmax.VMaxRequestBuilder
+  @discardableResult
+  public func setRetry(attemptCount: Swift.Int) -> Vmax.VMaxRequestBuilder
+  public func build() -> Vmax.VmaxRequest
+}
+@objc public class VmaxHttpClient : ObjectiveC.NSObject {
+  public init(vmaxHttpClientModel: Vmax.VmaxHttpClientModel)
+  public func fetch(completionHandler: @escaping (Swift.Result<Foundation.Data, Vmax.VmaxClientError>) -> Swift.Void)
+  @objc deinit
+}
+public enum NonStandardContent : Swift.Int {
+  case unmoderatedUgc
+  case extremeGraphicViolence
+  case pornography
+  case profaneContent
+  case hateContent
+  case underConstruction
+  case incentivized
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.NonStandardContent : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.NonStandardContent]
+  nonisolated public static var allCases: [Vmax.NonStandardContent] {
+    get
+  }
+}
+@objc public class VmaxPagesNonStandardContent : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.NonStandardContent)
+  @objc deinit
+}
+public protocol VmaxPages : AnyObject {
+  var stringValue: Swift.String { get }
+}
+public enum ArtsEntertainment : Swift.Int {
+  case booksLiterature
+  case celebrityFanGossip
+  case fineArt
+  case humor
+  case movies
+  case music
+  case television
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.ArtsEntertainment : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.ArtsEntertainment]
+  nonisolated public static var allCases: [Vmax.ArtsEntertainment] {
+    get
+  }
+}
+@objc public class VmaxPagesArtsEntertainment : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.ArtsEntertainment)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VmaxAdSpace {
+  @objc deinit
+  public var disableDampening: Swift.Bool
+}
+extension Vmax.VmaxAdSpace {
+  public func setRequestedAdOrientation(orientation: Vmax.Orientation)
+  public func setAdClickBrowser(type: Vmax.AdClickBrowser)
+  public func setInterstitialExperience(interstitialExperience: Swift.Bool)
+  public func addAdEventDelegate(adEventDelegate: any Vmax.VmaxAdEventDelegate)
+  public func addMediaEvents(mediaEvents: any Vmax.VmaxMediaEvents)
+  public func setCompanionEvents(companionEvents: any Vmax.VmaxCompanionEvents)
+  public func setVmaxAdLayout(vmaxAdLayout: Vmax.VmaxAdLayout)
+  public func showAd(container: UIKit.UIView)
+  public func getTagId() -> Swift.String
+  public func setRefreshInterval(time: Swift.Int)
+  public func pause()
+  public func resume()
+  public func close()
+  public func updateContainer(view: UIKit.UIView)
+  public func getVmaxAd() -> (any Vmax.VmaxAd)?
+  public func getId() -> Swift.String
+  public func getState() -> Vmax.VmaxAdSpaceState
+  public func getAdLayout() -> (any Vmax.VmaxLayout)?
+  public func setCacheMode(cacheMode: Vmax.VmaxCacheMode)
+  public func setMediaLoadTimeout(timeoutInSeconds: Swift.Int)
+  public func addCustomData(customData: [Swift.String : Swift.String])
+  public func isVmaxAdSpaceRefreshable() -> Swift.Bool
+}
+extension Vmax.VmaxAdSpace : Vmax.VmaxAdDelegate {
+  public func onLoadSuccess(vmaxAd: any Vmax.VmaxAd)
+  public func onLoadFailure(vmaxAd: any Vmax.VmaxAd, vmaxError: Vmax.VmaxError)
+  public func onRenderSuccess(vmaxAd: any Vmax.VmaxAd)
+  public func onRenderFailure(vmaxAd: any Vmax.VmaxAd, vmaxError: Vmax.VmaxError)
+  public func onAdPaused()
+  public func onAdResumed()
+  public func onClose(vmaxAd: any Vmax.VmaxAd)
+  public func onClicked(vmaxAd: any Vmax.VmaxAd)
+}
+public enum VmaxAdSpaceState {
+  case unknown
+  case initialized
+  case adRequested
+  case adReceived
+  case adReady
+  case adRender
+  case adError
+  case adRenderError
+  public static func == (a: Vmax.VmaxAdSpaceState, b: Vmax.VmaxAdSpaceState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum VmaxCacheMode {
+  case fullCaching
+  case markupCaching
+  public static func == (a: Vmax.VmaxCacheMode, b: Vmax.VmaxCacheMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum LawGovtPolitics : Swift.Int {
+  case immigration
+  case legalIssues
+  case usGovernmentResources
+  case politics
+  case commentary
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.LawGovtPolitics : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.LawGovtPolitics]
+  nonisolated public static var allCases: [Vmax.LawGovtPolitics] {
+    get
+  }
+}
+@objc public class VmaxPagesLawGovtPolitics : ObjectiveC.NSObject, Vmax.VmaxPages {
+  public var stringValue: Swift.String
+  public init(val: Vmax.LawGovtPolitics)
+  @objc deinit
+}
+public struct VmaxViewabilityMeta {
+  public var type: Vmax.VmaxViewabilityType
+  public var webView: UIKit.UIView?
+  public var mediaView: UIKit.UIView?
+  public var viewabilityResource: [Vmax.VmaxViewabilityResource]?
+  public var obstructions: [UIKit.UIView]?
+  public var delay: CoreFoundation.CGFloat?
+  public var isFullscreenAd: Swift.Bool?
+  public init(type: Vmax.VmaxViewabilityType)
+}
+public protocol VmaxAdDelegate : AnyObject {
+  func onLoadSuccess(vmaxAd: any Vmax.VmaxAd)
+  func onLoadFailure(vmaxAd: any Vmax.VmaxAd, vmaxError: Vmax.VmaxError)
+  func onRenderSuccess(vmaxAd: any Vmax.VmaxAd)
+  func onRenderFailure(vmaxAd: any Vmax.VmaxAd, vmaxError: Vmax.VmaxError)
+  func onAdPaused()
+  func onAdResumed()
+  func onClose(vmaxAd: any Vmax.VmaxAd)
+  func onClicked(vmaxAd: any Vmax.VmaxAd)
+}
+public protocol VmaxAd : ObjectiveC.NSObject {
+  func prepare(adResponse: Swift.String, delegate: any Vmax.VmaxAdDelegate)
+  func render(container: UIKit.UIView)
+  static func getSignatures() -> [Swift.String]
+  static func getRegexPatternSignatures() -> [Swift.String]
+  func set(layout: any Vmax.VmaxLayout)
+  func set(delegate: any Vmax.VmaxAdDelegate)
+  func set(adInfo: Vmax.VmaxAdInfo)
+  func set(adClickBrowser: Vmax.AdClickBrowser)
+  func set(cacheMode: Vmax.VmaxCacheMode)
+  func set(mediaLoadTimeout: Swift.Int)
+  func getVmaxAdInfo() -> Vmax.VmaxAdInfo?
+  func pause()
+  func resume()
+  func close()
+  func handleAdClick()
+  func cacheMediaIfNotCached()
+}
+extension Vmax.VmaxAd {
+  public static func getRegexPatternSignatures() -> [Swift.String]
+  public func set(delegate: any Vmax.VmaxAdDelegate)
+  public func set(adInfo: Vmax.VmaxAdInfo)
+  public func set(layout: any Vmax.VmaxLayout)
+  public func set(adClickBrowser: Vmax.AdClickBrowser)
+  public func set(cacheMode: Vmax.VmaxCacheMode)
+  public func set(mediaLoadTimeout: Swift.Int)
+  public func getVmaxAdInfo() -> Vmax.VmaxAdInfo?
+  public func handleAdClick()
+  public func cacheMediaIfNotCached()
+}
+public protocol VmaxFlutterAd : Vmax.VmaxAd {
+  func getAdResponse() -> Swift.String?
+}
+final public class VmaxAdInfo {
+  final public var signature: Swift.String?
+  final public var adMarkup: Swift.String?
+  final public var adId: Swift.String?
+  final public var adName: Swift.String?
+  final public var campaignId: Swift.String?
+  final public var campaignName: Swift.String?
+  final public var marketerId: Swift.String?
+  final public var marketerName: Swift.String?
+  final public var brand: Swift.String?
+  final public var agency: Swift.String?
+  final public var orderId: Swift.String?
+  final public var orderName: Swift.String?
+  final public var adSystem: Swift.String?
+  final public var adTitle: Swift.String?
+  final public var adDescription: Swift.String?
+  final public var ctaText: Swift.String?
+  final public var skipOffset: Swift.String?
+  final public var adDuration: Swift.String?
+  final public var isCTAAvailable: Swift.Bool?
+  final public var adIconUrl: Swift.String?
+  final public var adClickUrl: Swift.String?
+  final public var companions: [Any]?
+  final public var companionResourceUrls: [Swift.String]?
+  final public var cacheMode: Vmax.VmaxCacheMode
+  public init()
+  @objc deinit
+}
+public enum HealthFitness : Swift.Int {
+  case exercise
+  case add
+  case aidsHiv
+  case allergies
+  case alternativeMedicine
+  case arthritis
+  case asthma
+  case autismPod
+  case bipolarDisorder
+  case brainTumor
+  case cancer
+  case cholesterol
+  case chronicFatigueSyndrome
+  case chronicPain
+  case coldFlu
+  case deafness
+  case dentalCare
+  case depression
+  case dermatology
+  case diabetes
+  case epilepsy
+  case gerdAcidReflux
+  case headachesMigraines
+  case heartDisease
+  case herbsForHealth
+  case holisticHealing
+  case ibsCrohnsDisease
+  case incestAbuseSupport
+  case incontinence
+  case infertility
+  case mensHealth
+  case nutrition
+  case orthopedics
+  case panicAnxietyDisorders
+  case pediatrics
+  case physicalTherapy
+  case psychologyPsychiatry
+  case senorHealth
+  case sexuality
+  case sleepDisorders
+  case smokingCessation
+  case substanceAbuse
+  case thyroidDisease
+  case weightLoss
+  case womensHealth
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.HealthFitness : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.HealthFitness]
+  nonisolated public static var allCases: [Vmax.HealthFitness] {
+    get
+  }
+}
+@objc public class VmaxPagesHealthFitness : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.HealthFitness)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxAdspotRequestBuilder : Vmax.VMaxRequestBuilder {
+  @objc deinit
+}
+public enum Pets : Swift.Int {
+  case aquariums
+  case birds
+  case cats
+  case dogs
+  case largeAnimals
+  case reptiles
+  case veterinaryMedicine
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.Pets : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.Pets]
+  nonisolated public static var allCases: [Vmax.Pets] {
+    get
+  }
+}
+@objc public class VmaxPagesPets : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.Pets)
+  @objc deinit
+}
+public class VmaxTracker {
+  public init()
+  public func addEvent(event: Vmax.VmaxEvent)
+  public func fireNotification(eventName: Swift.String)
+  public func fireNotification(eventName: Swift.String, completionHandler: @escaping (Swift.Result<Foundation.Data, Vmax.VmaxClientError>) -> Swift.Void)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxRequest : ObjectiveC.NSObject {
+  public func setDistinctAdConfiguration(distinctValue: Swift.String)
+  public func setSignatures(signatures: [Swift.String])
+  @objc deinit
+}
+public enum HobbiesInterests : Swift.Int {
+  case artTechnology
+  case artsCrafts
+  case beadwork
+  case birdwatching
+  case boardGamesPuzzles
+  case candleSoapMaking
+  case cardGames
+  case chess
+  case cigars
+  case collecting
+  case comicBooks
+  case drawingSketching
+  case freelanceWriting
+  case genealogy
+  case gettingPublished
+  case guitar
+  case homeRecording
+  case investorsPatents
+  case jewelryMaking
+  case magicIllusion
+  case needlework
+  case painting
+  case photography
+  case radio
+  case roleplayingGames
+  case sciFiFantasy
+  case scrapbooking
+  case screenwriting
+  case stampsCoins
+  case videoComputerGames
+  case woodworking
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.HobbiesInterests : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.HobbiesInterests]
+  nonisolated public static var allCases: [Vmax.HobbiesInterests] {
+    get
+  }
+}
+@objc public class VmaxPagesHobbiesInterests : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.HobbiesInterests)
+  @objc deinit
+}
+public enum Automotive : Swift.Int {
+  case autoParts
+  case autoRepair
+  case buyingSellingCars
+  case carCulture
+  case certifiedPreOwned
+  case convertible
+  case coupe
+  case crossover
+  case diesel
+  case electricVehicle
+  case hatchback
+  case hybrid
+  case luxury
+  case minivan
+  case mororcycles
+  case offRoadVehicles
+  case performanceVehicles
+  case pickup
+  case roadSideAssistance
+  case sedan
+  case trucksAccessories
+  case vintageCars
+  case wagon
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.Automotive : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.Automotive]
+  nonisolated public static var allCases: [Vmax.Automotive] {
+    get
+  }
+}
+@objc public class VmaxPagesAutomotive : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.Automotive)
+  @objc deinit
+}
+public enum RealEstate : Swift.Int {
+  case apartments
+  case architects
+  case buyingSellingHomes
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Vmax.RealEstate : Swift.CaseIterable {
+  public typealias AllCases = [Vmax.RealEstate]
+  nonisolated public static var allCases: [Vmax.RealEstate] {
+    get
+  }
+}
+@objc public class VmaxPagesRealEstate : ObjectiveC.NSObject, Vmax.VmaxPages {
+  final public let stringValue: Swift.String
+  public init(val: Vmax.RealEstate)
+  @objc deinit
+}
+@objc public class VmaxTimer : ObjectiveC.NSObject {
+  public init(timeInterval: Foundation.TimeInterval, target: Any, callBack: ObjectiveC.Selector)
+  @objc deinit
+  public func remainingDurationInSeconds() -> Swift.Int
+  public func stop()
+  public func pause()
+  public func resume()
+}
+extension Vmax.VmaxAdAssetType : Swift.Equatable {}
+extension Vmax.VmaxAdAssetType : Swift.Hashable {}
+extension Vmax.ExpandCollapse : Swift.Equatable {}
+extension Vmax.ExpandCollapse : Swift.Hashable {}
+extension Vmax.ExpandCollapse : Swift.RawRepresentable {}
+extension Vmax.FamilyParenting : Swift.Equatable {}
+extension Vmax.FamilyParenting : Swift.Hashable {}
+extension Vmax.FamilyParenting : Swift.RawRepresentable {}
+extension Vmax.VmaxCarouselSwipeMode : Swift.Equatable {}
+extension Vmax.VmaxCarouselSwipeMode : Swift.Hashable {}
+extension Vmax.Sports : Swift.Equatable {}
+extension Vmax.Sports : Swift.Hashable {}
+extension Vmax.Sports : Swift.RawRepresentable {}
+extension Vmax.VmaxViewabilityType : Swift.Equatable {}
+extension Vmax.VmaxViewabilityType : Swift.Hashable {}
+extension Vmax.ConnectionType : Swift.Equatable {}
+extension Vmax.ConnectionType : Swift.Hashable {}
+extension Vmax.ConnectionType : Swift.RawRepresentable {}
+extension Vmax.FoodDrink : Swift.Equatable {}
+extension Vmax.FoodDrink : Swift.Hashable {}
+extension Vmax.FoodDrink : Swift.RawRepresentable {}
+extension Vmax.DeviceType : Swift.Equatable {}
+extension Vmax.DeviceType : Swift.Hashable {}
+extension Vmax.DeviceType : Swift.RawRepresentable {}
+extension Vmax.HomeGarden : Swift.Equatable {}
+extension Vmax.HomeGarden : Swift.Hashable {}
+extension Vmax.HomeGarden : Swift.RawRepresentable {}
+extension Vmax.TechnologyComputing : Swift.Equatable {}
+extension Vmax.TechnologyComputing : Swift.Hashable {}
+extension Vmax.TechnologyComputing : Swift.RawRepresentable {}
+extension Vmax.Shopping : Swift.Equatable {}
+extension Vmax.Shopping : Swift.Hashable {}
+extension Vmax.Shopping : Swift.RawRepresentable {}
+extension Vmax.Orientation : Swift.Equatable {}
+extension Vmax.Orientation : Swift.Hashable {}
+extension Vmax.Orientation : Swift.RawRepresentable {}
+extension Vmax.PauseResume : Swift.Equatable {}
+extension Vmax.PauseResume : Swift.Hashable {}
+extension Vmax.PauseResume : Swift.RawRepresentable {}
+extension Vmax.Travel : Swift.Equatable {}
+extension Vmax.Travel : Swift.Hashable {}
+extension Vmax.Travel : Swift.RawRepresentable {}
+extension Vmax.Business : Swift.Equatable {}
+extension Vmax.Business : Swift.Hashable {}
+extension Vmax.Business : Swift.RawRepresentable {}
+extension Vmax.AdClickBrowser : Swift.Equatable {}
+extension Vmax.AdClickBrowser : Swift.Hashable {}
+extension Vmax.AdClickBrowser : Swift.RawRepresentable {}
+extension Vmax.IllegalContent : Swift.Equatable {}
+extension Vmax.IllegalContent : Swift.Hashable {}
+extension Vmax.IllegalContent : Swift.RawRepresentable {}
+extension Vmax.VmaxAdLayoutRegistrationType : Swift.Equatable {}
+extension Vmax.VmaxAdLayoutRegistrationType : Swift.Hashable {}
+extension Vmax.VmaxLogType : Swift.Equatable {}
+extension Vmax.VmaxLogType : Swift.Hashable {}
+extension Vmax.VmaxLogType : Swift.RawRepresentable {}
+extension Vmax.VmaxSDKError.Codes : Swift.Equatable {}
+extension Vmax.VmaxSDKError.Codes : Swift.Hashable {}
+extension Vmax.VmaxSDKError.Codes : Swift.RawRepresentable {}
+extension Vmax.VmaxHttpMethod : Swift.Equatable {}
+extension Vmax.VmaxHttpMethod : Swift.Hashable {}
+extension Vmax.VmaxHttpMethod : Swift.RawRepresentable {}
+extension Vmax.News : Swift.Equatable {}
+extension Vmax.News : Swift.Hashable {}
+extension Vmax.News : Swift.RawRepresentable {}
+extension Vmax.Gender : Swift.Equatable {}
+extension Vmax.Gender : Swift.Hashable {}
+extension Vmax.Gender : Swift.RawRepresentable {}
+extension Vmax.PersonalFinance : Swift.Equatable {}
+extension Vmax.PersonalFinance : Swift.Hashable {}
+extension Vmax.PersonalFinance : Swift.RawRepresentable {}
+extension Vmax.VmaxVastEvent : Swift.Equatable {}
+extension Vmax.VmaxVastEvent : Swift.Hashable {}
+extension Vmax.VmaxVastEvent : Swift.RawRepresentable {}
+extension Vmax.AdRecurrence : Swift.Equatable {}
+extension Vmax.AdRecurrence : Swift.Hashable {}
+extension Vmax.Science : Swift.Equatable {}
+extension Vmax.Science : Swift.Hashable {}
+extension Vmax.Science : Swift.RawRepresentable {}
+extension Vmax.MuteUnmute : Swift.Equatable {}
+extension Vmax.MuteUnmute : Swift.Hashable {}
+extension Vmax.MuteUnmute : Swift.RawRepresentable {}
+extension Vmax.Careers : Swift.Equatable {}
+extension Vmax.Careers : Swift.Hashable {}
+extension Vmax.Careers : Swift.RawRepresentable {}
+extension Vmax.Education : Swift.Equatable {}
+extension Vmax.Education : Swift.Hashable {}
+extension Vmax.Education : Swift.RawRepresentable {}
+extension Vmax.VmaxSections : Swift.Equatable {}
+extension Vmax.VmaxSections : Swift.Hashable {}
+extension Vmax.VmaxSections : Swift.RawRepresentable {}
+extension Vmax.AdPosition : Swift.Equatable {}
+extension Vmax.AdPosition : Swift.Hashable {}
+extension Vmax.AdPosition : Swift.RawRepresentable {}
+extension Vmax.VmaxCTAaction : Swift.Equatable {}
+extension Vmax.VmaxCTAaction : Swift.Hashable {}
+extension Vmax.StyleFashion : Swift.Equatable {}
+extension Vmax.StyleFashion : Swift.Hashable {}
+extension Vmax.StyleFashion : Swift.RawRepresentable {}
+extension Vmax.Society : Swift.Equatable {}
+extension Vmax.Society : Swift.Hashable {}
+extension Vmax.Society : Swift.RawRepresentable {}
+extension Vmax.ReligionSpirituality : Swift.Equatable {}
+extension Vmax.ReligionSpirituality : Swift.Hashable {}
+extension Vmax.ReligionSpirituality : Swift.RawRepresentable {}
+extension Vmax.InteractionState : Swift.Equatable {}
+extension Vmax.InteractionState : Swift.Hashable {}
+extension Vmax.NonStandardContent : Swift.Equatable {}
+extension Vmax.NonStandardContent : Swift.Hashable {}
+extension Vmax.NonStandardContent : Swift.RawRepresentable {}
+extension Vmax.ArtsEntertainment : Swift.Equatable {}
+extension Vmax.ArtsEntertainment : Swift.Hashable {}
+extension Vmax.ArtsEntertainment : Swift.RawRepresentable {}
+extension Vmax.VmaxAdSpaceState : Swift.Equatable {}
+extension Vmax.VmaxAdSpaceState : Swift.Hashable {}
+extension Vmax.VmaxCacheMode : Swift.Equatable {}
+extension Vmax.VmaxCacheMode : Swift.Hashable {}
+extension Vmax.LawGovtPolitics : Swift.Equatable {}
+extension Vmax.LawGovtPolitics : Swift.Hashable {}
+extension Vmax.LawGovtPolitics : Swift.RawRepresentable {}
+extension Vmax.HealthFitness : Swift.Equatable {}
+extension Vmax.HealthFitness : Swift.Hashable {}
+extension Vmax.HealthFitness : Swift.RawRepresentable {}
+extension Vmax.Pets : Swift.Equatable {}
+extension Vmax.Pets : Swift.Hashable {}
+extension Vmax.Pets : Swift.RawRepresentable {}
+extension Vmax.HobbiesInterests : Swift.Equatable {}
+extension Vmax.HobbiesInterests : Swift.Hashable {}
+extension Vmax.HobbiesInterests : Swift.RawRepresentable {}
+extension Vmax.Automotive : Swift.Equatable {}
+extension Vmax.Automotive : Swift.Hashable {}
+extension Vmax.Automotive : Swift.RawRepresentable {}
+extension Vmax.RealEstate : Swift.Equatable {}
+extension Vmax.RealEstate : Swift.Hashable {}
+extension Vmax.RealEstate : Swift.RawRepresentable {}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LatestAlbumCell" id="gTV-IL-0wX" customClass="LatestAlbumCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="138" height="186"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="138" height="186"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xer-YE-Z1T">
+                        <rect key="frame" x="5" y="5" width="128" height="176"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration" translatesAutoresizingMaskIntoConstraints="NO" id="MB7-kN-68p">
+                                <rect key="frame" x="-2" y="0.0" width="132" height="132"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="HcR-uk-Bzd"/>
+                                    <constraint firstAttribute="width" constant="132" id="MHh-Q0-A2o"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5Z8-sK-OmP">
+                                <rect key="frame" x="0.0" y="138" width="128" height="38"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saat Sotero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbY-XX-DBu">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                        <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minar Rahman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJ0-rw-TT5">
+                                        <rect key="frame" x="0.0" y="21.5" width="128" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MB7-kN-68p" firstAttribute="centerX" secondItem="xer-YE-Z1T" secondAttribute="centerX" id="CyR-Xq-5q3"/>
+                            <constraint firstAttribute="trailing" secondItem="5Z8-sK-OmP" secondAttribute="trailing" id="M71-rv-B6X"/>
+                            <constraint firstItem="MB7-kN-68p" firstAttribute="top" secondItem="xer-YE-Z1T" secondAttribute="top" id="OtF-90-fVu"/>
+                            <constraint firstItem="5Z8-sK-OmP" firstAttribute="leading" secondItem="xer-YE-Z1T" secondAttribute="leading" id="SbW-IF-3S0"/>
+                            <constraint firstItem="5Z8-sK-OmP" firstAttribute="top" secondItem="MB7-kN-68p" secondAttribute="bottom" constant="6" id="cWA-uj-DeI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="xer-YE-Z1T" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="AeP-di-l5z"/>
+                <constraint firstAttribute="bottom" secondItem="xer-YE-Z1T" secondAttribute="bottom" constant="5" id="D8W-vO-mfv"/>
+                <constraint firstItem="xer-YE-Z1T" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="jxt-HN-gOy"/>
+                <constraint firstAttribute="trailing" secondItem="xer-YE-Z1T" secondAttribute="trailing" constant="5" id="kAD-Nj-yu2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="138" height="186"/>
+            <connections>
+                <outlet property="albumArtistLbl" destination="IJ0-rw-TT5" id="mLS-34-mw0"/>
+                <outlet property="albumImgView" destination="MB7-kN-68p" id="Usc-fQ-de5"/>
+                <outlet property="albumTitleLbl" destination="CbY-XX-DBu" id="an6-SB-2Hn"/>
+            </connections>
+            <point key="canvasLocation" x="200" y="209.59520239880061"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Illustration" width="360" height="359"/>
+    </resources>
+</document>

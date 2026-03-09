@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HelpCenterCVCell2" customModule="Shadhin_Gp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="277"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="372" height="277"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="SMy-pQ-v66">
+                        <rect key="frame" x="16" y="0.0" width="340" height="108"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequently Asked Questions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPd-Ak-1eb">
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="21.666666666666668"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cni-yj-Q7n">
+                                <rect key="frame" x="0.0" y="33.666666666666664" width="340" height="74.333333333333343"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xox-TP-Zp3">
+                                        <rect key="frame" x="16" y="12.000000000000004" width="308" height="50.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWb-d8-LJc">
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="50.333333333333336"/>
+                                                <color key="backgroundColor" name="gp"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="English">
+                                                    <color key="titleColor" name="mostPopular_bgColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="egnlishBtnAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="fUh-x6-BXd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1A-Ly-txL">
+                                                <rect key="frame" x="160" y="0.0" width="148" height="50.333333333333336"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="বাংলা">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="banglaBtnAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2Yj-WS-ezl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="mostPopular_bgColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xox-TP-Zp3" secondAttribute="trailing" constant="16" id="8Gn-e0-Yoh"/>
+                                    <constraint firstItem="xox-TP-Zp3" firstAttribute="leading" secondItem="cni-yj-Q7n" secondAttribute="leading" constant="16" id="BWY-OW-g4a"/>
+                                    <constraint firstAttribute="bottom" secondItem="xox-TP-Zp3" secondAttribute="bottom" constant="12" id="dbG-CU-kyX"/>
+                                    <constraint firstItem="xox-TP-Zp3" firstAttribute="top" secondItem="cni-yj-Q7n" secondAttribute="top" constant="12" id="oQC-fe-3xb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="108" id="5SA-Ca-sle"/>
+                        </constraints>
+                    </stackView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JhA-Ey-GnN">
+                        <rect key="frame" x="16" y="116" width="340" height="161"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aep-qJ-KvL">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="JhA-Ey-GnN" firstAttribute="trailing" secondItem="SMy-pQ-v66" secondAttribute="trailing" id="CLO-td-o9e"/>
+                <constraint firstAttribute="bottom" secondItem="JhA-Ey-GnN" secondAttribute="bottom" id="Udv-cC-11K"/>
+                <constraint firstAttribute="trailing" secondItem="SMy-pQ-v66" secondAttribute="trailing" constant="16" id="bbN-dA-Gax"/>
+                <constraint firstItem="JhA-Ey-GnN" firstAttribute="top" secondItem="SMy-pQ-v66" secondAttribute="bottom" constant="8" id="hdD-ft-Awn"/>
+                <constraint firstItem="SMy-pQ-v66" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="pkI-4g-e6W"/>
+                <constraint firstItem="JhA-Ey-GnN" firstAttribute="leading" secondItem="SMy-pQ-v66" secondAttribute="leading" id="rOH-U5-cU3"/>
+                <constraint firstItem="SMy-pQ-v66" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vGS-CF-Qcw"/>
+            </constraints>
+            <size key="customSize" width="304" height="277"/>
+            <connections>
+                <outlet property="banglaBtn" destination="k1A-Ly-txL" id="AJh-Ec-Eto"/>
+                <outlet property="btnBgView" destination="cni-yj-Q7n" id="dhr-4V-kmU"/>
+                <outlet property="collectionView" destination="JhA-Ey-GnN" id="d6y-st-WD5"/>
+                <outlet property="englishBtn" destination="vWb-d8-LJc" id="fHG-g6-qHH"/>
+                <outlet property="titleLabel" destination="dPd-Ak-1eb" id="99S-kJ-f3b"/>
+            </connections>
+            <point key="canvasLocation" x="195.41984732824426" y="99.647887323943664"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="gp">
+            <color red="0.0" green="0.68999999761581421" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mostPopular_bgColor">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

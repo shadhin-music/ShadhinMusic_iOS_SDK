@@ -1,0 +1,397 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name VmaxVideoHelper
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVKit
+import DeveloperToolsSupport
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import Vmax
+import VmaxVastHelper
+@_exported import VmaxVideoHelper
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct VmaxVPPAsset {
+  public let mediaUrl: Swift.String
+}
+final public class VmaxVastVideoTracker : Vmax.VmaxTrackerManager {
+  public init()
+  final public func prepare<T>(data: T) -> any Vmax.VmaxTrackerManager
+  final public func get() -> Vmax.VmaxTracker?
+  @objc deinit
+}
+final public class VmaxVastCompanionTracker {
+  public init(vastCreativeCompanion: VmaxVastHelper.VmaxVastCreativeCompanion)
+  final public func get() -> Vmax.VmaxTracker?
+  @objc deinit
+}
+@objc public class SyncCompanionEventsReceiver : ObjectiveC.NSObject, VmaxVideoHelper.VmaxCompanionEventsReceiver {
+  required public init(adSlotIds: [Swift.String], delegate: any Vmax.VmaxCompanionEvents)
+  required public init(adSlotIds: [Swift.String], delegate: any Vmax.VmaxCompanionEvents, container: UIKit.UIView)
+  public func onCompanionShow(adSlotId: Swift.String, vmaxCache: VmaxVideoHelper.VmaxCache)
+  public func onCompanionClose(adSlotId: Swift.String)
+  public func set(container: UIKit.UIView)
+  public func doPause(adSlotId: Swift.String)
+  public func doResume(adSlotId: Swift.String)
+  public func doUpdate(adSlotId: Swift.String, message: Swift.String)
+  public func onCompanionError(adSlotId: Swift.String, error: Vmax.VmaxError)
+  public func getAdSlotId() -> [Swift.String]
+  public func set(companionInfo: VmaxVastHelper.VmaxVastCreativeCompanion)
+  public func get() -> VmaxVastHelper.VmaxVastCreativeCompanion?
+  public func set(vmaxCache: VmaxVideoHelper.VmaxCache)
+  public func get() -> VmaxVideoHelper.VmaxCache?
+  public func set(selectedAdSlotId: Swift.String)
+  public func getSelectedAdSlotId() -> Swift.String?
+  @objc deinit
+}
+final public class VmaxVideoHelperError : Vmax.VmaxError {
+  public enum Codes : Swift.Int {
+    case playerFailed
+    case playerHelperFailed
+    case mediaFilesIsEmpty
+    case mediaInvalidUrl
+    case breakFailedDueToInsfficientData
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public init(code: VmaxVideoHelper.VmaxVideoHelperError.Codes)
+  public init(code: VmaxVideoHelper.VmaxVideoHelperError.Codes, errorDescription: Swift.String)
+  public init(code: VmaxVideoHelper.VmaxVideoHelperError.Codes, errorDescription: Swift.String, recoveryMessage: Swift.String)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class VmaxVideoInstreamLayout : UIKit.UIView {
+  @objc deinit
+}
+extension VmaxVideoHelper.VmaxVideoInstreamLayout : VmaxVideoHelper.VmaxVideoLayout {
+  @_Concurrency.MainActor @preconcurrency final public func set(delegate: any VmaxVideoHelper.VmaxVideoLayoutDelegate)
+  @_Concurrency.MainActor @preconcurrency final public func setUpInitialState()
+  @_Concurrency.MainActor @preconcurrency final public func getNibName() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency final public func getParentContainer() -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency final public func getOverlayContainer() -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency final public func update(currentAdDuration: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency final public func update(totalAdDuration: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency final public func update(state: Vmax.PauseResume)
+  @_Concurrency.MainActor @preconcurrency final public func update(ctaText: Swift.String)
+  @_Concurrency.MainActor @preconcurrency final public func update(skipState: Vmax.VmaxSkipState)
+  @_Concurrency.MainActor @preconcurrency final public func update(adText: Swift.String)
+  @_Concurrency.MainActor @preconcurrency final public func getFriendlyObstructions() -> [UIKit.UIView]?
+  @_Concurrency.MainActor @preconcurrency final public func isFullScreen() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency final public func setOverlayAdspotIds(adSpots: [Swift.String])
+  @_Concurrency.MainActor @preconcurrency final public func getOverlayAdspotIds() -> [Swift.String]
+  @_Concurrency.MainActor @preconcurrency final public func getAdLayoutSize() -> CoreFoundation.CGSize
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxAdBillboardVideo : ObjectiveC.NSObject, Vmax.VmaxAd {
+  @objc deinit
+  public func prepare(adResponse: Swift.String, delegate: any Vmax.VmaxAdDelegate)
+  public func render(container: UIKit.UIView)
+  public static func getSignatures() -> [Swift.String]
+  public static func getRegexPatternSignatures() -> [Swift.String]
+  public func pause()
+  public func resume()
+  public func close()
+  public func set(layout: any Vmax.VmaxLayout)
+  public func set(adClickBrowser: Vmax.AdClickBrowser)
+  public func set(adInfo: Vmax.VmaxAdInfo)
+  public func getVmaxAdInfo() -> Vmax.VmaxAdInfo?
+}
+extension VmaxVideoHelper.VmaxAdBillboardVideo : Vmax.VmaxRefreshableAd {
+  public func shouldProcessRefresh() -> Swift.Bool
+}
+extension VmaxVideoHelper.VmaxAdBillboardVideo : Vmax.VmaxMediaEventsDelegate {
+  public func set(vmaxMediaEvents: [any Vmax.VmaxMediaEvents])
+}
+extension VmaxVideoHelper.VmaxAdBillboardVideo : Vmax.VmaxCompanionEventDelegate {
+  public func set(companionEvents: any Vmax.VmaxCompanionEvents)
+}
+extension VmaxVideoHelper.VmaxAdBillboardVideo : Vmax.VmaxViewabilityProtocol {
+  public func add(viewability: any Vmax.VmaxAdViewability)
+}
+extension VmaxVideoHelper.VmaxAdBillboardVideo : Vmax.VmaxAdAssetDelegate {
+  public func onPrepared<T>(asset: any Vmax.VmaxAdAssetHelper, result: T)
+  public func onPrepareFailed(asset: any Vmax.VmaxAdAssetHelper, error: Vmax.VmaxError)
+  public func onRendered<T>(asset: any Vmax.VmaxAdAssetHelper, result: T)
+  public func onRenderFailed(asset: any Vmax.VmaxAdAssetHelper, error: Vmax.VmaxError)
+  public func onClosed(asset: any Vmax.VmaxAdAssetHelper)
+  public func onClicked(asset: any Vmax.VmaxAdAssetHelper)
+  public func onClickedComplete(asset: any Vmax.VmaxAdAssetHelper)
+}
+extension VmaxVideoHelper.VmaxAdBillboardVideo : Vmax.ViewPortManager {
+  public func addObserverToScrollViews()
+  public func removeObserverFromScrollViews()
+  @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+}
+extension VmaxVideoHelper.VmaxAdBillboardVideo : Vmax.VmaxRefreshableAssetDelegate {
+  public func onAdPaused()
+  public func onAdResumed()
+  public func onAdComplete()
+}
+public protocol VmaxCompanionEventsReceiver : ObjectiveC.NSObject {
+  init(adSlotIds: [Swift.String], delegate: any Vmax.VmaxCompanionEvents)
+  func set(container: UIKit.UIView)
+  init(adSlotIds: [Swift.String], delegate: any Vmax.VmaxCompanionEvents, container: UIKit.UIView)
+  func onCompanionShow(adSlotId: Swift.String, vmaxCache: VmaxVideoHelper.VmaxCache)
+  func onCompanionClose(adSlotId: Swift.String)
+  func doPause(adSlotId: Swift.String)
+  func doResume(adSlotId: Swift.String)
+  func doUpdate(adSlotId: Swift.String, message: Swift.String)
+  func onCompanionError(adSlotId: Swift.String, error: Vmax.VmaxError)
+  func getAdSlotId() -> [Swift.String]
+  func set(companionInfo: VmaxVastHelper.VmaxVastCreativeCompanion)
+  func get() -> VmaxVastHelper.VmaxVastCreativeCompanion?
+  func set(vmaxCache: VmaxVideoHelper.VmaxCache)
+  func get() -> VmaxVideoHelper.VmaxCache?
+  func set(selectedAdSlotId: Swift.String)
+  func getSelectedAdSlotId() -> Swift.String?
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxAdInterstitialVideo : ObjectiveC.NSObject, Vmax.VmaxAd {
+  @objc deinit
+  public func prepare(adResponse: Swift.String, delegate: any Vmax.VmaxAdDelegate)
+  public func render(container: UIKit.UIView)
+  public static func getSignatures() -> [Swift.String]
+  public func pause()
+  public func resume()
+  public func close()
+  public func set(layout: any Vmax.VmaxLayout)
+  public func set(adClickBrowser: Vmax.AdClickBrowser)
+  public func set(adInfo: Vmax.VmaxAdInfo)
+  public func getVmaxAdInfo() -> Vmax.VmaxAdInfo?
+}
+extension VmaxVideoHelper.VmaxAdInterstitialVideo : Vmax.VmaxMediaEventsDelegate {
+  public func set(vmaxMediaEvents: [any Vmax.VmaxMediaEvents])
+}
+extension VmaxVideoHelper.VmaxAdInterstitialVideo : Vmax.VmaxCompanionEventDelegate {
+  public func set(companionEvents: any Vmax.VmaxCompanionEvents)
+}
+extension VmaxVideoHelper.VmaxAdInterstitialVideo : Vmax.VmaxViewabilityProtocol {
+  public func add(viewability: any Vmax.VmaxAdViewability)
+}
+extension VmaxVideoHelper.VmaxAdInterstitialVideo : Vmax.VmaxAdAssetDelegate {
+  public func onPrepared<T>(asset: any Vmax.VmaxAdAssetHelper, result: T)
+  public func onPrepareFailed(asset: any Vmax.VmaxAdAssetHelper, error: Vmax.VmaxError)
+  public func onRendered<T>(asset: any Vmax.VmaxAdAssetHelper, result: T)
+  public func onRenderFailed(asset: any Vmax.VmaxAdAssetHelper, error: Vmax.VmaxError)
+  public func onClosed(asset: any Vmax.VmaxAdAssetHelper)
+  public func onClicked(asset: any Vmax.VmaxAdAssetHelper)
+  public func onClickedComplete(asset: any Vmax.VmaxAdAssetHelper)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxAdInstream : ObjectiveC.NSObject, Vmax.VmaxAd {
+  @objc deinit
+  public func prepare(adResponse: Swift.String, delegate: any Vmax.VmaxAdDelegate)
+  public func render(container: UIKit.UIView)
+  public static func getSignatures() -> [Swift.String]
+  public static func getRegexPatternSignatures() -> [Swift.String]
+  public static func addCustomSignature(_ customSignature: Swift.String)
+  public func pause()
+  public func resume()
+  public func close()
+  public func set(layout: any Vmax.VmaxLayout)
+  public func set(adClickBrowser: Vmax.AdClickBrowser)
+  public func set(adInfo: Vmax.VmaxAdInfo)
+  public func set(cacheMode: Vmax.VmaxCacheMode)
+  public func getVmaxAdInfo() -> Vmax.VmaxAdInfo?
+  public func handleAdClick()
+  public func cacheMediaIfNotCached()
+}
+extension VmaxVideoHelper.VmaxAdInstream : Vmax.VmaxAdAssetDelegate {
+  public func onPrepared<T>(asset: any Vmax.VmaxAdAssetHelper, result: T)
+  public func onPrepareFailed(asset: any Vmax.VmaxAdAssetHelper, error: Vmax.VmaxError)
+  public func onRendered<T>(asset: any Vmax.VmaxAdAssetHelper, result: T)
+  public func onRenderFailed(asset: any Vmax.VmaxAdAssetHelper, error: Vmax.VmaxError)
+  public func onClosed(asset: any Vmax.VmaxAdAssetHelper)
+  public func onClicked(asset: any Vmax.VmaxAdAssetHelper)
+  public func onClickedComplete(asset: any Vmax.VmaxAdAssetHelper)
+}
+extension VmaxVideoHelper.VmaxAdInstream : Vmax.VmaxMediaEventsDelegate {
+  public func set(vmaxMediaEvents: [any Vmax.VmaxMediaEvents])
+}
+extension VmaxVideoHelper.VmaxAdInstream : Vmax.VmaxCompanionEventDelegate {
+  public func set(companionEvents: any Vmax.VmaxCompanionEvents)
+}
+extension VmaxVideoHelper.VmaxAdInstream : Vmax.VmaxViewabilityProtocol {
+  public func add(viewability: any Vmax.VmaxAdViewability)
+}
+extension VmaxVideoHelper.VmaxAdInstream : Vmax.VmaxInstreamAd {
+  public func update(container view: UIKit.UIView)
+}
+public protocol VmaxVideoLayout : Vmax.VmaxLayout {
+  func getOverlayContainer() -> UIKit.UIView?
+  func update(state: Vmax.PauseResume)
+  func update(state: Vmax.MuteUnmute)
+  func update(state: Vmax.ExpandCollapse)
+  func update(ctaText: Swift.String)
+  func update(skipState: Vmax.VmaxSkipState)
+  func update(currentAdDuration: Swift.Int)
+  func update(totalAdDuration: Swift.Int)
+  func update(adText: Swift.String)
+  func getFriendlyObstructions() -> [UIKit.UIView]?
+  func isFullScreen() -> Swift.Bool
+  func set(delegate: any VmaxVideoHelper.VmaxVideoLayoutDelegate)
+  func setOverlayAdspotIds(adSpots: [Swift.String])
+  func getOverlayAdspotIds() -> [Swift.String]
+  func getAdLayoutSize() -> CoreFoundation.CGSize
+}
+extension VmaxVideoHelper.VmaxVideoLayout {
+  public func getOverlayContainer() -> UIKit.UIView?
+  public func update(state: Vmax.PauseResume)
+  public func update(state: Vmax.MuteUnmute)
+  public func update(state: Vmax.ExpandCollapse)
+  public func update(ctaText: Swift.String)
+  public func update(skipState: Vmax.VmaxSkipState)
+  public func update(currentAdDuration: Swift.Int)
+  public func update(totalAdDuration: Swift.Int)
+  public func update(adText: Swift.String)
+  public func getFriendlyObstructions() -> [UIKit.UIView]?
+  public func isFullScreen() -> Swift.Bool
+  public func setOverlayAdspotIds(adSpots: [Swift.String])
+  public func getOverlayAdspotIds() -> [Swift.String]
+}
+@objc public class VmaxCache : ObjectiveC.NSObject {
+  public init(htmlResource: Swift.String, delegate: any VmaxVideoHelper.VmaxCacheDelegate)
+  @objc deinit
+  public func set(height: Swift.Int)
+  public func set(width: Swift.Int)
+  public func getCache() -> UIKit.UIView?
+  public func removeCache()
+  public func notifyClickTrackers()
+  public func set(adSlotId: Swift.String, companionEvents: any Vmax.VmaxCompanionEvents)
+}
+public protocol VmaxCacheDelegate : AnyObject {
+  func onVmaxCacheRendered(cache: VmaxVideoHelper.VmaxCache, tracker: Vmax.VmaxTracker?)
+  func onVmaxCacheClicked()
+  func onVmaxCacheClickComplete()
+}
+extension VmaxVideoHelper.VmaxCache : Vmax.VmaxWebAssetDelegate {
+  public func onPrepared<T>(asset: any Vmax.VmaxAdAssetHelper, result: T)
+  public func onPrepareFailed(asset: any Vmax.VmaxAdAssetHelper, error: Vmax.VmaxError)
+  public func onRendered<T>(asset: any Vmax.VmaxAdAssetHelper, result: T)
+  public func onRenderFailed(asset: any Vmax.VmaxAdAssetHelper, error: Vmax.VmaxError)
+  public func onClicked(asset: any Vmax.VmaxAdAssetHelper)
+  public func onClickedComplete(asset: any Vmax.VmaxAdAssetHelper)
+  public func onClosed(asset: any Vmax.VmaxAdAssetHelper)
+}
+public protocol VmaxVideoLayoutDelegate : Vmax.VmaxLayoutDelegate {
+  func onStateChange(pauseResume: Vmax.PauseResume)
+  func onStateChange(muteUnmute: Vmax.MuteUnmute)
+  func onStateChange(expandCollapse: Vmax.ExpandCollapse)
+  func onAdSkipped()
+  func onSkippableStateChange()
+}
+public struct VPPCachedInfo {
+  public let totalDuration: Swift.Double
+  public init(totalDuration: Swift.Double)
+}
+public enum AdExperience : Swift.Int {
+  case instreamAd
+  case billboardAd
+  case interstitialAd
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol VmaxVpp {
+  init(delegate: any VmaxVideoHelper.VmaxVppDelegate)
+  func add(event: any Vmax.VmaxMediaEvents)
+  func cache(asset: VmaxVideoHelper.VmaxVPPAsset)
+  func show(container: UIKit.UIView, state: VmaxVideoHelper.InitialVPPState)
+  func set(layout: any VmaxVideoHelper.VmaxVideoLayout)
+  func set(cacheMode: Vmax.VmaxCacheMode)
+  func replay()
+  func close()
+  func destroy()
+  func control(playPause: Vmax.PauseResume, interactedBy: Vmax.InteractionState?)
+  func control(muteUnmute: Vmax.MuteUnmute)
+  func playNext()
+  func get(adDuration mediaURL: Swift.String) -> Swift.Double
+  func getOverlayView() -> UIKit.UIView?
+  func update(adBadgeText: Swift.String)
+  func cacheMediaIfNotCached()
+}
+extension VmaxVideoHelper.VmaxVpp {
+  public func getOverlayView() -> UIKit.UIView?
+  public func update(adBadgeText: Swift.String)
+  public func set(cacheMode: Vmax.VmaxCacheMode)
+  public func cacheMediaIfNotCached()
+}
+public protocol VmaxVppDelegate : AnyObject {
+  func cacheSucceeded(info: VmaxVideoHelper.VPPCachedInfo, asset: VmaxVideoHelper.VmaxVPPAsset)
+  func cacheFailed(error: Vmax.VmaxError, asset: VmaxVideoHelper.VmaxVPPAsset?)
+  func showSuccess(asset: VmaxVideoHelper.VmaxVPPAsset)
+  func showFailure(error: Vmax.VmaxError, asset: VmaxVideoHelper.VmaxVPPAsset?)
+  func showComplete(asset: VmaxVideoHelper.VmaxVPPAsset)
+}
+public struct InitialVPPState {
+  public let pauseResume: Vmax.PauseResume
+  public let muteUnmute: Vmax.MuteUnmute
+  public init()
+  public init(pauseResume: Vmax.PauseResume)
+  public init(muteUnmute: Vmax.MuteUnmute)
+  public init(muteUnmute: Vmax.MuteUnmute, pauseResume: Vmax.PauseResume)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxAdExternalVastNetwork : ObjectiveC.NSObject, Vmax.VmaxAd {
+  @objc deinit
+  public func set(delegate: any Vmax.VmaxAdDelegate)
+  public func prepare(adResponse: Swift.String, delegate: any Vmax.VmaxAdDelegate)
+  public func render(container: UIKit.UIView)
+  public static func getSignatures() -> [Swift.String]
+  public func pause()
+  public func resume()
+  public func close()
+  public func set(layout: any Vmax.VmaxLayout)
+  public func set(adClickBrowser: Vmax.AdClickBrowser)
+  public func set(cacheMode: Vmax.VmaxCacheMode)
+  public func set(adInfo: Vmax.VmaxAdInfo)
+  public func getVmaxAdInfo() -> Vmax.VmaxAdInfo?
+  public func handleAdClick()
+  public func cacheMediaIfNotCached()
+}
+extension VmaxVideoHelper.VmaxAdExternalVastNetwork : Vmax.VmaxAdAssetDelegate {
+  public func onPrepared<T>(asset: any Vmax.VmaxAdAssetHelper, result: T)
+  public func onPrepareFailed(asset: any Vmax.VmaxAdAssetHelper, error: Vmax.VmaxError)
+  public func onRendered<T>(asset: any Vmax.VmaxAdAssetHelper, result: T)
+  public func onRenderFailed(asset: any Vmax.VmaxAdAssetHelper, error: Vmax.VmaxError)
+  public func onClosed(asset: any Vmax.VmaxAdAssetHelper)
+  public func onClicked(asset: any Vmax.VmaxAdAssetHelper)
+  public func onClickedComplete(asset: any Vmax.VmaxAdAssetHelper)
+}
+extension VmaxVideoHelper.VmaxAdExternalVastNetwork : Vmax.VmaxMediaEventsDelegate {
+  public func set(vmaxMediaEvents: [any Vmax.VmaxMediaEvents])
+  public func update(vmaxMediaEvents: [any Vmax.VmaxMediaEvents])
+}
+extension VmaxVideoHelper.VmaxAdExternalVastNetwork : Vmax.VmaxCompanionEventDelegate {
+  public func set(companionEvents: any Vmax.VmaxCompanionEvents)
+}
+extension VmaxVideoHelper.VmaxAdExternalVastNetwork : Vmax.VmaxViewabilityProtocol {
+  public func add(viewability: any Vmax.VmaxAdViewability)
+  public func update(viewability: any Vmax.VmaxAdViewability)
+}
+extension VmaxVideoHelper.VmaxAdExternalVastNetwork : Vmax.VmaxInstreamAd {
+  public func update(container view: UIKit.UIView)
+}
+public struct VmaxCompanionMasterModel {
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxCompanionRegistry : ObjectiveC.NSObject {
+  public static var shared: VmaxVideoHelper.VmaxCompanionRegistry
+  public func registerMasterView(primaryView: VmaxVideoHelper.VmaxCompanionMasterModel, companions: [VmaxVastHelper.VmaxVastCreativeCompanion])
+  public func unregisterMasterView(primaryView: VmaxVideoHelper.VmaxCompanionMasterModel)
+  public func registerCompanionEventsReceivers(receiver: any VmaxVideoHelper.VmaxCompanionEventsReceiver)
+  public func unregisterCompanionEventsReceivers(receiver: any VmaxVideoHelper.VmaxCompanionEventsReceiver)
+  @objc deinit
+}
+extension VmaxVideoHelper.VmaxCompanionRegistry {
+  public func getCompanionEventReceiver(primaryView: VmaxVideoHelper.VmaxCompanionMasterModel) -> [any VmaxVideoHelper.VmaxCompanionEventsReceiver]?
+}
+extension VmaxVideoHelper.VmaxVideoHelperError.Codes : Swift.Equatable {}
+extension VmaxVideoHelper.VmaxVideoHelperError.Codes : Swift.Hashable {}
+extension VmaxVideoHelper.VmaxVideoHelperError.Codes : Swift.RawRepresentable {}
+extension VmaxVideoHelper.AdExperience : Swift.Equatable {}
+extension VmaxVideoHelper.AdExperience : Swift.Hashable {}
+extension VmaxVideoHelper.AdExperience : Swift.RawRepresentable {}

@@ -1,0 +1,85 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "gpmusicios",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/Office work/MYGP/gpmusicios",
+          "name" : "gpmusicios"
+        },
+        "path" : "/Users/mrt/Desktop/Office work/MYGP/gpmusicios/Shadhin_Gp/Library/Vmax/VmaxDisplayHelper.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "VmaxDisplayHelper"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "gpmusicios",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/Office work/MYGP/gpmusicios",
+          "name" : "gpmusicios"
+        },
+        "path" : "/Users/mrt/Desktop/Office work/MYGP/gpmusicios/Shadhin_Gp/Library/Vmax/VmaxVideoHelper.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "VmaxVideoHelper"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "gpmusicios",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/Office work/MYGP/gpmusicios",
+          "name" : "gpmusicios"
+        },
+        "path" : "/Users/mrt/Desktop/Office work/MYGP/gpmusicios/Shadhin_Gp/Library/Vmax/VmaxVastHelper.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "VmaxVastHelper"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "gpmusicios",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/Office work/MYGP/gpmusicios",
+          "name" : "gpmusicios"
+        },
+        "path" : "/Users/mrt/Desktop/Office work/MYGP/gpmusicios/Shadhin_Gp/Library/Vmax/VmaxNativeHelper.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "VmaxNativeHelper"
+      }
+    ],
+    "dependencies" : [
+
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

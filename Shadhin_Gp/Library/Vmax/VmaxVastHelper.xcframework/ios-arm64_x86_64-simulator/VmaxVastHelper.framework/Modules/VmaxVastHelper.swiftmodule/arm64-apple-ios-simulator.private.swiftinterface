@@ -1,0 +1,551 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name VmaxVastHelper
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVKit
+import Foundation
+import Swift
+import UIKit
+import Vmax
+@_exported import VmaxVastHelper
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class VmaxVastHelperFactory {
+  public init()
+  public func get(playerPlugin tracker: Vmax.VmaxTracker) -> VmaxVastHelper.VmaxPlayerPluginTracker?
+  public func get(viewabilityHelper viewability: any Vmax.VmaxAdViewability, dictionary: Foundation.NSDictionary?) -> VmaxVastHelper.VmaxViewabilityHelper?
+  public func get(mediaEventManager delegate: any VmaxVastHelper.VmaxMediaEventManagerDelegate) -> VmaxVastHelper.VmaxMediaEventManager?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VmaxPlayerPluginTracker : Vmax.VmaxMediaEvents {
+  public var tracker: Vmax.VmaxTracker
+  public func onImpression<T>(info: T?)
+  public func onStart<T>(info: T?)
+  public func onFirstQuartile<T>(info: T?)
+  public func onMidPoint<T>(info: T?)
+  public func onThirdQuartile<T>(info: T?)
+  public func onResume<T>(info: T?)
+  public func onPause<T>(info: T?)
+  public func onMute<T>(info: T?)
+  public func onUnmute<T>(info: T?)
+  public func onComplete<T>(info: T?)
+  public func onFullscreen<T>(info: T?)
+  public func onExitFullscreen<T>(info: T?)
+  public func onClose<T>(info: T?)
+  public func onClick<T>(info: T?)
+  public func onSkip<T>(info: T?)
+  public func onError<T>(info: T?, error: Vmax.VmaxError)
+  public func onSkippableStateChange<T>(info: T?)
+  @objc deinit
+}
+public struct VmaxMediaFile {
+  public enum MediaType : Swift.String {
+    case mp4
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum MediaDelivery : Swift.String {
+    case progressive
+    case streaming
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum MediaCodec : Swift.String {
+    case h264
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var delivery: VmaxVastHelper.VmaxMediaFile.MediaDelivery?
+  public var bitrate: Swift.Int
+  public var width: Swift.Int?
+  public var height: Swift.Int?
+  public var type: VmaxVastHelper.VmaxMediaFile.MediaType?
+  public var url: Swift.String?
+  public var mediaId: Swift.Int?
+  public var scalable: Swift.UInt?
+  public var maintainAspectRatio: Swift.UInt?
+  public var minBitrate: Swift.UInt?
+  public var maxBitrate: Swift.UInt?
+  public var codec: VmaxVastHelper.VmaxMediaFile.MediaCodec?
+  public init(bitrate: Swift.Int)
+  public init(bitrate: Swift.Int, dict: [Swift.String : Swift.String])
+}
+extension VmaxVastHelper.VmaxMediaFile : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxMediaFile, rhs: VmaxVastHelper.VmaxMediaFile) -> Swift.Bool
+}
+extension VmaxVastHelper.VmaxMediaFile : Swift.Comparable {
+  public static func < (lhs: VmaxVastHelper.VmaxMediaFile, rhs: VmaxVastHelper.VmaxMediaFile) -> Swift.Bool
+}
+extension VmaxVastHelper.VmaxMediaFile : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public enum VmaxVastTrackingEvents : Swift.String {
+  case creativeView
+  case start
+  case complete
+  case midpoint
+  case firstQuartile
+  case thirdQuartile
+  case mute
+  case unmute
+  case pause
+  case resume
+  case close
+  case closeLinear
+  case progress
+  case offset
+  case expand
+  case collapse
+  case skip
+  case click
+  case companionCreativeView
+  case companionClose
+  case companionClickTracking
+  case clickTracking
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastTrackingEvents : Swift.CaseIterable {
+  public typealias AllCases = [VmaxVastHelper.VmaxVastTrackingEvents]
+  nonisolated public static var allCases: [VmaxVastHelper.VmaxVastTrackingEvents] {
+    get
+  }
+}
+final public class VmaxVastError : Vmax.VmaxError {
+  public enum Codes : Swift.Int {
+    case XMLParsingError
+    case vastSchemaValidation
+    case vastVersionNotSupported
+    case vastUnsupportedVastAd
+    case vastPlayerExpectsDifferentLinearity
+    case vastPlayerExpectsDifferentDuration
+    case vastPlayerExpectsDifferentSize
+    case adCategoryNotProvided
+    case inLineCategoryViolatesWrapper
+    case adBreakShortened
+    case vastGeneralWrapperError
+    case vastTimeoutVASTURI
+    case vastWrapperLimitReached
+    case vastNoResponceFromWraper
+    case inLineR
+    case vastGeneralLinearError
+    case vastMediaFileNotFound
+    case vastTimeoutMediaFile
+    case vastUnsupportedMediaFile
+    case vastMediaCouldNotBePlayed
+    case mezzanineNotSupported
+    case mezzanineNotDownloaded
+    case conditionalAdRejected
+    case interactiveUnitNotExecuted
+    case verificationNodeNotExecuted
+    case mezzanineNotAsSpecification
+    case vastGeneralNonLinearAds
+    case vastDimensionsNotAlignedToDisplayArea
+    case vastUnableToFetchNonLinearAd
+    case vastUnableToFindNonLinearAdToSuppType
+    case vastGeneralCompanionAdsError
+    case vastCompanionDimNotAlignedToDisplayArea
+    case unableToDisplayCompanionAd
+    case unableToFetchCompanionResource
+    case companionResNotFoundWithSupportedType
+    case vastUnknownError
+    case generalVPAIDerror
+    case generalInteractiveCreativeFileError
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public init(code: VmaxVastHelper.VmaxVastError.Codes)
+  public init(code: VmaxVastHelper.VmaxVastError.Codes, errorDescription: Swift.String)
+  public init(code: VmaxVastHelper.VmaxVastError.Codes, errorDescription: Swift.String, recoveryMessage: Swift.String)
+  @objc deinit
+}
+public struct VmaxTrackerEvent {
+  public let event: Swift.String
+  public var trackerUrl: [Swift.String]
+  public var offset: Swift.String?
+  public init(event: Swift.String)
+  public init(event: Swift.String, trackerUrl: [Swift.String])
+  public init?(dict: [Swift.String : Swift.String])
+}
+extension VmaxVastHelper.VmaxTrackerEvent : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxTrackerEvent, rhs: VmaxVastHelper.VmaxTrackerEvent) -> Swift.Bool
+}
+extension VmaxVastHelper.VmaxTrackerEvent : Swift.Comparable {
+  public static func < (lhs: VmaxVastHelper.VmaxTrackerEvent, rhs: VmaxVastHelper.VmaxTrackerEvent) -> Swift.Bool
+}
+extension VmaxVastHelper.VmaxTrackerEvent : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+@objc public class VmaxMediaFileSelection : ObjectiveC.NSObject {
+  public init(connectionType: Vmax.ConnectionType? = nil, bitrate: Swift.Int? = nil, deviceType: Vmax.DeviceType? = nil)
+  @objc deinit
+  public func fetch(mediaFiles: [VmaxVastHelper.VmaxMediaFile]) -> Swift.Result<VmaxVastHelper.VmaxMediaFile, Vmax.VmaxError>
+}
+public protocol VmaxMediaEventManagerDelegate {
+  func pauseAd()
+  func resumeAd()
+}
+@objc @_hasMissingDesignatedInitializers public class VmaxMediaEventManager : ObjectiveC.NSObject {
+  @objc deinit
+  public func set(vastModel: VmaxVastHelper.VmaxVastModel)
+  public func set(adClickBrowser: Vmax.AdClickBrowser)
+  public func setCurrent(adModel: VmaxVastHelper.VmaxVastAdModel)
+  public func prepareTrackers(manager: any Vmax.VmaxTrackerManager)
+  public func set(parentView: UIKit.UIView)
+}
+extension VmaxVastHelper.VmaxMediaEventManager : Vmax.VmaxMediaEvents {
+  public func onStart<T>(info: T?)
+  public func onImpression<T>(info: T?)
+  public func onFirstQuartile<T>(info: T?)
+  public func onMidPoint<T>(info: T?)
+  public func onThirdQuartile<T>(info: T?)
+  public func onResume<T>(info: T?)
+  public func onPause<T>(info: T?)
+  public func onMute<T>(info: T?)
+  public func onUnmute<T>(info: T?)
+  public func onComplete<T>(info: T?)
+  public func onFullscreen<T>(info: T?)
+  public func onExitFullscreen<T>(info: T?)
+  public func onClose<T>(info: T?)
+  public func onClick<T>(info: T?)
+  public func onSkip<T>(info: T?)
+  public func onError<T>(info: T?, error: Vmax.VmaxError)
+  public func onSkippableStateChange<T>(info: T?)
+}
+extension VmaxVastHelper.VmaxMediaEventManager : Vmax.VmaxCTAHandlerEvents {
+  public func onSuccessRedirect(event: Vmax.VmaxCTAaction)
+  public func onFailureRedirect(error: Vmax.VmaxError)
+  public func onCompleteCTA()
+}
+public struct VmaxVastImpression {
+  public var id: Swift.String?
+  public var data: Swift.String?
+}
+extension VmaxVastHelper.VmaxVastImpression : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastImpression : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastImpression, rhs: VmaxVastHelper.VmaxVastImpression) -> Swift.Bool
+}
+public struct VmaxVastVerification {
+  public var javaScriptResource: Swift.String?
+  public var verificationParam: Swift.String?
+  public var vendorKey: Swift.String?
+}
+extension VmaxVastHelper.VmaxVastVerification : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastVerification : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastVerification, rhs: VmaxVastHelper.VmaxVastVerification) -> Swift.Bool
+}
+public struct VmaxVastAdVerifications {
+  public var verifications: [VmaxVastHelper.VmaxVastVerification]?
+  public func toNSDictionary() -> [Foundation.NSDictionary]?
+}
+extension VmaxVastHelper.VmaxVastAdVerifications : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastAdVerifications : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastAdVerifications, rhs: VmaxVastHelper.VmaxVastAdVerifications) -> Swift.Bool
+}
+public struct VmaxVastMetaData {
+  public var version: Swift.Double?
+  public var xmlns: Swift.String?
+  public var xmlnsxs: Swift.String?
+}
+extension VmaxVastHelper.VmaxVastMetaData : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastMetaData : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastMetaData, rhs: VmaxVastHelper.VmaxVastMetaData) -> Swift.Bool
+}
+public struct VmaxPricing {
+  public var model: Swift.String?
+  public var currency: Swift.String?
+  public var price: Swift.String?
+}
+extension VmaxVastHelper.VmaxPricing : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxPricing : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxPricing, rhs: VmaxVastHelper.VmaxPricing) -> Swift.Bool
+}
+public struct VmaxVastExtension {
+  public var type: Swift.String?
+  public var name: Swift.String?
+  public var value: Swift.String?
+}
+extension VmaxVastHelper.VmaxVastExtension : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastExtension : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastExtension, rhs: VmaxVastHelper.VmaxVastExtension) -> Swift.Bool
+}
+public struct VmaxVastCategory {
+  public var authority: Swift.String?
+  public var value: Swift.String?
+}
+extension VmaxVastHelper.VmaxVastCategory : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastCategory : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastCategory, rhs: VmaxVastHelper.VmaxVastCategory) -> Swift.Bool
+}
+public struct VmaxVastModel {
+  public var meta: VmaxVastHelper.VmaxVastMetaData?
+  public var ads: [VmaxVastHelper.VmaxVastAdModel]?
+  public var errorUrls: [Swift.String]?
+}
+extension VmaxVastHelper.VmaxVastModel : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastModel : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastModel, rhs: VmaxVastHelper.VmaxVastModel) -> Swift.Bool
+}
+public struct VmaxVastWrapper {
+  public var attributes: [Swift.String : Swift.String]?
+  public var vastAdTagUri: Swift.String?
+  public let followAdditionalWrappers: Swift.Bool
+  public let allowMultipleAds: Swift.Bool
+  public var fallbackOnNoAd: Swift.Bool?
+}
+extension VmaxVastHelper.VmaxVastWrapper : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastWrapper : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastWrapper, rhs: VmaxVastHelper.VmaxVastWrapper) -> Swift.Bool
+}
+public struct VmaxVastAdSystem {
+  public var version: Swift.String?
+  public var system: Swift.String?
+}
+extension VmaxVastHelper.VmaxVastAdSystem : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastAdSystem : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastAdSystem, rhs: VmaxVastHelper.VmaxVastAdSystem) -> Swift.Bool
+}
+public struct VmaxVastCreative {
+  public var id: Swift.String?
+  public var adId: Swift.String?
+  public var sequence: Swift.Int?
+  public var apiFramework: Swift.String?
+  public var linear: VmaxVastHelper.VmaxVastCreativeLinear?
+  public var companion: VmaxVastHelper.VmaxVastCompanionAd?
+}
+extension VmaxVastHelper.VmaxVastCreative : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastCreative : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastCreative, rhs: VmaxVastHelper.VmaxVastCreative) -> Swift.Bool
+}
+public struct VmaxVastVideoClick {
+  public var id: Swift.String?
+  public var clickThroughUrl: Swift.String?
+  public var deepLinkUrl: Swift.String?
+  public var trackerUrl: [Swift.String]?
+}
+extension VmaxVastHelper.VmaxVastVideoClick : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastVideoClick : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastVideoClick, rhs: VmaxVastHelper.VmaxVastVideoClick) -> Swift.Bool
+}
+public struct VmaxVastStaticResource {
+  public var creativeType: Swift.String?
+  public var data: Swift.String?
+}
+extension VmaxVastHelper.VmaxVastStaticResource : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastStaticResource : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastStaticResource, rhs: VmaxVastHelper.VmaxVastStaticResource) -> Swift.Bool
+}
+public struct VmaxVastCreativeCompanion {
+  public var attributes: [Swift.String : Swift.String]?
+  public var staticResource: VmaxVastHelper.VmaxVastStaticResource?
+  public var companionClickThrough: Swift.String?
+  public var companionClickTracking: [Swift.String]?
+  public var adParameters: [Swift.String : Any]?
+  public var trackingEvents: [VmaxVastHelper.VmaxTrackerEvent]
+  public var htmlResource: Swift.String?
+  public var adSlotId: Swift.String?
+}
+extension VmaxVastHelper.VmaxVastCreativeCompanion : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastCreativeCompanion : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastCreativeCompanion, rhs: VmaxVastHelper.VmaxVastCreativeCompanion) -> Swift.Bool
+}
+public struct VmaxVastCompanionAd {
+  public var attributes: [Swift.String : Swift.String]?
+  public var companions: [VmaxVastHelper.VmaxVastCreativeCompanion]?
+}
+extension VmaxVastHelper.VmaxVastCompanionAd : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastCompanionAd : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastCompanionAd, rhs: VmaxVastHelper.VmaxVastCompanionAd) -> Swift.Bool
+}
+public struct VmaxVastCreativeLinear {
+  public var skipOffset: Swift.Int?
+  public var duration: Swift.Int?
+  public var click: VmaxVastHelper.VmaxVastVideoClick?
+  public var trackingEvents: [VmaxVastHelper.VmaxTrackerEvent]
+  public var mediaFiles: [VmaxVastHelper.VmaxMediaFile]?
+}
+extension VmaxVastHelper.VmaxVastCreativeLinear : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastCreativeLinear : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastCreativeLinear, rhs: VmaxVastHelper.VmaxVastCreativeLinear) -> Swift.Bool
+}
+public struct VmaxVastAdModel {
+  public enum VmaxVastAdType {
+    case wrapper
+    case inLine
+    public static func == (a: VmaxVastHelper.VmaxVastAdModel.VmaxVastAdType, b: VmaxVastHelper.VmaxVastAdModel.VmaxVastAdType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var adId: Swift.String?
+  public var sequence: Swift.Int?
+  public var adType: VmaxVastHelper.VmaxVastAdModel.VmaxVastAdType?
+  public var wrapper: VmaxVastHelper.VmaxVastWrapper?
+  public var adSystem: VmaxVastHelper.VmaxVastAdSystem?
+  public var errorUrls: [Swift.String]?
+  public var extensions: [VmaxVastHelper.VmaxVastExtension]?
+  public var pricing: VmaxVastHelper.VmaxPricing?
+  public var adServingId: Swift.String?
+  public var adTitle: Swift.String?
+  public var adVerifications: VmaxVastHelper.VmaxVastAdVerifications?
+  public var advertiser: Swift.String?
+  public var categories: [VmaxVastHelper.VmaxVastCategory]?
+  public var impressions: [VmaxVastHelper.VmaxVastImpression]?
+  public var creatives: [VmaxVastHelper.VmaxVastCreative]?
+  public func get() -> [VmaxVastHelper.VmaxVastCreativeCompanion]?
+}
+extension VmaxVastHelper.VmaxVastAdModel : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension VmaxVastHelper.VmaxVastAdModel : Swift.Equatable {
+  public static func == (lhs: VmaxVastHelper.VmaxVastAdModel, rhs: VmaxVastHelper.VmaxVastAdModel) -> Swift.Bool
+}
+@objc public class VmaxVastParser : ObjectiveC.NSObject {
+  public init(data: Foundation.Data)
+  @objc deinit
+  public func startParsing(completionHandler: @escaping (Swift.Result<VmaxVastHelper.VmaxVastModel, Vmax.VmaxError>) -> Swift.Void)
+}
+@_hasMissingDesignatedInitializers public class VmaxViewabilityHelper : Vmax.VmaxMediaEvents {
+  public func onImpression<T>(info: T?)
+  public func onStart<T>(info: T?)
+  public func onFirstQuartile<T>(info: T?)
+  public func onMidPoint<T>(info: T?)
+  public func onThirdQuartile<T>(info: T?)
+  public func onProgress<T>(info: T?, currentTime: Swift.Double, totalDuration: Swift.Double)
+  public func onResume<T>(info: T?)
+  public func onPause<T>(info: T?)
+  public func onMute<T>(info: T?)
+  public func onUnmute<T>(info: T?)
+  public func onComplete<T>(info: T?)
+  public func onFullscreen<T>(info: T?)
+  public func onExitFullscreen<T>(info: T?)
+  public func onClose<T>(info: T?)
+  public func onClick<T>(info: T?)
+  public func onSkip<T>(info: T?)
+  public func onError<T>(info: T?, error: Vmax.VmaxError)
+  @objc deinit
+}
+final public class VmaxMediaFileError : Vmax.VmaxError {
+  public enum Codes : Swift.Int {
+    case mediaSelectFailedGeneralError
+    case mediaSelectFailEmptyArrayPassed
+    case mediaSelectFailUnkownDeviceType
+    case mediaSelectFailUnkownBitrate
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public init(code: VmaxVastHelper.VmaxMediaFileError.Codes)
+  public init(code: VmaxVastHelper.VmaxMediaFileError.Codes, errorDescription: Swift.String)
+  public init(code: VmaxVastHelper.VmaxMediaFileError.Codes, errorDescription: Swift.String, recoveryMessage: Swift.String)
+  @objc deinit
+}
+extension VmaxVastHelper.VmaxMediaFile.MediaType : Swift.Equatable {}
+extension VmaxVastHelper.VmaxMediaFile.MediaType : Swift.Hashable {}
+extension VmaxVastHelper.VmaxMediaFile.MediaType : Swift.RawRepresentable {}
+extension VmaxVastHelper.VmaxMediaFile.MediaDelivery : Swift.Equatable {}
+extension VmaxVastHelper.VmaxMediaFile.MediaDelivery : Swift.Hashable {}
+extension VmaxVastHelper.VmaxMediaFile.MediaDelivery : Swift.RawRepresentable {}
+extension VmaxVastHelper.VmaxMediaFile.MediaCodec : Swift.Equatable {}
+extension VmaxVastHelper.VmaxMediaFile.MediaCodec : Swift.Hashable {}
+extension VmaxVastHelper.VmaxMediaFile.MediaCodec : Swift.RawRepresentable {}
+extension VmaxVastHelper.VmaxVastTrackingEvents : Swift.Equatable {}
+extension VmaxVastHelper.VmaxVastTrackingEvents : Swift.Hashable {}
+extension VmaxVastHelper.VmaxVastTrackingEvents : Swift.RawRepresentable {}
+extension VmaxVastHelper.VmaxVastError.Codes : Swift.Equatable {}
+extension VmaxVastHelper.VmaxVastError.Codes : Swift.Hashable {}
+extension VmaxVastHelper.VmaxVastError.Codes : Swift.RawRepresentable {}
+extension VmaxVastHelper.VmaxVastAdModel.VmaxVastAdType : Swift.Equatable {}
+extension VmaxVastHelper.VmaxVastAdModel.VmaxVastAdType : Swift.Hashable {}
+extension VmaxVastHelper.VmaxMediaFileError.Codes : Swift.Equatable {}
+extension VmaxVastHelper.VmaxMediaFileError.Codes : Swift.Hashable {}
+extension VmaxVastHelper.VmaxMediaFileError.Codes : Swift.RawRepresentable {}

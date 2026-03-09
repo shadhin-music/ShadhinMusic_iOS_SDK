@@ -1,0 +1,11 @@
+framework module VmaxNativeHelper {
+  umbrella header "VmaxNativeHelper.h"
+  export *
+
+  module * { export * }
+}
+
+module VmaxNativeHelper.Swift {
+  header "VmaxNativeHelper-Swift.h"
+  requires objc
+}

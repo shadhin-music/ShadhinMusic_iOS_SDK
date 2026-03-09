@@ -1,0 +1,4 @@
+module OMSDK_Vmax2 {
+    header "Headers/OMIDImports.h"
+    export *
+}
