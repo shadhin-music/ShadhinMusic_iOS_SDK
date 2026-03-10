@@ -51,10 +51,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sEe-ev-rTv" userLabel="scBgView">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="788"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRR-Xn-KH4" userLabel="topView">
-                                    <rect key="frame" x="16" y="39" width="361" height="50"/>
+                                    <rect key="frame" x="16" y="44" width="361" height="50"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CeE-8M-TQf">
                                             <rect key="frame" x="0.0" y="-6" width="345" height="40"/>
@@ -84,7 +84,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGl-1n-ehH" userLabel="mainViewBg">
-                                    <rect key="frame" x="16" y="97" width="361" height="666"/>
+                                    <rect key="frame" x="16" y="102" width="361" height="666"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ays-Gs-w6X">
                                             <rect key="frame" x="0.0" y="0.0" width="361" height="240"/>
@@ -359,7 +359,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpX-D5-Wjw" userLabel="noInternetView">
-                                    <rect key="frame" x="16" y="97" width="361" height="666"/>
+                                    <rect key="frame" x="16" y="102" width="361" height="666"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="g0J-br-904">
                                             <rect key="frame" x="15.666666666666657" y="245.66666666666669" width="330" height="175"/>
@@ -435,7 +435,7 @@
                                 <constraint firstAttribute="trailing" secondItem="QGl-1n-ehH" secondAttribute="trailing" constant="16" id="XZ1-QS-dgn"/>
                                 <constraint firstItem="FpX-D5-Wjw" firstAttribute="leading" secondItem="QGl-1n-ehH" secondAttribute="leading" id="asM-uI-UBh"/>
                                 <constraint firstItem="QGl-1n-ehH" firstAttribute="leading" secondItem="sEe-ev-rTv" secondAttribute="leading" constant="16" id="cST-cf-2y3"/>
-                                <constraint firstItem="zRR-Xn-KH4" firstAttribute="top" secondItem="sEe-ev-rTv" secondAttribute="top" constant="39" id="dyY-oe-eQ4"/>
+                                <constraint firstItem="zRR-Xn-KH4" firstAttribute="top" secondItem="sEe-ev-rTv" secondAttribute="top" constant="44" id="dyY-oe-eQ4"/>
                                 <constraint firstItem="FpX-D5-Wjw" firstAttribute="bottom" secondItem="QGl-1n-ehH" secondAttribute="bottom" id="fct-8s-Oa7"/>
                                 <constraint firstAttribute="trailing" secondItem="zRR-Xn-KH4" secondAttribute="trailing" constant="16" id="oAN-6J-9OE"/>
                                 <constraint firstItem="zRR-Xn-KH4" firstAttribute="leading" secondItem="sEe-ev-rTv" secondAttribute="leading" constant="16" id="upa-5r-Ac1"/>
