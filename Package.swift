@@ -13,4 +13,13 @@ let package = Package(
             targets: ["ShadhinMusic"]
         ),
     ],
+    targets: [
+        .target(
+            name: "ShadhinMusic",
+            dependencies: [...],
+            path: "Shadhin_Gp",
+            ...
+        ),
+        // all other targets
+    ]
 )
