@@ -13,13 +13,4 @@ let package = Package(
             targets: ["ShadhinMusic"]
         ),
     ],
-    targets: [
-
-        // MARK: - Main Binary Target
-        // Distributed as a pre-built XCFramework to protect source code.
-        .binaryTarget(
-            name: "ShadhinMusic",
-            path: "ShadhinGP_Framework/Framework/Shadhin_Gp.xcframework"
-        ),
-    ]
 )
