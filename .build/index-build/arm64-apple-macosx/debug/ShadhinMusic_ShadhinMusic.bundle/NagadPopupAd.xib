@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NagadPopupAd" customModule="Shadhin" customModuleProvider="target">
+            <connections>
+                <outlet property="background" destination="i5M-Pr-FkT" id="NPn-3X-hfK"/>
+                <outlet property="closeBtn" destination="QkE-fZ-M18" id="2EH-zS-VoK"/>
+                <outlet property="mainHolder" destination="PPP-js-cfV" id="XQi-Ga-jMH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPP-js-cfV">
+                    <rect key="frame" x="16" y="320.5" width="382" height="255"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nagad_popup" translatesAutoresizingMaskIntoConstraints="NO" id="HDs-yU-5bD">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="255"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="HDs-yU-5bD" secondAttribute="height" multiplier="3:2" id="Npr-gU-HiL"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkE-fZ-M18">
+                            <rect key="frame" x="350" y="-16" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="noQ-dh-qvd"/>
+                                <constraint firstAttribute="width" constant="48" id="wCq-Mo-82I"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                            <state key="normal" image="nagad_close"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray3Color"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="HDs-yU-5bD" secondAttribute="bottom" id="0SZ-c3-coX"/>
+                        <constraint firstItem="HDs-yU-5bD" firstAttribute="leading" secondItem="PPP-js-cfV" secondAttribute="leading" id="7sF-wq-aVS"/>
+                        <constraint firstAttribute="trailing" secondItem="HDs-yU-5bD" secondAttribute="trailing" id="FqX-Zq-HJB"/>
+                        <constraint firstAttribute="trailing" secondItem="QkE-fZ-M18" secondAttribute="trailing" constant="-16" id="eLl-D7-dsI"/>
+                        <constraint firstItem="HDs-yU-5bD" firstAttribute="top" secondItem="PPP-js-cfV" secondAttribute="top" id="pnn-mE-ar4"/>
+                        <constraint firstItem="QkE-fZ-M18" firstAttribute="top" secondItem="PPP-js-cfV" secondAttribute="top" constant="-16" id="x13-bu-fI0"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="separatorColor"/>
+            <constraints>
+                <constraint firstItem="PPP-js-cfV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="2sm-vb-yPq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PPP-js-cfV" secondAttribute="trailing" constant="16" id="4aQ-D3-SyJ"/>
+                <constraint firstItem="PPP-js-cfV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dWJ-Qr-oFC"/>
+            </constraints>
+            <point key="canvasLocation" x="-12" y="99"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="nagad_close" width="87" height="87"/>
+        <image name="nagad_popup" width="1080" height="720"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

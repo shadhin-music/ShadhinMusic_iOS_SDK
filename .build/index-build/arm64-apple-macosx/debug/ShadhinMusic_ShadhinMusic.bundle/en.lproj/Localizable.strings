@@ -1,0 +1,59 @@
+/* 
+  Localizable.strings
+  Shadhin
+
+  Created by Admin on 19/6/22.
+  Copyright © 2022 Cloud 7 Limited. All rights reserved.
+*/
+
+//Downloads
+"Download" = "Download";
+"NoDownloadTitle" = "No Downloads!";
+"NoDownloadSubtitle" = "This list is empty. Downloads songs, albums, playlists.";
+"NoFavorites" = "No Favorites!";
+"NoFavoritesSubtitle" =  "This list is empty. Add favorite songs, podcast.";
+"NoSongs" = "No Songs!";
+"NoSongsSubtitle" = "This list is empty. Play songs and podcast";
+"SelectAll" = "Select All";
+"Songs" = "Songs";
+"SongsSubtitle"= "Recently played songs";
+"Album" = "Album";
+"NoAlbum" = "No Album";
+"NoAlbumSubtitle" = "This List is empty. Play album songs";
+"RecentlyPlayedAlbum" = "Recently Played Albums";
+"AudioPodcast" = "Audio Podcast";
+"Playlist" = "Playlist";
+"Artist" = "Artist";
+"History" = "History";
+"Favorites" = "Favorites";
+"FavoritesSubtitle" = "Your favorite songs and podcasts that you added earlier";
+
+
+//musicArtisListVC
+"PopularTrack" = "Popular Track";
+"Albums" = "Albums";
+"FanAlsoLike" = "Fan Also Like";
+
+//music album list
+"TrackList" = "Track List";
+
+//more menu
+"RemoveFromFavorite" = "Remove from Favorite";
+"AddToFavorite" = "Add to Favorite";
+"Share"  = "Share";
+"ShareVideo" = "Share Video";
+"RemoveFromDownload" = "Remove from Download";
+"Download" = "Download";
+"RemoveFromHistory" = "Remove From History";
+"GotoAlbum" = "Go to Album";
+"GotoArtist" = "Go to Artist";
+"AddToPlaylist" = "Add to Playlist";
+"AddToWatchLater" = "Add To Watch Later";
+"RemoveFromWatchLater" = "Remove From Watch Later";
+"Remove" = "Remove";
+"ConnectedDevice" = "Connected Device";
+"SleepTimer" = "Sleep Timer";
+"QueueList" = "Queue List";
+//toast
+"NoArtistFound" = "No Artist Found";
+"NoAlbumFound" = "No Album Found";

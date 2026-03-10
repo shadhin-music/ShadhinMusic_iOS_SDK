@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="500" id="KGk-i7-Jjw" customClass="WinNStreamCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="328" height="500"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="328" height="500"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-xH-bvc">
+                        <rect key="frame" x="16" y="0.0" width="296" height="500"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="winAndStreamBG" translatesAutoresizingMaskIntoConstraints="NO" id="jOF-QB-uPX">
+                                <rect key="frame" x="0.0" y="0.0" width="296" height="296"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jOF-QB-uPX" secondAttribute="height" multiplier="1:1" id="P0G-Dn-hnl"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdZ-bp-fnp">
+                                <rect key="frame" x="0.0" y="404" width="296" height="80"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="nZC-uj-wUY">
+                                        <rect key="frame" x="0.0" y="0.0" width="296" height="80"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VUp-Zn-sbw">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" name="TouchBarBezel"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="nZC-uj-wUY" secondAttribute="bottom" id="1u2-Yt-zTg"/>
+                                    <constraint firstItem="nZC-uj-wUY" firstAttribute="top" secondItem="KdZ-bp-fnp" secondAttribute="top" id="4zc-eJ-OTg"/>
+                                    <constraint firstAttribute="trailing" secondItem="nZC-uj-wUY" secondAttribute="trailing" id="NHC-ze-Azu"/>
+                                    <constraint firstAttribute="height" constant="80" id="hEJ-Tc-Zt1"/>
+                                    <constraint firstItem="nZC-uj-wUY" firstAttribute="leading" secondItem="KdZ-bp-fnp" secondAttribute="leading" id="xwG-QO-uZj"/>
+                                </constraints>
+                            </view>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="KAc-3F-doE">
+                                <rect key="frame" x="16" y="326.66666666666669" width="264" height="61.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stream &amp; Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVU-bJ-HAf">
+                                        <rect key="frame" x="0.0" y="0.0" width="264" height="28.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribe Shadhin Music and Stream &amp; Win Unlimited." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmU-WW-nDD">
+                                        <rect key="frame" x="0.0" y="32.666666666666629" width="264" height="28.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="seconduryBackground"/>
+                        <constraints>
+                            <constraint firstItem="KAc-3F-doE" firstAttribute="leading" secondItem="E9T-xH-bvc" secondAttribute="leading" constant="16" id="1gP-Nr-5i7"/>
+                            <constraint firstItem="jOF-QB-uPX" firstAttribute="top" secondItem="E9T-xH-bvc" secondAttribute="top" id="3QE-jo-wxW"/>
+                            <constraint firstItem="KdZ-bp-fnp" firstAttribute="top" secondItem="KAc-3F-doE" secondAttribute="bottom" constant="16" id="CS0-l5-zBU"/>
+                            <constraint firstAttribute="trailing" secondItem="jOF-QB-uPX" secondAttribute="trailing" id="FzN-d0-nVa"/>
+                            <constraint firstAttribute="bottom" secondItem="KdZ-bp-fnp" secondAttribute="bottom" constant="16" id="INl-n0-xnW"/>
+                            <constraint firstAttribute="trailing" secondItem="KAc-3F-doE" secondAttribute="trailing" constant="16" id="QvT-vn-BB8"/>
+                            <constraint firstItem="KdZ-bp-fnp" firstAttribute="leading" secondItem="E9T-xH-bvc" secondAttribute="leading" id="SHo-7W-Iyt"/>
+                            <constraint firstAttribute="trailing" secondItem="KdZ-bp-fnp" secondAttribute="trailing" id="th9-xL-m0B"/>
+                            <constraint firstItem="jOF-QB-uPX" firstAttribute="leading" secondItem="E9T-xH-bvc" secondAttribute="leading" id="zuB-qh-8EX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="E9T-xH-bvc" secondAttribute="bottom" id="AwR-b2-tt2"/>
+                    <constraint firstItem="E9T-xH-bvc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BSV-7P-atv"/>
+                    <constraint firstAttribute="trailing" secondItem="E9T-xH-bvc" secondAttribute="trailing" constant="16" id="rxL-n6-Bud"/>
+                    <constraint firstItem="E9T-xH-bvc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="xJh-gt-gaS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="collectionView" destination="nZC-uj-wUY" id="gzL-VS-0ei"/>
+                <outlet property="containerView" destination="E9T-xH-bvc" id="xja-ES-MLd"/>
+                <outlet property="heightConstraint" destination="hEJ-Tc-Zt1" id="VkQ-Mj-6c8"/>
+            </connections>
+            <point key="canvasLocation" x="-68.702290076335871" y="179.57746478873241"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="winAndStreamBG" width="1500" height="1500"/>
+        <namedColor name="TouchBarBezel">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="seconduryBackground">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

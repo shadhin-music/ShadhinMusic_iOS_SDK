@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MinimalVisualCard" customModule="Shadhin_Gp" customModuleProvider="target">
+            <connections>
+                <outlet property="adBadgeLabel" destination="MM3-0j-aQF" id="3b8-m0-x8l"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="bpe-VX-aq7"/>
+                <outlet property="mediaView" destination="REc-m3-LdA" id="QvL-ca-DMM"/>
+                <outlet property="nativeView" destination="mqd-lD-3TI" id="e9n-H8-bnW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="174"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqd-lD-3TI" userLabel="Native View">
+                    <rect key="frame" x="0.0" y="0.0" width="360" height="174"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="REc-m3-LdA" userLabel="Media View">
+                            <rect key="frame" x="0.0" y="0.0" width="360" height="174"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MM3-0j-aQF">
+                            <rect key="frame" x="8" y="8" width="40" height="24"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.47999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="GpT-Hy-c4i"/>
+                                <constraint firstAttribute="width" constant="40" id="cxC-ie-pjL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="REc-m3-LdA" firstAttribute="top" secondItem="mqd-lD-3TI" secondAttribute="top" id="Tk9-DD-5T2"/>
+                        <constraint firstAttribute="bottom" secondItem="REc-m3-LdA" secondAttribute="bottom" id="phx-Ob-UAe"/>
+                        <constraint firstItem="REc-m3-LdA" firstAttribute="leading" secondItem="mqd-lD-3TI" secondAttribute="leading" id="rM6-tm-JU3"/>
+                        <constraint firstItem="MM3-0j-aQF" firstAttribute="leading" secondItem="REc-m3-LdA" secondAttribute="leading" constant="8" id="tx7-sI-clP"/>
+                        <constraint firstAttribute="trailing" secondItem="REc-m3-LdA" secondAttribute="trailing" id="vLm-t6-9mn"/>
+                        <constraint firstItem="MM3-0j-aQF" firstAttribute="top" secondItem="REc-m3-LdA" secondAttribute="top" constant="8" id="vnT-3p-yhg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="mqd-lD-3TI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6Cg-wI-Mqt"/>
+                <constraint firstItem="mqd-lD-3TI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Es4-T3-Vb9"/>
+                <constraint firstAttribute="trailing" secondItem="mqd-lD-3TI" secondAttribute="trailing" id="g39-uY-fsS"/>
+                <constraint firstAttribute="bottom" secondItem="mqd-lD-3TI" secondAttribute="bottom" id="swf-wO-IyI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="10.144927536231885" y="138.28125"/>
+        </view>
+    </objects>
+</document>

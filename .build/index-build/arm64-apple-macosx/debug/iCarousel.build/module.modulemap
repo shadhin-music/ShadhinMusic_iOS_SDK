@@ -1,0 +1,4 @@
+module iCarousel {
+    umbrella header "/Users/mrt/Desktop/Office work/MYGP/ObjCBridge/iCarousel/iCarousel.h"
+    export *
+}

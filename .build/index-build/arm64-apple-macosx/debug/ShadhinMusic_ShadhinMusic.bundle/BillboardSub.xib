@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BillboardSub" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="281" height="272"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="281" height="272"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWS-Wr-NbE">
+                        <rect key="frame" x="0.0" y="0.0" width="281" height="272"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qs-mc-ufK">
+                                <rect key="frame" x="0.0" y="0.0" width="281" height="272"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baner" translatesAutoresizingMaskIntoConstraints="NO" id="Ast-hc-yom">
+                                <rect key="frame" x="0.0" y="0.0" width="281" height="272"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaH-us-Gxo">
+                                <rect key="frame" x="247" y="18" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Reo-GC-XbS"/>
+                                    <constraint firstAttribute="width" constant="16" id="lbJ-x8-L25"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="mute"/>
+                            </button>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ce9-mm-2yw">
+                                <rect key="frame" x="15.999999999999996" y="227.33333333333334" width="58.666666666666657" height="16.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sG-aG-6qF">
+                                        <rect key="frame" x="0.0" y="0.0" width="21.666666666666668" height="16.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBJ-6x-faO">
+                                        <rect key="frame" x="25.666666666666664" y="0.0" width="33" height="16.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                        <color key="textColor" red="0.73717719319999997" green="0.7098188996" blue="0.7098030448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="G3S-fF-XRk">
+                                <rect key="frame" x="16" y="256" width="249" height="0.0"/>
+                                <subviews>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waking at Dawn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2P5-w7-a4u">
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROY WOOD$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kY4-dE-iMP">
+                                        <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                        <color key="textColor" red="0.73717719319999997" green="0.7098188996" blue="0.7098030448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5qs-mc-ufK" secondAttribute="bottom" id="37k-do-btm"/>
+                            <constraint firstAttribute="trailing" secondItem="qaH-us-Gxo" secondAttribute="trailing" constant="18" id="80t-RX-leS"/>
+                            <constraint firstItem="Ce9-mm-2yw" firstAttribute="leading" secondItem="IWS-Wr-NbE" secondAttribute="leading" constant="16" id="Fun-9Y-9xe"/>
+                            <constraint firstAttribute="trailing" secondItem="G3S-fF-XRk" secondAttribute="trailing" constant="16" id="H4M-nD-JcN"/>
+                            <constraint firstItem="Ast-hc-yom" firstAttribute="leading" secondItem="IWS-Wr-NbE" secondAttribute="leading" id="ORc-Yg-uPM"/>
+                            <constraint firstAttribute="trailing" secondItem="5qs-mc-ufK" secondAttribute="trailing" id="VmJ-Jq-aFc"/>
+                            <constraint firstItem="5qs-mc-ufK" firstAttribute="leading" secondItem="IWS-Wr-NbE" secondAttribute="leading" id="WdJ-Tk-oZK"/>
+                            <constraint firstAttribute="bottom" secondItem="G3S-fF-XRk" secondAttribute="bottom" constant="16" id="bSg-oG-U7o"/>
+                            <constraint firstItem="qaH-us-Gxo" firstAttribute="top" secondItem="IWS-Wr-NbE" secondAttribute="top" constant="18" id="h45-dJ-nxN"/>
+                            <constraint firstItem="Ast-hc-yom" firstAttribute="top" secondItem="IWS-Wr-NbE" secondAttribute="top" id="jVZ-C2-xiu"/>
+                            <constraint firstAttribute="bottom" secondItem="Ast-hc-yom" secondAttribute="bottom" id="lrs-fE-Z3n"/>
+                            <constraint firstItem="G3S-fF-XRk" firstAttribute="top" secondItem="Ce9-mm-2yw" secondAttribute="bottom" constant="12" id="uCY-Co-QpR"/>
+                            <constraint firstItem="5qs-mc-ufK" firstAttribute="top" secondItem="IWS-Wr-NbE" secondAttribute="top" id="vzB-i7-SoY"/>
+                            <constraint firstAttribute="trailing" secondItem="Ast-hc-yom" secondAttribute="trailing" id="yQL-8F-qUe"/>
+                            <constraint firstItem="G3S-fF-XRk" firstAttribute="leading" secondItem="IWS-Wr-NbE" secondAttribute="leading" constant="16" id="z3S-uk-dKp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="IWS-Wr-NbE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2MZ-Vk-IOh"/>
+                <constraint firstItem="IWS-Wr-NbE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Hau-sD-aHo"/>
+                <constraint firstAttribute="trailing" secondItem="IWS-Wr-NbE" secondAttribute="trailing" id="ILU-UT-vaK"/>
+                <constraint firstAttribute="bottom" secondItem="IWS-Wr-NbE" secondAttribute="bottom" id="mn6-JP-sde"/>
+            </constraints>
+            <size key="customSize" width="281" height="272"/>
+            <connections>
+                <outlet property="bilboardLblName" destination="2P5-w7-a4u" id="Pze-f2-wk9"/>
+                <outlet property="billboardImage" destination="Ast-hc-yom" id="dgZ-pC-giG"/>
+                <outlet property="billboarsSubLbl" destination="kY4-dE-iMP" id="TnG-fK-d3T"/>
+                <outlet property="muteButton" destination="qaH-us-Gxo" id="hnK-6x-Zmq"/>
+                <outlet property="noLabel" destination="8sG-aG-6qF" id="h31-IN-U6Q"/>
+                <outlet property="videoHolder" destination="5qs-mc-ufK" id="lc8-x2-qkm"/>
+            </connections>
+            <point key="canvasLocation" x="78.625954198473281" y="144.36619718309859"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="baner" width="328" height="394"/>
+        <image name="mute" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

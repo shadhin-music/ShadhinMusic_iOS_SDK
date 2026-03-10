@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VideoLandscapeCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="212"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="212"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAv-xW-HGh">
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="212"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app push img" translatesAutoresizingMaskIntoConstraints="NO" id="0EW-8k-LdR">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="158" id="aMP-8m-cmC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_play_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="9Ac-tn-9Go">
+                                <rect key="frame" x="16" y="110" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="2NO-4L-f4Z"/>
+                                    <constraint firstAttribute="height" constant="32" id="31D-lu-Dwp"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VuE-z8-NPQ">
+                                <rect key="frame" x="0.0" y="173.5" width="280" height="38.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Podcast name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0L-gh-JGe">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="22"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Host name • 30m 40s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7E-Y5-bEJ">
+                                        <rect key="frame" x="0.0" y="22" width="280" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0EW-8k-LdR" firstAttribute="top" secondItem="LAv-xW-HGh" secondAttribute="top" id="1a5-3s-nKq"/>
+                            <constraint firstItem="VuE-z8-NPQ" firstAttribute="leading" secondItem="LAv-xW-HGh" secondAttribute="leading" id="B8L-bY-0s3"/>
+                            <constraint firstItem="9Ac-tn-9Go" firstAttribute="leading" secondItem="0EW-8k-LdR" secondAttribute="leading" constant="16" id="GG8-rc-ERs"/>
+                            <constraint firstAttribute="trailing" secondItem="VuE-z8-NPQ" secondAttribute="trailing" id="IrD-0U-N1h"/>
+                            <constraint firstAttribute="trailing" secondItem="0EW-8k-LdR" secondAttribute="trailing" id="WLU-Vo-y86"/>
+                            <constraint firstItem="0EW-8k-LdR" firstAttribute="leading" secondItem="LAv-xW-HGh" secondAttribute="leading" id="ZAi-I1-2Ua"/>
+                            <constraint firstAttribute="bottom" secondItem="VuE-z8-NPQ" secondAttribute="bottom" id="c1L-09-Bn6"/>
+                            <constraint firstItem="0EW-8k-LdR" firstAttribute="bottom" secondItem="9Ac-tn-9Go" secondAttribute="bottom" constant="16" id="lB2-Vq-Dfl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LAv-xW-HGh" secondAttribute="bottom" id="NBz-0R-Vx2"/>
+                <constraint firstItem="LAv-xW-HGh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eNP-Ib-tZa"/>
+                <constraint firstAttribute="trailing" secondItem="LAv-xW-HGh" secondAttribute="trailing" id="ia5-F5-xjc"/>
+                <constraint firstItem="LAv-xW-HGh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lWz-mG-D2W"/>
+            </constraints>
+            <connections>
+                <outlet property="img" destination="0EW-8k-LdR" id="lAS-3t-3gH"/>
+                <outlet property="imgPlay" destination="9Ac-tn-9Go" id="fgm-Ms-m8J"/>
+                <outlet property="primaryLabel" destination="v0L-gh-JGe" id="dvW-Tl-QDR"/>
+                <outlet property="secondaryLabel" destination="t7E-Y5-bEJ" id="lvd-sU-Go4"/>
+            </connections>
+            <point key="canvasLocation" x="78" y="92"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="app push img" width="312" height="124"/>
+        <image name="ic_play_overlay" width="32" height="32"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,139 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "mygp",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/Office work/MYGP",
+          "name" : "MYGP"
+        },
+        "path" : "/Users/mrt/Desktop/Office work/MYGP/Shadhin_Gp/Library/Vmax/VmaxVastHelper.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "VmaxVastHelper"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "mygp",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/Office work/MYGP",
+          "name" : "MYGP"
+        },
+        "path" : "/Users/mrt/Desktop/Office work/MYGP/Shadhin_Gp/Library/Vmax/VmaxOM.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "VmaxOM"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "mygp",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/Office work/MYGP",
+          "name" : "MYGP"
+        },
+        "path" : "/Users/mrt/Desktop/Office work/MYGP/Shadhin_Gp/Library/Vmax/OMSDK_Vmax2.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "OMSDK_Vmax2"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "mygp",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/Office work/MYGP",
+          "name" : "MYGP"
+        },
+        "path" : "/Users/mrt/Desktop/Office work/MYGP/Shadhin_Gp/Library/Vmax/VmaxDisplayHelper.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "VmaxDisplayHelper"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "mygp",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/Office work/MYGP",
+          "name" : "MYGP"
+        },
+        "path" : "/Users/mrt/Desktop/Office work/MYGP/Shadhin_Gp/Library/Vmax/VmaxNativeHelper.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "VmaxNativeHelper"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "mygp",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/Office work/MYGP",
+          "name" : "MYGP"
+        },
+        "path" : "/Users/mrt/Desktop/Office work/MYGP/Shadhin_Gp/Library/Vmax/Vmax.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "Vmax"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "mygp",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/Office work/MYGP",
+          "name" : "MYGP"
+        },
+        "path" : "/Users/mrt/Desktop/Office work/MYGP/Shadhin_Gp/Library/Vmax/VmaxVideoHelper.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "VmaxVideoHelper"
+      }
+    ],
+    "dependencies" : [
+
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

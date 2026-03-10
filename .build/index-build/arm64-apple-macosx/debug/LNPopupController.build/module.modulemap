@@ -1,0 +1,4 @@
+module LNPopupController {
+    umbrella header "/Users/mrt/Desktop/Office work/MYGP/ObjCBridge/LNPopupController/LNPopupController.h"
+    export *
+}

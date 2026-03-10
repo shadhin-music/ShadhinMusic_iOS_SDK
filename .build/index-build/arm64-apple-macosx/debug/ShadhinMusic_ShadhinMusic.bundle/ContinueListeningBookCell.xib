@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ContinueListeningBookCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="251" height="154"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="251" height="154"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJC-6n-uvu">
+                        <rect key="frame" x="0.0" y="8" width="251" height="39"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvz-lz-sip">
+                                <rect key="frame" x="0.0" y="9" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7g-Gh-Joz">
+                                <rect key="frame" x="187" y="6" width="48" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="SEE ALL">
+                                    <color key="titleColor" red="0.30689245459999998" green="0.68026649949999995" blue="0.97258967159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="seeAllClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ItH-OJ-S0a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="s7g-Gh-Joz" secondAttribute="trailing" constant="16" id="ToW-IH-teY"/>
+                            <constraint firstItem="mvz-lz-sip" firstAttribute="centerY" secondItem="TJC-6n-uvu" secondAttribute="centerY" id="XjN-bp-SSt"/>
+                            <constraint firstItem="mvz-lz-sip" firstAttribute="leading" secondItem="TJC-6n-uvu" secondAttribute="leading" id="kGG-Kh-MQl"/>
+                            <constraint firstItem="s7g-Gh-Joz" firstAttribute="centerY" secondItem="TJC-6n-uvu" secondAttribute="centerY" id="lv2-H9-gmz"/>
+                            <constraint firstAttribute="height" constant="39" id="oEw-Wq-996"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Gw9-zc-IYL">
+                        <rect key="frame" x="0.0" y="47" width="251" height="107"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wIN-sL-bBk">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </collectionView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="pKg-Pr-dCy">
+                        <rect key="frame" x="115.66666666666667" y="67" width="20.000000000000014" height="20"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="pKg-Pr-dCy" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="FLC-Ki-QLK"/>
+                <constraint firstItem="Gw9-zc-IYL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FZE-Wg-1ut"/>
+                <constraint firstAttribute="trailing" secondItem="Gw9-zc-IYL" secondAttribute="trailing" id="ONb-fv-Egz"/>
+                <constraint firstItem="TJC-6n-uvu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SOJ-93-222"/>
+                <constraint firstItem="pKg-Pr-dCy" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="cIA-kN-qL5"/>
+                <constraint firstItem="Gw9-zc-IYL" firstAttribute="top" secondItem="TJC-6n-uvu" secondAttribute="bottom" id="hOr-Yw-Mwi"/>
+                <constraint firstAttribute="trailing" secondItem="TJC-6n-uvu" secondAttribute="trailing" id="lEW-JP-grZ"/>
+                <constraint firstItem="TJC-6n-uvu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="lSd-Ju-fIk"/>
+                <constraint firstAttribute="bottom" secondItem="Gw9-zc-IYL" secondAttribute="bottom" id="oL4-Lq-POY"/>
+            </constraints>
+            <size key="customSize" width="251" height="154"/>
+            <connections>
+                <outlet property="collectionView" destination="Gw9-zc-IYL" id="0vg-oW-Sl4"/>
+                <outlet property="indicator" destination="pKg-Pr-dCy" id="gbo-Kn-vca"/>
+                <outlet property="seeAllbtn" destination="s7g-Gh-Joz" id="caK-dp-ux1"/>
+                <outlet property="titleNameLbl" destination="mvz-lz-sip" id="5nk-Gt-WTU"/>
+            </connections>
+            <point key="canvasLocation" x="138.1679389312977" y="56.338028169014088"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrendingVideoCell" id="gTV-IL-0wX" customClass="TrendingVideoCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="175"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="175"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOs-zX-mrb">
+                        <rect key="frame" x="5" y="5" width="290" height="165"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration" translatesAutoresizingMaskIntoConstraints="NO" id="BpX-Zt-cbs">
+                                <rect key="frame" x="0.0" y="0.0" width="290" height="165"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_play_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="wKP-71-4z3">
+                                <rect key="frame" x="16" y="117" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="7gd-qu-B8R"/>
+                                    <constraint firstAttribute="height" constant="32" id="f5x-Uj-dKM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BpX-Zt-cbs" secondAttribute="trailing" id="PI5-TS-3tZ"/>
+                            <constraint firstAttribute="bottom" secondItem="wKP-71-4z3" secondAttribute="bottom" constant="16" id="Q7x-er-BTn"/>
+                            <constraint firstItem="BpX-Zt-cbs" firstAttribute="leading" secondItem="pOs-zX-mrb" secondAttribute="leading" id="QIT-Hz-I1S"/>
+                            <constraint firstAttribute="bottom" secondItem="BpX-Zt-cbs" secondAttribute="bottom" id="awy-PE-KnQ"/>
+                            <constraint firstItem="BpX-Zt-cbs" firstAttribute="top" secondItem="pOs-zX-mrb" secondAttribute="top" id="frB-Kq-Pzd"/>
+                            <constraint firstItem="wKP-71-4z3" firstAttribute="leading" secondItem="pOs-zX-mrb" secondAttribute="leading" constant="16" id="tM6-hu-usq"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pOs-zX-mrb" secondAttribute="trailing" constant="5" id="8eR-t6-hSm"/>
+                <constraint firstItem="pOs-zX-mrb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="NSr-ef-ghc"/>
+                <constraint firstItem="pOs-zX-mrb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="gcd-lK-XE2"/>
+                <constraint firstAttribute="bottom" secondItem="pOs-zX-mrb" secondAttribute="bottom" constant="5" id="o0w-Sb-YEu"/>
+            </constraints>
+            <connections>
+                <outlet property="trendingVideoImgView" destination="BpX-Zt-cbs" id="keN-jU-3oM"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="154"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Illustration" width="360" height="359"/>
+        <image name="ic_play_overlay" width="32" height="32"/>
+    </resources>
+</document>
