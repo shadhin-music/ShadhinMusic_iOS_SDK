@@ -14,12 +14,10 @@ let package = Package(
         ),
     ],
     targets: [
-
-        // MARK: - Main Binary Target
-        // Distributed as a pre-built XCFramework to protect source code.
         .binaryTarget(
             name: "ShadhinMusic",
-            path: "ShadhinGP_Framework/Framework/Shadhin_Gp.xcframework"
+            url: "https://github.com/shadhin-music/MyGP_iOS_ShadhinMusicSDK/releases/download/1.0.3/Shadhin_Gp.xcframework.zip",
+            checksum: "618c60572fbfb7b2aa7e266867302f449c3efd82ffe12428fd684ad9cb2aeb78"
         ),
     ]
 )
