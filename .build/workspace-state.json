@@ -13,47 +13,11 @@
           "location" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK",
           "name" : "ShadhinMusic_iOS_SDK"
         },
-        "path" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK/Shadhin_Gp/Library/Vmax/VmaxNativeHelper.xcframework",
+        "path" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK/Shadhin_Gp/Library/Vmax/VmaxDisplayHelper.xcframework",
         "source" : {
           "type" : "local"
         },
-        "targetName" : "VmaxNativeHelper"
-      },
-      {
-        "kind" : {
-          "xcframework" : {
-
-          }
-        },
-        "packageRef" : {
-          "identity" : "shadhinmusic_ios_sdk",
-          "kind" : "root",
-          "location" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK",
-          "name" : "ShadhinMusic_iOS_SDK"
-        },
-        "path" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK/Shadhin_Gp/Library/Vmax/VmaxOM.xcframework",
-        "source" : {
-          "type" : "local"
-        },
-        "targetName" : "VmaxOM"
-      },
-      {
-        "kind" : {
-          "xcframework" : {
-
-          }
-        },
-        "packageRef" : {
-          "identity" : "shadhinmusic_ios_sdk",
-          "kind" : "root",
-          "location" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK",
-          "name" : "ShadhinMusic_iOS_SDK"
-        },
-        "path" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK/Shadhin_Gp/Library/Vmax/Vmax.xcframework",
-        "source" : {
-          "type" : "local"
-        },
-        "targetName" : "Vmax"
+        "targetName" : "VmaxDisplayHelper"
       },
       {
         "kind" : {
@@ -121,11 +85,47 @@
           "location" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK",
           "name" : "ShadhinMusic_iOS_SDK"
         },
-        "path" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK/Shadhin_Gp/Library/Vmax/VmaxDisplayHelper.xcframework",
+        "path" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK/Shadhin_Gp/Library/Vmax/VmaxNativeHelper.xcframework",
         "source" : {
           "type" : "local"
         },
-        "targetName" : "VmaxDisplayHelper"
+        "targetName" : "VmaxNativeHelper"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "shadhinmusic_ios_sdk",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK",
+          "name" : "ShadhinMusic_iOS_SDK"
+        },
+        "path" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK/Shadhin_Gp/Library/Vmax/VmaxOM.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "VmaxOM"
+      },
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "shadhinmusic_ios_sdk",
+          "kind" : "root",
+          "location" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK",
+          "name" : "ShadhinMusic_iOS_SDK"
+        },
+        "path" : "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK/Shadhin_Gp/Library/Vmax/Vmax.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "Vmax"
       }
     ],
     "dependencies" : [
