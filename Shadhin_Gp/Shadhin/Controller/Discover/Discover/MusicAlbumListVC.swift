@@ -427,12 +427,20 @@ extension MusicAlbumListVC: UITableViewDelegate,UITableViewDataSource {
              ***/
             
             let adjustedRow = getAdAdjustedRow(row: indexPath.row)
-            
+
             let cell = tableView.dequeueReusableCell(withIdentifier: "MusicSongsListCell") as! MusicSongsListCell
             var obj = songsAndAlbums[adjustedRow]
             obj.albumId = (discoverModel.albumId != nil) ? discoverModel.albumId : discoverModel.contentID
+
+            // প্রথম GP RBT item কোনটা সেটা বের করো
+            let isFirstRbt: Bool = {
+                guard obj.rbtOperators?.containsGP() == true else { return false }
+                let firstRbtIndex = songsAndAlbums.firstIndex(where: { $0.rbtOperators?.containsGP() == true })
+                return firstRbtIndex == adjustedRow
+            }()
+
+            cell.configureCell(model: obj, contentType: discoverModel.contentType ?? "", indexInSection: isFirstRbt ? 0 : 1)
             
-            cell.configureCell(model: obj, contentType: discoverModel.contentType ?? "")           
             cell.didTappedWelcomeTuneSet {
                 let popupVC = SetWelcomeTunePopupVC.instantiateNib()
                 let song = self.songsAndAlbums[adjustedRow]  // ✅ get individual song

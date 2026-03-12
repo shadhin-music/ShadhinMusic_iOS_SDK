@@ -88,6 +88,7 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
             }
         }
     }
+    
     var lyricsRequest: DataRequest?
     
     private var gradientLayer : CAGradientLayer!
@@ -191,92 +192,10 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
     @IBOutlet weak var ChorkiWatchNowBtn: UIButton!
     var adPlayer: AVPlayer? = nil
     var isChorkiAdIsPlaying = false
-    
-    
-    private func playChorkiAudioAd(){
-        guard let url = Bundle.main.url(forResource: "ad_file", withExtension: "mp3") else {
-            print("url not found")
-            return
-        }
-        
-        let content = CommonContent_V0()
-        //        content.contentID = "0000"
-        //        content.contentType = "s"
-        //        content.image = imageUrl.absoluteString
-        //        content.title = "Chorki Ad"
-        //        content.artist = "Advertisement"
-        //
-        let playPauseBtnMini = (MainTabBar.shared?.popupBar.customPopupBarViewController as? MusicPlayerV4Mini)?.playPauseBtn
-        updateMiniPlayerInfo(content: content, tabBar: self.tabBarController)
-        playPauseBtnMini?.showLoading()
-        
-        
-        ChorkiAdDuration.text = "00:00"
-        ChorkiAdView.isHidden = false
-        ChorkiSkipBtn.isHidden = true
-        self.view.bringSubviewToFront(ChorkiAdView)
-        audioPause()
-        isChorkiAdIsPlaying = true
-        
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            //adPlayer = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            adPlayer = AVPlayer(url: url)
-            adPlayer?.play()
-            adPlayer?.addPeriodicTimeObserver(forInterval: CMTime.init(value: 1, timescale: 1), queue: .main, using: { [weak self] time in
-                if let duration = self?.adPlayer?.currentItem?.duration {
-                    let duration = CMTimeGetSeconds(duration),
-                        time = CMTimeGetSeconds(time)
-                    let progress = Float(time/duration)
-                    self?.ChorkiAdDuration.text = formatSecondsToString(time)
-                    if time >= 20 , self?.ChorkiSkipBtn.isHidden == true{
-                        self?.ChorkiSkipBtn.isHidden = false
-                        
-                    }
-                    Log.info("progress \(progress)")
-                    if progress < 0.99 {
-                        self?.ChorkiSlider.value = progress
-                    }else if(progress >= 0.99){
-                        self?.adPlayer?.replaceCurrentItem(with: nil)
-                        self?.adPlayer = nil
-                        self?.ChorkiAdView.isHidden = true
-                        self?.isChorkiAdIsPlaying = false
-                        self?.audioResume()
-                    }
-                }
-            })
-        } catch let error as NSError {
-            print("error: \(error.localizedDescription)")
-        }
-        
-        
-        
-        //        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0, execute: {
-        //            self.ChorkiAdView.isHidden = true
-        //            self.isChorkiAdIsPlaying = false
-        //            self.audioResume()
-        //        })
-    }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        ChorkiAudioAd.instance.shouldPlayAudioAd = {
-        //            self.playChorkiAudioAd()
-        //        }
-        //        ChorkiSkipBtn.setClickListener {
-        //            self.adPlayer?.replaceCurrentItem(with: nil)
-        //            self.adPlayer = nil
-        //            self.ChorkiAdView.isHidden = true
-        //            self.isChorkiAdIsPlaying = false
-        //            self.audioResume()
-        //        }
-        //        ChorkiWatchNowBtn.setClickListener {
-        //            if let url = URL(string: "https://www.chorki.com/series/procholito?utm_source=shadhin_chorki&utm_medium=cpm&utm_campaign=chorki_procholito_shadhin_audio_ads") {
-        //                UIApplication.shared.open(url)
-        //            }
-        //        }
+        
         if let popupBar = self.popupContainerViewController?.popupBar{
             popupBar.dataSource = self
             popupBar.titleLabel.font = .systemFont(ofSize: 14, weight: .semibold)
@@ -287,7 +206,7 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
         self.view.backgroundColor = .customBGColor()
         
         if #available(iOS 13.0, *) {
-            let window = UIApplication.shared.windows.first
+            let window = UIApplication.shared.currentWindow
             let topPadding = window?.safeAreaInsets.top ?? 0
             topSpacing.constant = topPadding //+ 20
         }else{
@@ -300,7 +219,6 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
         imageModule.layer.cornerRadius = 10
         imageModule.isHidden = true
         shadowImageView.cornerRadius = 10
-        //view.backgroundColor = .customBGColor()
         
         playerSlider.setThumbImage(UIImage(named: "slider img",in: Bundle.ShadhinMusicSdk,compatibleWith: nil), for: .normal)
         playerSlider.setThumbImage(UIImage(named: "slider img",in: Bundle.ShadhinMusicSdk,compatibleWith: nil), for: .highlighted)
@@ -401,6 +319,7 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
         super.viewDidLayoutSubviews()
         gradientLayer.frame = self.view.bounds
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         self.checkSongsIsDownloading(index: self.songsIndex)
         liveHolderOffset.constant = iCarouselView.itemWidth / 2
@@ -621,7 +540,7 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
             
             guard let playlist = playlists else {return}
             if playlist.count > 0 {
-                let window = UIApplication.shared.windows.first
+                let window = UIApplication.shared.currentWindow
                 let bottomPadding = window?.safeAreaInsets.bottom ?? 0
                 let tableCellHeight: CGFloat = CGFloat((playlist.count * 72) + 130)
                 height = bottomPadding + tableCellHeight
@@ -676,6 +595,7 @@ class MusicPlayerV3: UIViewController,NIBVCProtocol {
 
 //MARK: initial setup
 extension MusicPlayerV3{
+    
     public func initplayer(_ rootContent: CommonContentProtocol? = nil, _ index: Int = 0){
         self.history_timer.invalidate()
         self.userHistoryTracking(newIndex: nil)
@@ -709,6 +629,8 @@ extension MusicPlayerV3{
             // self.playStartTime = getCurrentDateAndTime()
         }
     }
+    
+    
     func updateUI(withIndex index: Int) {
         guard Thread.isMainThread else {
             DispatchQueue.main.async { self.updateUI(withIndex: index) }
@@ -721,8 +643,6 @@ extension MusicPlayerV3{
         MusicPlayerV3.songContentID = musicdata[index].contentID ?? ""
         songsIndex = index
         getCommentOrLyrics()
-
-        // ✅ Reset gradient immediately so old playlist colors don't persist
         gradientLayer.colors = [
             UIColor.gray.cgColor,
             UIColor(red: 0.97, green: 0.97, blue: 0.97, alpha: 1.00).cgColor
@@ -735,7 +655,6 @@ extension MusicPlayerV3{
         ) { result in
             switch result {
             case .success(let res):
-                // ✅ Ensure UI updates on main thread
                 DispatchQueue.main.async {
                     self.shadowImageView.image = res.image
                     self.backgroundImageView.image = res.image
@@ -744,7 +663,6 @@ extension MusicPlayerV3{
                         popbar.image = res.image
                     }
 
-                    // ✅ getColors callback is NOT guaranteed to be on main thread
                     res.image.getColors(quality: .lowest) { colors in
                         guard let colors = colors else { return }
                         DispatchQueue.main.async {
@@ -776,7 +694,6 @@ extension MusicPlayerV3{
             popbar.subtitleLabel.textColor = self.albumNameLabel.textColor
         }
 
-        // ... rest of your existing code unchanged
     }
     private func userHistoryTracking(newIndex: Int?) {
         
@@ -787,15 +704,15 @@ extension MusicPlayerV3{
         {
             let playCount = history_total_duration > 1 ? "1" : "0"
             
-            //            Analytics.logEvent("sm_content_played",
-            //                               parameters: [
-            //                                "content_type"  : type.lowercased() as NSObject,
-            //                                "content_id"    : contentID as NSObject,
-            //                                "user_type"     : ShadhinCore.instance.defaults.shadhinUserType.rawValue  as NSObject,
-            //                                "content_name"  : history_data?.title?.lowercased() ?? "" as NSObject,
-            //                                "duration_sec"  : history_total_duration as NSObject,
-            //                                "platform"      : "ios" as NSObject
-            //                               ])
+            ShadhinGP.shared.trackEvent(name: "sm_content_played", params: [
+                "content_type"  : type.lowercased() as NSObject,
+                "content_id"    : contentID as NSObject,
+                "user_type"     : ShadhinCore.instance.defaults.shadhinUserType.rawValue  as NSObject,
+                "content_name"  : history_data?.title?.lowercased() ?? "" as NSObject,
+                "duration_sec"  : history_total_duration as NSObject,
+                "platform"      : "ios" as NSObject
+
+            ])
             
             ShadhinCore.instance.api.trackUserHistory(
                 contentID: contentID,
@@ -904,7 +821,6 @@ extension MusicPlayerV3{
     }
     
     func gradientSetup() {
-        // ✅ Remove existing gradient layer if already present
         gradientLayer?.removeFromSuperlayer()
 
         gradientLayer = CAGradientLayer()
@@ -919,6 +835,7 @@ extension MusicPlayerV3{
         self.effectView.contentView.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
+
 //MARK: Audio player setup
 extension MusicPlayerV3{
     private func songsChangeWithIndex(index: Int) {
@@ -1079,11 +996,9 @@ extension MusicPlayerV3: iCarouselDelegate, iCarouselDataSource {
             imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 220, height: 220))
         }
         
-        
         imageView.contentMode = .scaleToFill
         imageView.layer.cornerRadius = 4
         imageView.clipsToBounds = true
-        
         
         imageView.kf.setImage(with: URL(string: musicdata[index].image?.replacingOccurrences(of: "<$size$>", with: "300").safeUrl() ?? ""), placeholder: UIImage(named: "default_song",in: Bundle.ShadhinMusicSdk,compatibleWith: nil))
         
@@ -1119,27 +1034,29 @@ extension MusicPlayerV3: iCarouselDelegate, iCarouselDataSource {
         transform = CATransform3DScale(transform, 1 / (f / shrinkFactor + 1), 1 / (f / shrinkFactor + 1), 1)
         return transform
     }
-    
+        
     func carouselDidEndScrollingAnimation(_ carousel: iCarousel) {
-        guard self.musicdata.count > self.iCarouselView.currentItemIndex else {return}
-        if !(self.musicdata[self.iCarouselView.currentItemIndex].contentID == MusicPlayerV3.songContentID) {
-            //self.userHistoryTracking()
-            
-            MusicPlayerV3.audioPlayer.play(items: viewModel.audioItems, startAtIndex: self.iCarouselView.currentItemIndex)
-            self.songsChangeWithIndex(index: carousel.currentItemIndex)
-            //self.playStartTime = getCurrentDateAndTime()
-        }else {
-            //print("same contentid")
+        guard self.musicdata.count > self.iCarouselView.currentItemIndex else { return }
+        
+        let currentIndex = self.iCarouselView.currentItemIndex
+        let currentPlayingId = MusicPlayerV3.audioPlayer.currentItem?.contentId
+        let carouselItemId = self.musicdata[currentIndex].contentID
+        
+        if currentPlayingId == carouselItemId {
+            self.songsChangeWithIndex(index: currentIndex)
+            return
         }
         
+        if !(self.musicdata[currentIndex].contentID == MusicPlayerV3.songContentID) {
+            MusicPlayerV3.audioPlayer.play(items: viewModel.audioItems, startAtIndex: currentIndex)
+            self.songsChangeWithIndex(index: carousel.currentItemIndex)
+        }
     }
-    
 }
 
 //MARK: - Audio player
 extension MusicPlayerV3: AudioPlayerDelegate {
     func audioPlayer(_ audioPlayer: AudioPlayer, didChangeStateFrom from: AudioPlayerState, to state: AudioPlayerState) {
-        //print("Look from - \(from) to - \(state)")
         self.history_timer.invalidate()
         MusicPlayerV3.isAudioPlaying = false
         let playPauseBtnMini = (MainTabBar.shared?.popupBar.customPopupBarViewController as? MusicPlayerV4Mini)?.playPauseBtn
@@ -1318,20 +1235,21 @@ extension MusicPlayerV3: AudioPlayerDelegate {
             userInfo: ["index": index]
         )
     }
-    
 }
 
 extension MusicPlayerV3 : PBPopupControllerDelegate,PBPopupBarDataSource{
     
     func popupController(_ popupController: PBPopupController, didOpen popupContentViewController: UIViewController) {
-        UIView.animate(withDuration: 0.3) {
+
+        UIView.animate(withDuration: 0.2) {
             self.iCarouselView.isHidden = false
             self.imageModule.isHidden = true
+            self.updateUI(withIndex: self.songsIndex)
             self.view.layoutIfNeeded()
         }
     }
     func popupController(_ popupController: PBPopupController, willClose popupContentViewController: UIViewController) {
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.2) {
             self.iCarouselView.isHidden = true
             self.imageModule.isHidden = false
             self.view.layoutIfNeeded()

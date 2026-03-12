@@ -98,7 +98,7 @@ extension ArtistSongsListCell {
         self.welcomeTuneBtn.isHidden = !hasGP
     }
 
-    func configureCell(model: CommonContentProtocol, _ showCount: Bool = false) {
+    func configureCell(model: CommonContentProtocol, _ showCount: Bool = false, indexInSection: Int = 0) {
         songTitleLbl.text = model.title ?? ""
         songArtistLbl.text = model.artist ?? ""
         songsDurationLbl.text = formatSecondsToString(Double(model.duration ?? "") ?? 123)
@@ -109,9 +109,8 @@ extension ArtistSongsListCell {
 
         self.configureWelcomeTuneButton(operators: model.rbtOperators)
 
-        // ✅ Badge animation
         let hasGP = model.rbtOperators?.containsGP() ?? false
-        if hasGP {
+        if hasGP && indexInSection == 0 {
             showBadgeAndStartAnimation()
         } else {
             stopBadgeAnimation()

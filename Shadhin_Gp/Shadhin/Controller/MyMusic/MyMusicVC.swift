@@ -602,6 +602,27 @@ extension MyMusicVC: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView,
+                   viewForFooterInSection section: Int) -> UIView? {
+
+        guard sectionType(for: section) == .recent else {
+            return nil
+        }
+
+        let footer = ShadhinPoweredByFooterView()
+        return footer
+    }
+
+    func tableView(_ tableView: UITableView,
+                   heightForFooterInSection section: Int) -> CGFloat {
+
+        guard sectionType(for: section) == .recent else {
+            return .leastNormalMagnitude
+        }
+
+        return 44
+    }
+    
+    func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch sectionType(for: indexPath.section) {

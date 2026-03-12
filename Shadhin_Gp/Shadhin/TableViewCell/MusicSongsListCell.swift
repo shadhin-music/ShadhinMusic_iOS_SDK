@@ -100,7 +100,7 @@ extension MusicSongsListCell {
         self.welcomeTuneBtn.isHidden = !hasGP
     }
     
-    func configureCell(model: CommonContentProtocol, contentType: String) {
+    func configureCell(model: CommonContentProtocol, contentType: String, indexInSection: Int = 0) {
         
         let imgUrl = model.image?.replacingOccurrences(of: "<$size$>", with: "300") ?? ""
         songsImgView.kf.indicatorType = .activity
@@ -108,13 +108,13 @@ extension MusicSongsListCell {
         songTitleLbl.text = model.title ?? ""
         self.configureWelcomeTuneButton(operators: model.rbtOperators)
         let hasGP = model.rbtOperators?.containsGP() ?? false
-           if hasGP {
-               showBadgeAndStartAnimation()
-           } else {
-               stopBadgeAnimation()
-               badgeView.isHidden = true
-               badgeLbl.isHidden = true
-           }
+        if hasGP && indexInSection == 0 {
+            showBadgeAndStartAnimation()
+        } else {
+            stopBadgeAnimation()
+            badgeView.isHidden = true
+            badgeLbl.isHidden = true
+        }
         songArtistLbl.text = model.artist ?? ""
         
         songsDurationLbl.text = formatSecondsToString(Double(model.duration ?? "") ?? 123)

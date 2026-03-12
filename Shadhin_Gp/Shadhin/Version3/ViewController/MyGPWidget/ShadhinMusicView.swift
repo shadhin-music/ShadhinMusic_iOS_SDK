@@ -132,6 +132,7 @@ public class ShadhinMusicView: UIView {
         if ConnectionManager.shared.isNetworkAvailable {
             GPAudioViewModel.shared.goContentPlayingState = isPlaying
             GPAudioViewModel.shared.areWeInsideSDK = true
+            GPAudioViewModel.shared.switchContext(to: .sdk)
             self.gpDeletegate?.gotoShadhinSDK(completionHandler: { vc, accessToken in
                 self.vc = vc
                 self.accessToken = accessToken
@@ -294,6 +295,7 @@ public class ShadhinMusicView: UIView {
 
     func setButtonImage(playingState: PlayingState, contentId: Int?) {
         viewModel.setPlayPauseImage(playPauseButton: playPauseButton, isPlaying: playingState)
+        isPlaying = playingState
     }
     
     @IBAction func retryBtnAction(_ sender: UIButton) {
@@ -660,14 +662,21 @@ extension ShadhinMusicView: AudioPlayerDelegate {
     }
     
     public func audioPlayer(_ audioPlayer: AudioPlayer, didChangeStateFrom from: AudioPlayerState, to state: AudioPlayerState) {
-        
         let isAudioPlaying = state.isPlaying
+        if case .stopped = state {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.isPlaying = .playing
+                self.goToNextItem()
+            }
+        }
+        
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             self.updateVisibleVideoMuteState(isAudioPlaying: isAudioPlaying)
         }
     }
-
+    
     public func audioPlayer(_ audioPlayer: AudioPlayer, didUpdateProgressionTo time: TimeInterval, percentageRead: Float){
         playDurationLbl.text = formatTimeToMinutesAndSeconds(time)
         gpPlayerSlider.value = Float(percentageRead/100)
@@ -719,7 +728,7 @@ extension ShadhinMusicView: iCarouselDataSource, iCarouselDelegate {
         
         guard let audioItem = viewModel.gpMusicContents[newIndex].convertToAudioItem() else { return }
         self.rememberDataToPlayAgainInSDK()
-
+        self.isPlaying = .playing
         if isPlaying == .playing {
             AudioPlayer.shared.play(item: audioItem)
             viewModel.setPlayPauseImage(playPauseButton: playPauseButton, isPlaying: .playing)
@@ -738,67 +747,4 @@ enum PlayingState {
 
 public protocol ShadhinMusicViewDelegate {
     func gotoShadhinSDK(completionHandler: @escaping (UIViewController, String)-> Void)
-}
-
-extension ShadhinMusicView {
-
-    /// HomeVC থেকে ফিরে আসলে call হবে
-    /// Currently playing item টা check করে smartly merge করবে
-    func syncAudioItemsOnReturn() {
-        let freshContents = ShadhinCore.instance.defaults.gpMusicContentsCache
-        guard !freshContents.isEmpty else { return }
-        
-        guard !viewModel.gpMusicContents.isEmpty else {
-            viewModel.gpMusicContents = freshContents
-            gpCaroselMusicView.reloadData()
-            return
-        }
-        
-        let originalContentIds = Set(freshContents.compactMap { $0.contentId })
-        
-        let currentPlayingId = AudioPlayer.shared.currentItem?.contentId
-        let currentPlayingIntId = currentPlayingId.flatMap { Int($0) }
-        
-        let isPlayingFromOriginalList: Bool
-        if let playingId = currentPlayingIntId {
-            isPlayingFromOriginalList = originalContentIds.contains(playingId)
-        } else {
-            isPlayingFromOriginalList = true
-        }
-        
-        if isPlayingFromOriginalList {
-            return
-        }
-        
-        var mergedContents: [GPContent] = []
-        
-        let externalItems = viewModel.gpMusicContents.filter { item in
-            guard let id = item.contentId else { return false }
-            return !originalContentIds.contains(id)
-        }
-        mergedContents.append(contentsOf: externalItems)
-        
-        let existingIds = Set(mergedContents.compactMap { $0.contentId })
-        let nonDuplicateFresh = freshContents.filter { item in
-            guard let id = item.contentId else { return true }
-            return !existingIds.contains(id)
-        }
-        mergedContents.append(contentsOf: nonDuplicateFresh)
-        
-        viewModel.gpMusicContents = mergedContents
-        
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.gpCaroselMusicView.reloadData()
-            
-            if let playingId = currentPlayingId,
-               let index = self.viewModel.gpMusicContents.firstIndex(where: {
-                   String($0.contentId ?? 0) == playingId
-               }) {
-                self.viewModel.selectedIndexInCarousel = index
-                self.gpCaroselMusicView.scrollToItem(at: index, animated: false)
-                self.setArtistLbl(index: index)
-            }
-        }
-    }
 }

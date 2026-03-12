@@ -54,6 +54,7 @@ class PodcastViewControllerVersionTwo: UIViewController, NIBVCProtocol {
         collectionView.register(VmaxCommonAdCell.nib, forCellWithReuseIdentifier: VmaxCommonAdCell.identifier)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "EmptyCell")
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 20, right: 16)
+        collectionView?.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,withReuseIdentifier: "ShadhinFooter")
 
         // Pull to refresh
         refreshControl.tintColor = .appTint
@@ -231,6 +232,36 @@ extension PodcastViewControllerVersionTwo: UICollectionViewDelegateFlowLayout, U
             }
             return .zero
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionFooter {
+            let footer = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: "ShadhinFooter",
+                for: indexPath
+            )
+            footer.subviews.forEach { $0.removeFromSuperview() }
+            let shadhinFooter = ShadhinPoweredByFooterView()
+            shadhinFooter.translatesAutoresizingMaskIntoConstraints = false
+            footer.addSubview(shadhinFooter)
+            NSLayoutConstraint.activate([
+                shadhinFooter.leadingAnchor.constraint(equalTo: footer.leadingAnchor),
+                shadhinFooter.trailingAnchor.constraint(equalTo: footer.trailingAnchor),
+                shadhinFooter.topAnchor.constraint(equalTo: footer.topAnchor),
+                shadhinFooter.bottomAnchor.constraint(equalTo: footer.bottomAnchor),
+            ])
+            return footer
+        }
+        return UICollectionReusableView()
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 44)
     }
 }
 

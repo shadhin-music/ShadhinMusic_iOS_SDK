@@ -343,7 +343,14 @@ extension PlaylistOrSingleDetailsVC: UITableViewDelegate,UITableViewDataSource {
             if discoverModel.contentType?.uppercased() == "S" || discoverModel.contentType?.uppercased() == "R" {
                 cell.configureTrackCell(model: latestTracks[index])
             }else {
-                cell.configureCell(model: songsAndPlaylists[index], contentType: discoverModel.contentType?.uppercased() ?? "")
+                
+                let isFirstRbt: Bool = {
+                    guard item.rbtOperators?.containsGP() == true else { return false }
+                    let firstRbtIndex = songsAndPlaylists.firstIndex(where: { $0.rbtOperators?.containsGP() == true })
+                    return firstRbtIndex == index
+                }()
+
+                cell.configureCell(model: songsAndPlaylists[index], contentType: discoverModel.contentType?.uppercased() ?? "", indexInSection: isFirstRbt ? 0 : 1)
             }
             cell.didTappedWelcomeTuneSet {
                 let popupVC = SetWelcomeTunePopupVC.instantiateNib()

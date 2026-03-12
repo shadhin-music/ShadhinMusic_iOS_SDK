@@ -322,8 +322,15 @@ extension MusicArtistListVC: UITableViewDelegate,UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ArtistSongsListCell") as! ArtistSongsListCell
             var item = artistSongs[adjustedRow]
             item.artistId = artistId
-            cell.configureCell(model: item, true)
             
+            let isFirstRbt: Bool = {
+                guard item.rbtOperators?.containsGP() == true else { return false }
+                let firstRbtIndex = artistSongs.firstIndex(where: { $0.rbtOperators?.containsGP() == true })
+                return firstRbtIndex == adjustedRow
+            }()
+
+            cell.configureCell(model: item, true, indexInSection: isFirstRbt ? 0 : 1)
+
             cell.didTappedWelcomeTuneSet {
                 let popupVC = SetWelcomeTunePopupVC.instantiateNib()
                 let song = self.artistSongs[adjustedRow]

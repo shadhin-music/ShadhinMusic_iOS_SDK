@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -60,7 +60,7 @@
                                             <rect key="frame" x="0.0" y="-6" width="345" height="40"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadhin_logo_c" translatesAutoresizingMaskIntoConstraints="NO" id="UxM-UD-uFa">
-                                                    <rect key="frame" x="16" y="16" width="216" height="36"/>
+                                                    <rect key="frame" x="0.0" y="16" width="216" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="eqB-X1-aab"/>
                                                         <constraint firstAttribute="width" constant="216" id="esy-4I-Qo4"/>
@@ -71,7 +71,7 @@
                                             <constraints>
                                                 <constraint firstItem="UxM-UD-uFa" firstAttribute="top" secondItem="CeE-8M-TQf" secondAttribute="top" constant="16" id="LVB-WZ-BcF"/>
                                                 <constraint firstAttribute="height" constant="40" id="UJC-6V-ovq"/>
-                                                <constraint firstItem="UxM-UD-uFa" firstAttribute="leading" secondItem="CeE-8M-TQf" secondAttribute="leading" constant="16" id="zJd-6N-k5T"/>
+                                                <constraint firstItem="UxM-UD-uFa" firstAttribute="leading" secondItem="CeE-8M-TQf" secondAttribute="leading" id="zJd-6N-k5T"/>
                                             </constraints>
                                         </view>
                                     </subviews>

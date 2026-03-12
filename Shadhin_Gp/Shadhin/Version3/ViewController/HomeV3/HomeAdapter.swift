@@ -65,7 +65,9 @@ protocol HomeAdapterProtocol : NSObjectProtocol{
 
 class HomeAdapter: NSObject {
     
-    private weak var delegate : HomeAdapterProtocol?
+    private var footerView: ShadhinPoweredByFooterView?
+
+    private var delegate : HomeAdapterProtocol
     private var dataSourceV3: [HomeV3Patch] = []
     var aiPlaylists: [NewContent]?
     var isCheckingAIPlaylistExists = false
@@ -154,7 +156,6 @@ class HomeAdapter: NSObject {
                     for i in (adjustedIndex + 1)..<dataSourceV3.count {
                         dataSourceV3[i].patch.sort += 1
                     }
-                    
                     insertedAdCodes.insert(patchCode)
                     insertionOffset += 1
                 } else {
@@ -231,7 +232,7 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.onClick = {[weak self ] item in
                 guard let self = self else {return}
                 Log.info("\(item)")
-                self.delegate?.onItemClicked(patch: obj3, content: item)
+                self.delegate.onItemClicked(patch: obj3, content: item)
             }
             return cell
         case .TWO_ROW_SQR_WITH_DESC_LEFT:
@@ -241,11 +242,11 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             //        cell.bind(with: obj)
             cell.onItemClick = {[weak self ] item in
                 guard let self = self else {return}
-                self.delegate?.onItemClicked(patch: obj3, content: item)
+                self.delegate.onItemClicked(patch: obj3, content: item)
             }
             cell.onSeeAllClick = {[weak self] in
                 guard let self = self else {return}
-                self.delegate?.seeAllClick(patch: obj3)
+                self.delegate.seeAllClick(patch: obj3)
             }
             return cell
         case .CIRCULAR_WITH_FAV_BTN:
@@ -256,14 +257,14 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             
             cell.onItemClick = {[weak self] content in
                 guard let self = self else {return}
-                self.delegate?.onItemClicked(patch: obj3, content: content)
+                self.delegate.onItemClicked(patch: obj3, content: content)
             }
             //            cell.onFollow = {[weak self] content in
             //                guard let _ = self else {return}
             //            }
             cell.onSeeAllClick = {[weak self] in
                 guard let self = self else {return}
-                self.delegate?.seeAllClick(patch: obj3)
+                self.delegate.seeAllClick(patch: obj3)
             }
             return cell
             
@@ -276,11 +277,11 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
                 cell.onItemClick = {[weak self] content in
                     guard let self = self else {return}
                     IS_RECENTPLAY = true
-                    self.delegate?.onItemClicked(patch: obj3, content: content)
+                    self.delegate.onItemClicked(patch: obj3, content: content)
                 }
                 cell.onSeeAllClick = {[weak self] in
                     guard let self = self else {return}
-                    self.delegate?.seeAllClick(patch: obj3)
+                    self.delegate.seeAllClick(patch: obj3)
                 }
                 return cell
             }
@@ -294,11 +295,11 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.bind(with: obj3.patch.title, subtitle: obj3.patch.description ?? "", dataSource: downloadList, isSeeAll: obj3.patch.isSeeAllActive)
             cell.onItemClick = {[weak self] content in
                 guard let self = self else {return}
-                self.delegate?.onItemClicked(patch: obj3, content: content)
+                self.delegate.onItemClicked(patch: obj3, content: content)
             }
             cell.onSeeAll = { [weak self] in
                 guard let self = self else {return}
-                self.delegate?.seeAllClick(patch: obj3)
+                self.delegate.seeAllClick(patch: obj3)
             }
             return cell
             
@@ -310,11 +311,11 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
                 cell.bind(with: obj3)
                 cell.onItemClick = {[weak self] content in
                     guard let self = self else {return}
-                    self.delegate?.onItemClicked(patch: obj3, content: content)
+                    self.delegate.onItemClicked(patch: obj3, content: content)
                 }
                 cell.onSeeAllClick = { [weak self] in
                     guard let self = self else {return}
-                    self.delegate?.seeAllClick(patch: obj3)
+                    self.delegate.seeAllClick(patch: obj3)
                 }
                 
                 return cell
@@ -329,7 +330,7 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.bind(with: obj3)
             cell.onItemClick = {[weak self] content in
                 guard let self = self else {return}
-                self.delegate?.onItemClicked(patch: obj3, content: content)
+                self.delegate.onItemClicked(patch: obj3, content: content)
             }
             
             return cell
@@ -340,11 +341,11 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.bind(with: obj3.contents)
             cell.onItemClick = {[weak self] content in
                 guard let self = self else {return}
-                self.delegate?.onItemClicked(patch: obj3, content: content)
+                self.delegate.onItemClicked(patch: obj3, content: content)
             }
             cell.seeAllClick = {[weak self] in
                 guard let self = self else {return}
-                self.delegate?.seeAllClick(patch: obj3)
+                self.delegate.seeAllClick(patch: obj3)
             }
             return cell
         case .TWO_ROW_SQR_WITH_DESC_BELOW:
@@ -354,11 +355,11 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.bind(with: obj3.patch.title, dataSource: obj3.contents)
             cell.onItemClick = {[weak self] content in
                 guard let self = self else {return}
-                self.delegate?.onItemClicked(patch: obj3, content: content)
+                self.delegate.onItemClicked(patch: obj3, content: content)
             }
             cell.onSeeAll = {[weak self] in
                 guard let self = self else {return}
-                self.delegate?.seeAllClick(patch: obj3)
+                self.delegate.seeAllClick(patch: obj3)
             }
             return cell
         case .CIRCULAR_WITH_DESC_BELOW:
@@ -368,11 +369,11 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.bind(with: obj3.patch.title, obj3.contents,isSeeAll: obj3.patch.isSeeAllActive)
             cell.onItemClick = {[weak self] content in
                 guard let self = self else {return}
-                self.delegate?.onItemClicked(patch: obj3, content: content)
+                self.delegate.onItemClicked(patch: obj3, content: content)
             }
             cell.onSeeAll = {[weak self] in
                 guard let self = self else {return}
-                self.delegate?.seeAllClick(patch: obj3)
+                self.delegate.seeAllClick(patch: obj3)
             }
             return cell
         case .SINGLE_LINE_WITH_DESCRIPTION:
@@ -382,11 +383,11 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.bind(with: obj3)
             cell.onItemClick = {[weak self] content in
                 guard let self = self else {return}
-                self.delegate?.onItemClicked(patch: obj3, content: content)
+                self.delegate.onItemClicked(patch: obj3, content: content)
             }
             cell.onSeeAll = {[weak self] in
                 guard let self = self else {return}
-                self.delegate?.seeAllClick(patch: obj3)
+                self.delegate.seeAllClick(patch: obj3)
             }
             return cell
         case .SQR_WITH_DESC_BELOW:
@@ -396,11 +397,11 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.bind(with: obj3)
             cell.onItemClick = {[weak self] content in
                 guard let self = self else {return}
-                self.delegate?.onItemClicked(patch: obj3, content: content)
+                self.delegate.onItemClicked(patch: obj3, content: content)
             }
             cell.onSeeAll = {[weak self] in
                 guard let self = self else {return}
-                self.delegate?.seeAllClick(patch: obj3)
+                self.delegate.seeAllClick(patch: obj3)
             }
             return cell
         case .REC_PAGER_WITH_DESC_INSIDE:
@@ -410,7 +411,7 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.bind(with: obj3.contents)
             cell.onItemClick = {[weak self] content in
                 guard let self = self else {return}
-                self.delegate?.onItemClicked(patch: obj3, content: content)
+                self.delegate.onItemClicked(patch: obj3, content: content)
             }
             return cell
         case .TWO_ROW_REC_DESC_BELOW:
@@ -420,11 +421,11 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.configureCell(with: dataSourceV3[index])
             cell.onItemClick = {[weak self] content in
                 guard let self = self else {return}
-                self.delegate?.onItemClicked(patch: obj3, content: content)
+                self.delegate.onItemClicked(patch: obj3, content: content)
             }
             cell.onSeeAll = {[weak self] in
                 guard let self = self else {return}
-                self.delegate?.seeAllClick(patch: obj3)
+                self.delegate.seeAllClick(patch: obj3)
             }
             return cell
         case .TEASER:
@@ -434,9 +435,7 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             if let content = obj3.contents.first{
                 cell.bind(with: content)
             }
-            cell.onPaidContent = { [weak self] in
-                self?.delegate?.onSubscription()
-            }
+            cell.onPaidContent = delegate.onSubscription
             
             return cell
         case .PATCH_DESC_TOP_WITH_REC_PORT_DESC_BELOW:
@@ -447,7 +446,7 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.onItemClick = {[weak self] content in
                 guard let self = self else {return}
                 IS_RECENTPLAY = false
-                self.delegate?.onItemClicked(patch: obj3, content: content)
+                self.delegate.onItemClicked(patch: obj3, content: content)
             }
             return cell
         case .SINGLE_ITEM_WITH_SEE_ALL:
@@ -457,7 +456,7 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.bind(with: obj3.contents)
             cell.onSeeAll = {[weak self] in
                 guard let self = self else {return}
-                self.delegate?.seeAllClick(patch: obj3)
+                self.delegate.seeAllClick(patch: obj3)
             }
             return cell
         case .SQR:
@@ -473,17 +472,17 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
                 fatalError()
             }
             
-            cell.viewTostCallBack = { [weak self] errorMessage in
-                self?.delegate?.viewMackToastShow(message: errorMessage)
+            cell.viewTostCallBack = { errorMessage in
+                self.delegate.viewMackToastShow(message: errorMessage)
             }
-
-            cell.gotoPurchaseVC = { [weak self] in
-                self?.delegate?.gotoPurchaseVC()
+            
+            cell.gotoPurchaseVC = {
+                self.delegate.gotoPurchaseVC()
             }
             
             cell.gotoLeaderboard = {[weak self] camapign in
                 guard let self = self else {return}
-                self.delegate?.gotoLeaderBoard(method: camapign, campaignType: self.streamNwinCampaignResponse?.title ?? "Stream New Win")
+                self.delegate.gotoLeaderBoard(method: camapign, campaignType: self.streamNwinCampaignResponse?.title ?? "Stream New Win")
             }
             
             if case .multipleCampaigns(let simpleCampaigns) = stream.data {
@@ -502,7 +501,7 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             cell.imageIV.image = UIImage(named: "rewind",in: Bundle.ShadhinMusicSdk,compatibleWith: nil)
             cell.setClickListener {[weak self] in
                 guard let self = self else {return}
-                self.delegate?.onRewind(rewindData: self.rewindData)
+                self.delegate.onRewind(rewindData: self.rewindData)
             }
             return cell
         case .AI_PLAYLIST :
@@ -565,7 +564,7 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             
         case .VAMX_AD:
              
-            let tagId = obj3.patch.code
+            let tagId = dataSourceV3[indexPath.row].patch.code
             if ShadhinGP.shared.isVmaxInitialized
                 && !ShadhinCore.instance.isUserPro
                 && VMAX_AD_ITEM_DATA.contains(where: { $0.adId == tagId }) {
@@ -602,7 +601,7 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.row >= collectionView.numberOfItems(inSection: 0) - 5{
-            delegate?.loadMorePatchs()
+            delegate.loadMorePatchs()
         }
         if let cell = cell as? Teaser{
             cell.startVideo()
@@ -696,7 +695,7 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
         case .RECOMMENDED_BOOKS:
             return RecommendedBooksCell.size
         case .VAMX_AD:
-            let tagId = obj3.patch.code
+            let tagId = dataSourceV3[indexPath.row].patch.code
             if ShadhinGP.shared.isVmaxInitialized
                 && !ShadhinCore.instance.isUserPro
                 && VMAX_AD_ITEM_DATA.contains(where: { $0.adId == tagId }) {
@@ -706,6 +705,7 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
             return .zero
         }
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         print("Sectionssss: \(section)")
@@ -717,6 +717,37 @@ extension HomeAdapter : UICollectionViewDelegate,UICollectionViewDataSource,UICo
         }
         let deltaY =  scrollView.contentOffset.y - lastContentOffset
         lastContentOffset = scrollView.contentOffset.y
-        delegate?.onScroll(y: deltaY)
+        delegate.onScroll(y: deltaY)
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionFooter {
+            let footer = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: "ShadhinFooter",
+                for: indexPath
+            )
+            footer.subviews.forEach { $0.removeFromSuperview() }
+            let shadhinFooter = ShadhinPoweredByFooterView()
+            shadhinFooter.translatesAutoresizingMaskIntoConstraints = false
+            footer.addSubview(shadhinFooter)
+            NSLayoutConstraint.activate([
+                shadhinFooter.leadingAnchor.constraint(equalTo: footer.leadingAnchor),
+                shadhinFooter.trailingAnchor.constraint(equalTo: footer.trailingAnchor),
+                shadhinFooter.topAnchor.constraint(equalTo: footer.topAnchor),
+                shadhinFooter.bottomAnchor.constraint(equalTo: footer.bottomAnchor),
+            ])
+            return footer
+        }
+        return UICollectionReusableView()
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 44)
+    }
+
 }

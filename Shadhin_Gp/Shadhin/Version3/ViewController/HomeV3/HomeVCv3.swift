@@ -83,25 +83,6 @@ class HomeVCv3: UIViewController, NIBVCProtocol{
             overrideUserInterfaceStyle = isLight ? .light : .dark
         }
     }
-    
-    private func syncShadhinMusicViewIfNeeded() {
-        guard let collectionView = collectionView else { return }
-        for cell in collectionView.visibleCells {
-            findAndSyncMusicView(in: cell)
-        }
-
-        findAndSyncMusicView(in: self.view)
-    }
-
-    private func findAndSyncMusicView(in view: UIView) {
-        if let musicView = view as? ShadhinMusicView {
-            musicView.syncAudioItemsOnReturn()
-            return
-        }
-        for subview in view.subviews {
-            findAndSyncMusicView(in: subview)
-        }
-    }
 
     private func setupBackButton() {
         backBtn.removeTarget(nil, action: nil, for: .allEvents)
@@ -282,6 +263,8 @@ extension HomeVCv3{
         collectionView?.register(AIPlayList.nib, forCellWithReuseIdentifier: AIPlayList.identifier)
         // cell for AI playList
         collectionView?.register(AIPlaylistItemCell.nib, forCellWithReuseIdentifier: AIPlaylistItemCell.identifier)
+        collectionView?.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,withReuseIdentifier: "ShadhinFooter")
+
         collectionView?.dataSource = adapter
         collectionView?.delegate = adapter
         refreshControll = UIRefreshControl()
