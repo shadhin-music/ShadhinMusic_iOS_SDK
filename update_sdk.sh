@@ -16,6 +16,10 @@ cp -r "$SOURCE/Shadhin_Gp" "$SDK/"
 cp "$SOURCE/Package.swift" "$SDK/"
 echo "Files synced!"
 
+echo "Step 1b: Updating README version to $VERSION..."
+sed -i '' "s/from: \"[0-9]*\.[0-9]*\.[0-9]*\"/from: \"$VERSION\"/" "$SDK/README.md"
+echo "README updated!"
+
 echo "Step 2: Committing..."
 cd "$SDK"
 git add .

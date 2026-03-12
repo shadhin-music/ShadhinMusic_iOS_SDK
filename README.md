@@ -30,7 +30,7 @@ An iOS SDK that embeds the full Shadhin Music experience — streaming, download
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/shadhin-music/ShadhinMusic_iOS_SDK", from: "1.0.0")
+    .package(url: "https://github.com/shadhin-music/ShadhinMusic_iOS_SDK", from: "1.0.2")
 ],
 targets: [
     .target(
