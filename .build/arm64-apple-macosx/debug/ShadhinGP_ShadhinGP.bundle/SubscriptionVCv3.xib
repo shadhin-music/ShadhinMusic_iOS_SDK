@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubscriptionVCv3" customModule="Shadhin_Gp" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Svl-co-aKk" id="iVM-xR-mSA"/>
+                <outlet property="restoreButton" destination="suX-k5-7u9" id="kEo-TJ-feP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xV9-ge-l9S">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sub_bg" translatesAutoresizingMaskIntoConstraints="NO" id="CQd-Ad-KfS">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="328"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="328" id="9nT-2w-NBB"/>
+                            </constraints>
+                        </imageView>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Svl-co-aKk">
+                            <rect key="frame" x="16" y="56" width="361" height="796"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="He5-uT-LST">
+                                <size key="itemSize" width="0.0" height="0.0"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </collectionView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtS-sz-rTL">
+                            <rect key="frame" x="327" y="56" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="7hi-UO-NYi"/>
+                                <constraint firstAttribute="width" constant="60" id="KhM-Cf-CZu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="cancel_ic"/>
+                            <connections>
+                                <action selector="xMarkButton:" destination="-1" eventType="touchUpInside" id="EKW-vx-r1V"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suX-k5-7u9">
+                            <rect key="frame" x="201" y="68" width="112" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="IsV-aB-Pwu"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="j7o-Vp-vio"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Restore Apple"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Restore Apple">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="onRestorePurchaseBtn:" destination="-1" eventType="touchUpInside" id="e7Y-OS-bHq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="collectionViewBg_dark"/>
+                    <constraints>
+                        <constraint firstItem="Svl-co-aKk" firstAttribute="top" secondItem="xV9-ge-l9S" secondAttribute="top" constant="56" id="Q7y-gd-D6I"/>
+                        <constraint firstItem="LtS-sz-rTL" firstAttribute="leading" secondItem="suX-k5-7u9" secondAttribute="trailing" constant="14" id="UAc-lY-AsC"/>
+                        <constraint firstItem="suX-k5-7u9" firstAttribute="top" secondItem="Svl-co-aKk" secondAttribute="top" constant="12" id="ULB-AS-glW"/>
+                        <constraint firstItem="LtS-sz-rTL" firstAttribute="top" secondItem="Svl-co-aKk" secondAttribute="top" id="aJ7-hJ-P4o"/>
+                        <constraint firstItem="LtS-sz-rTL" firstAttribute="leading" secondItem="Svl-co-aKk" secondAttribute="trailing" constant="-50" id="e01-je-UQP"/>
+                        <constraint firstAttribute="bottom" secondItem="Svl-co-aKk" secondAttribute="bottom" id="g5r-hB-mYa"/>
+                        <constraint firstAttribute="trailing" secondItem="Svl-co-aKk" secondAttribute="trailing" constant="16" id="h0B-Vc-2eC"/>
+                        <constraint firstItem="CQd-Ad-KfS" firstAttribute="leading" secondItem="xV9-ge-l9S" secondAttribute="leading" id="m6C-pF-SlC"/>
+                        <constraint firstItem="CQd-Ad-KfS" firstAttribute="top" secondItem="xV9-ge-l9S" secondAttribute="top" id="uNP-84-kBG"/>
+                        <constraint firstAttribute="trailing" secondItem="CQd-Ad-KfS" secondAttribute="trailing" id="xNj-LM-BGX"/>
+                        <constraint firstItem="Svl-co-aKk" firstAttribute="leading" secondItem="xV9-ge-l9S" secondAttribute="leading" constant="16" id="ziV-Yx-bZ9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xV9-ge-l9S" secondAttribute="bottom" id="326-gw-Xvp"/>
+                <constraint firstItem="xV9-ge-l9S" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="E7g-P5-ZQQ"/>
+                <constraint firstAttribute="trailing" secondItem="xV9-ge-l9S" secondAttribute="trailing" id="cEx-Ou-W3p"/>
+                <constraint firstItem="xV9-ge-l9S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uOt-rN-7Hz"/>
+            </constraints>
+            <point key="canvasLocation" x="-21" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cancel_ic" width="24" height="24"/>
+        <image name="sub_bg" width="360" height="450"/>
+        <namedColor name="collectionViewBg_dark">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

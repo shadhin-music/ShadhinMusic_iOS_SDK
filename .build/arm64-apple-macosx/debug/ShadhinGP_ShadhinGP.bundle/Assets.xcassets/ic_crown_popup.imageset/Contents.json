@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_crown_popup.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

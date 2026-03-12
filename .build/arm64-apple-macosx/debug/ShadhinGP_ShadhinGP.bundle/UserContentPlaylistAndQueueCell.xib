@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserContentPlaylistAndQueueCell" rowHeight="66" id="KGk-i7-Jjw" customClass="UserContentPlaylistAndQueueCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tP1-22-O4D">
+                        <rect key="frame" x="5" y="5" width="310" height="56"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Replace this" translatesAutoresizingMaskIntoConstraints="NO" id="JEq-J5-tql">
+                                <rect key="frame" x="0.0" y="2" width="56" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="7wD-a3-r4i"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="bkk-lj-iaF">
+                                <rect key="frame" x="66" y="5" width="202" height="46"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baby" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rw-jQ-dmU">
+                                        <rect key="frame" x="0.0" y="0.0" width="37.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Justin Beiber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSI-nZ-dRA">
+                                        <rect key="frame" x="0.0" y="24" width="71" height="22"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="miR-wl-7tZ">
+                                <rect key="frame" x="278" y="16" width="24" height="24"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCe-eq-rHL">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="KQq-02-W5o"/>
+                                            <constraint firstAttribute="width" constant="24" id="vJr-xF-2Sy"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_more_vert"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="miR-wl-7tZ" firstAttribute="centerY" secondItem="tP1-22-O4D" secondAttribute="centerY" id="Ddf-pQ-Ry5"/>
+                            <constraint firstItem="miR-wl-7tZ" firstAttribute="leading" secondItem="bkk-lj-iaF" secondAttribute="trailing" constant="10" id="RfT-dg-Z6s"/>
+                            <constraint firstItem="JEq-J5-tql" firstAttribute="leading" secondItem="tP1-22-O4D" secondAttribute="leading" id="UCo-q9-yPO"/>
+                            <constraint firstItem="bkk-lj-iaF" firstAttribute="leading" secondItem="JEq-J5-tql" secondAttribute="trailing" constant="10" id="W5V-V8-5eP"/>
+                            <constraint firstItem="bkk-lj-iaF" firstAttribute="centerY" secondItem="JEq-J5-tql" secondAttribute="centerY" id="jdq-l2-dKU"/>
+                            <constraint firstAttribute="bottom" secondItem="JEq-J5-tql" secondAttribute="bottom" constant="2" id="kan-K9-rco"/>
+                            <constraint firstAttribute="trailing" secondItem="miR-wl-7tZ" secondAttribute="trailing" constant="8" id="s46-ib-E0U"/>
+                            <constraint firstItem="JEq-J5-tql" firstAttribute="top" secondItem="tP1-22-O4D" secondAttribute="top" constant="2" id="vhL-ex-IaL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tP1-22-O4D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="XSs-15-mNm"/>
+                    <constraint firstAttribute="bottom" secondItem="tP1-22-O4D" secondAttribute="bottom" constant="5" id="fih-T0-g6U"/>
+                    <constraint firstItem="tP1-22-O4D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="gvu-6n-fPR"/>
+                    <constraint firstAttribute="trailing" secondItem="tP1-22-O4D" secondAttribute="trailing" constant="5" id="kTW-0O-Fba"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="songArtistLbl" destination="oSI-nZ-dRA" id="C8M-jg-bjV"/>
+                <outlet property="songTitleLbl" destination="7rw-jQ-dmU" id="e8P-Eo-Y4N"/>
+                <outlet property="songsImgView" destination="JEq-J5-tql" id="kq4-2F-DS6"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="113.16964285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Replace this" width="248" height="248"/>
+        <image name="ic_more_vert" width="24" height="24"/>
+    </resources>
+</document>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CommonCollectionViewCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="249" height="155"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="249" height="155"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featuring Habib Wahid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfV-2T-XaX">
+                        <rect key="frame" x="0.0" y="7.9999999999999982" width="160.33333333333334" height="19.333333333333329"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="B7V-2L-3V2">
+                        <rect key="frame" x="0.0" y="35.333333333333336" width="249" height="119.66666666666666"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" id="3AV-fb-JNu">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="B7V-2L-3V2" firstAttribute="top" secondItem="mfV-2T-XaX" secondAttribute="bottom" constant="8" id="XAk-1q-AeR"/>
+                <constraint firstAttribute="trailing" secondItem="B7V-2L-3V2" secondAttribute="trailing" id="YRK-nu-dhh"/>
+                <constraint firstItem="mfV-2T-XaX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="YYI-LM-NLu"/>
+                <constraint firstAttribute="bottom" secondItem="B7V-2L-3V2" secondAttribute="bottom" id="lS5-LH-4FI"/>
+                <constraint firstItem="mfV-2T-XaX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rZH-xp-Cai"/>
+                <constraint firstItem="B7V-2L-3V2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="w8A-N0-uYa"/>
+            </constraints>
+            <size key="customSize" width="249" height="155"/>
+            <connections>
+                <outlet property="collectionView" destination="B7V-2L-3V2" id="Hwe-t2-lBp"/>
+                <outlet property="titleLbl" destination="mfV-2T-XaX" id="4MW-pb-mo9"/>
+            </connections>
+            <point key="canvasLocation" x="290.83969465648852" y="56.690140845070424"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumPlayedVC" customModule="Shadhin_Gp" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="xie-0A-wPa" id="Fkq-Lr-RS8"/>
+                <outlet property="emptyListView" destination="ZiX-fD-MDs" id="zbB-5x-Jc0"/>
+                <outlet property="headerConstraint" destination="Rfv-E4-BXG" id="Bc0-2D-GUi"/>
+                <outlet property="headerView" destination="Vbf-KA-uAh" id="nfd-36-vEm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collapsible_bg" translatesAutoresizingMaskIntoConstraints="NO" id="JWT-Ns-pXH">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="JWT-Ns-pXH" secondAttribute="height" id="nId-hx-T3a"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y75-S3-4yw" customClass="GradientUIView" customModule="Shadhin_Gp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                            <color key="value" systemColor="secondarySystemBackgroundColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                            <real key="value" value="-0.29999999999999999"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xie-0A-wPa">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qLv-rv-s8U">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vbf-KA-uAh" customClass="HeaderViewDownload" customModule="Shadhin_Gp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="270"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="270" id="Rfv-E4-BXG"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiX-fD-MDs" customClass="EmptyListView" customModule="Shadhin_Gp" customModuleProvider="target">
+                    <rect key="frame" x="20" y="437.5" width="374" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="NIk-Pi-v7F"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JWT-Ns-pXH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0zu-cd-Muc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZiX-fD-MDs" secondAttribute="trailing" constant="20" id="1jf-OM-ecO"/>
+                <constraint firstItem="JWT-Ns-pXH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3qh-o3-fd0"/>
+                <constraint firstItem="xie-0A-wPa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="44U-QL-baM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xie-0A-wPa" secondAttribute="bottom" id="599-0A-wTb"/>
+                <constraint firstItem="xie-0A-wPa" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6gK-7D-NpV"/>
+                <constraint firstItem="ZiX-fD-MDs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7vz-aC-ML5"/>
+                <constraint firstItem="ZiX-fD-MDs" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.2" id="A5a-T8-8kf"/>
+                <constraint firstItem="Vbf-KA-uAh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AO8-tQ-Tfd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Y75-S3-4yw" secondAttribute="trailing" id="Bzt-Pa-ILC"/>
+                <constraint firstItem="Y75-S3-4yw" firstAttribute="height" secondItem="JWT-Ns-pXH" secondAttribute="height" id="CXO-Cu-18j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vbf-KA-uAh" secondAttribute="trailing" id="Kqa-gR-Bw9"/>
+                <constraint firstItem="Y75-S3-4yw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SEG-md-i5J"/>
+                <constraint firstItem="Y75-S3-4yw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TKl-9O-HOf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JWT-Ns-pXH" secondAttribute="trailing" id="Tg1-MK-GBg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xie-0A-wPa" secondAttribute="trailing" id="Vyo-uF-RD0"/>
+                <constraint firstItem="Vbf-KA-uAh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wdb-j8-dTN"/>
+                <constraint firstItem="ZiX-fD-MDs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="wwJ-gW-Vuc"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="collapsible_bg" width="360" height="360"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
