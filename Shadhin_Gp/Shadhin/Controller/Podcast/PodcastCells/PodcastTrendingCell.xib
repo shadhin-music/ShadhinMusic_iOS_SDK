@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="PodcastTrendingCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tK4-54-yzk">
+                        <rect key="frame" x="16" y="8" width="298" height="184"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app push img" translatesAutoresizingMaskIntoConstraints="NO" id="c7Z-LU-4qZ">
+                                <rect key="frame" x="16" y="16" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="pMP-zV-Jo6"/>
+                                    <constraint firstAttribute="height" constant="72" id="qRN-Pk-4vJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XkL-3z-R8s">
+                                <rect key="frame" x="96" y="33" width="186" height="38.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daI-fU-vmu">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="22"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season 1 • Episode 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK4-k6-ZOK">
+                                        <rect key="frame" x="0.0" y="22" width="186" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="daI-fU-vmu" firstAttribute="leading" secondItem="XkL-3z-R8s" secondAttribute="leading" id="E7T-dV-5i9"/>
+                                    <constraint firstAttribute="trailing" secondItem="IK4-k6-ZOK" secondAttribute="trailing" id="FAo-p6-XWm"/>
+                                    <constraint firstItem="IK4-k6-ZOK" firstAttribute="leading" secondItem="XkL-3z-R8s" secondAttribute="leading" id="GTh-pj-T15"/>
+                                    <constraint firstItem="IK4-k6-ZOK" firstAttribute="top" secondItem="daI-fU-vmu" secondAttribute="bottom" id="HG7-F3-ckP"/>
+                                    <constraint firstAttribute="trailing" secondItem="daI-fU-vmu" secondAttribute="trailing" id="jfg-qG-hsD"/>
+                                    <constraint firstAttribute="bottom" secondItem="IK4-k6-ZOK" secondAttribute="bottom" id="xiR-76-R7j"/>
+                                    <constraint firstItem="daI-fU-vmu" firstAttribute="top" secondItem="XkL-3z-R8s" secondAttribute="top" id="yyl-C0-6ff"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqb-XI-HiU">
+                                <rect key="frame" x="16" y="96" width="266" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="v3U-Fa-QaA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTH-4W-caC">
+                                <rect key="frame" x="16" y="140" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="4sd-py-acC"/>
+                                    <constraint firstAttribute="height" constant="28" id="agX-Dr-DDD"/>
+                                </constraints>
+                                <state key="normal" image="ic_Play"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ak6-Xg-QhO" customClass="CircularProgress" customModule="Shadhin" customModuleProvider="target">
+                                <rect key="frame" x="254" y="140" width="28" height="28"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundShapeColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="percentLabelFormat" value="%.f%%"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spaceDegree">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPw-bu-eho">
+                                <rect key="frame" x="254" y="140" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="SfR-Zt-Xse"/>
+                                    <constraint firstAttribute="width" constant="28" id="Srw-q0-kx7"/>
+                                </constraints>
+                                <color key="tintColor" name="tintColor"/>
+                                <state key="normal" image="ic_download_podcast"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Jan 20 • 1h 40m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDc-57-tBf">
+                                <rect key="frame" x="52" y="146" width="158" height="16.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi4-lz-QHZ">
+                                <rect key="frame" x="218" y="140" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="RK3-Nb-VkO"/>
+                                    <constraint firstAttribute="height" constant="28" id="SgN-T7-qVj"/>
+                                </constraints>
+                                <state key="normal" image="ic_favorite_podcast"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qDc-57-tBf" firstAttribute="leading" secondItem="KTH-4W-caC" secondAttribute="trailing" constant="8" id="0bh-eU-Tqi"/>
+                            <constraint firstItem="c7Z-LU-4qZ" firstAttribute="top" secondItem="tK4-54-yzk" secondAttribute="top" constant="16" id="B3B-hk-DQq"/>
+                            <constraint firstItem="ak6-Xg-QhO" firstAttribute="top" secondItem="CPw-bu-eho" secondAttribute="top" id="Cre-Lg-Xti"/>
+                            <constraint firstAttribute="bottom" secondItem="pi4-lz-QHZ" secondAttribute="bottom" constant="16" id="ITX-Og-nNR"/>
+                            <constraint firstAttribute="bottom" secondItem="CPw-bu-eho" secondAttribute="bottom" constant="16" id="Jio-Bf-bhE"/>
+                            <constraint firstAttribute="trailing" secondItem="CPw-bu-eho" secondAttribute="trailing" constant="16" id="Kil-K8-5PN"/>
+                            <constraint firstItem="qDc-57-tBf" firstAttribute="centerY" secondItem="KTH-4W-caC" secondAttribute="centerY" id="LG3-TB-cOg"/>
+                            <constraint firstItem="Dqb-XI-HiU" firstAttribute="top" secondItem="c7Z-LU-4qZ" secondAttribute="bottom" constant="8" id="Pjd-vd-Q04"/>
+                            <constraint firstAttribute="trailing" secondItem="XkL-3z-R8s" secondAttribute="trailing" constant="16" id="SbB-cE-wKG"/>
+                            <constraint firstItem="XkL-3z-R8s" firstAttribute="leading" secondItem="c7Z-LU-4qZ" secondAttribute="trailing" constant="8" id="T3P-aW-5Vt"/>
+                            <constraint firstItem="pi4-lz-QHZ" firstAttribute="leading" secondItem="qDc-57-tBf" secondAttribute="trailing" constant="8" id="VRT-FZ-lgb"/>
+                            <constraint firstAttribute="trailing" secondItem="Dqb-XI-HiU" secondAttribute="trailing" constant="16" id="aQR-Ud-sPc"/>
+                            <constraint firstItem="Dqb-XI-HiU" firstAttribute="leading" secondItem="tK4-54-yzk" secondAttribute="leading" constant="16" id="cYV-6p-RTe"/>
+                            <constraint firstAttribute="bottom" secondItem="KTH-4W-caC" secondAttribute="bottom" constant="16" id="ccW-wZ-Rvv"/>
+                            <constraint firstItem="CPw-bu-eho" firstAttribute="leading" secondItem="pi4-lz-QHZ" secondAttribute="trailing" constant="8" id="dk4-9M-gTc"/>
+                            <constraint firstItem="KTH-4W-caC" firstAttribute="leading" secondItem="tK4-54-yzk" secondAttribute="leading" constant="16" id="fQY-6n-PEl"/>
+                            <constraint firstItem="ak6-Xg-QhO" firstAttribute="trailing" secondItem="CPw-bu-eho" secondAttribute="trailing" id="g2h-B0-gpT"/>
+                            <constraint firstItem="ak6-Xg-QhO" firstAttribute="bottom" secondItem="CPw-bu-eho" secondAttribute="bottom" id="gYj-O4-Bks"/>
+                            <constraint firstItem="KTH-4W-caC" firstAttribute="top" secondItem="Dqb-XI-HiU" secondAttribute="bottom" constant="10" id="iBA-NS-WS8"/>
+                            <constraint firstItem="ak6-Xg-QhO" firstAttribute="leading" secondItem="CPw-bu-eho" secondAttribute="leading" id="mgQ-9x-TeA"/>
+                            <constraint firstItem="XkL-3z-R8s" firstAttribute="centerY" secondItem="c7Z-LU-4qZ" secondAttribute="centerY" id="mie-Ia-JOH"/>
+                            <constraint firstItem="c7Z-LU-4qZ" firstAttribute="leading" secondItem="tK4-54-yzk" secondAttribute="leading" constant="16" id="tsp-iq-NNG"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="tK4-54-yzk" secondAttribute="bottom" constant="8" id="1ep-g1-5du"/>
+                    <constraint firstAttribute="trailing" secondItem="tK4-54-yzk" secondAttribute="trailing" constant="16" id="8Fk-TN-RaQ"/>
+                    <constraint firstItem="tK4-54-yzk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="dWG-Bp-BsD"/>
+                    <constraint firstItem="tK4-54-yzk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="h9m-ek-dW0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="circularProgress" destination="ak6-Xg-QhO" id="WQd-wM-w2N"/>
+                <outlet property="downloadBtn" destination="CPw-bu-eho" id="Eip-0O-viF"/>
+                <outlet property="img" destination="c7Z-LU-4qZ" id="1ZQ-0h-ma6"/>
+                <outlet property="likeBtn" destination="pi4-lz-QHZ" id="ViO-3U-kL8"/>
+                <outlet property="playBtn" destination="KTH-4W-caC" id="7aT-o3-aEk"/>
+                <outlet property="textDate" destination="qDc-57-tBf" id="yTH-ug-VL6"/>
+                <outlet property="textDes" destination="Dqb-XI-HiU" id="h2f-eT-zFn"/>
+                <outlet property="textPrimary" destination="daI-fU-vmu" id="xl1-EJ-Nbt"/>
+                <outlet property="textSecondary" destination="IK4-k6-ZOK" id="9wa-l6-MAU"/>
+            </connections>
+            <point key="canvasLocation" x="139.13043478260872" y="188.16964285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="app push img" width="312" height="124"/>
+        <image name="ic_Play" width="48" height="48"/>
+        <image name="ic_download_podcast" width="28" height="28"/>
+        <image name="ic_favorite_podcast" width="28" height="28"/>
+        <namedColor name="tintColor">
+            <color red="0.0" green="0.68999999761581421" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

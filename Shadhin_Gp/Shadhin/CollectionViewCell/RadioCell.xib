@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RadioCell" id="gTV-IL-0wX" customClass="RadioCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="112" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="112" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8L-cg-occ">
+                        <rect key="frame" x="4" y="5" width="104" height="150"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Illustration" translatesAutoresizingMaskIntoConstraints="NO" id="qvv-Cj-itz">
+                                <rect key="frame" x="4" y="16" width="96" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="4qc-xY-frI"/>
+                                    <constraint firstAttribute="height" constant="96" id="8d3-Nx-WN4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="48"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nan-If-Ced">
+                                <rect key="frame" x="4" y="124" width="96" height="14"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chuti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKi-sV-qBM">
+                                        <rect key="frame" x="27.5" y="0.0" width="41.5" height="14"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="16"/>
+                                        <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Songs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bk-GN-h9d">
+                                        <rect key="frame" x="25" y="0.0" width="46.5" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nan-If-Ced" secondAttribute="trailing" constant="4" id="2gy-YD-zRO"/>
+                            <constraint firstItem="qvv-Cj-itz" firstAttribute="top" secondItem="P8L-cg-occ" secondAttribute="top" constant="16" id="5X7-HK-WuA"/>
+                            <constraint firstAttribute="bottom" secondItem="nan-If-Ced" secondAttribute="bottom" constant="12" id="Pfe-Ib-EAE"/>
+                            <constraint firstItem="nan-If-Ced" firstAttribute="centerX" secondItem="P8L-cg-occ" secondAttribute="centerX" id="SPy-75-u1G"/>
+                            <constraint firstItem="nan-If-Ced" firstAttribute="top" secondItem="qvv-Cj-itz" secondAttribute="bottom" constant="12" id="XO9-8K-z1R"/>
+                            <constraint firstItem="nan-If-Ced" firstAttribute="leading" secondItem="P8L-cg-occ" secondAttribute="leading" constant="4" id="wyb-pQ-tk0"/>
+                            <constraint firstItem="qvv-Cj-itz" firstAttribute="centerX" secondItem="P8L-cg-occ" secondAttribute="centerX" id="zX6-Jq-E9r"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="P8L-cg-occ" secondAttribute="bottom" constant="5" id="D9t-b2-4qT"/>
+                <constraint firstItem="P8L-cg-occ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="OCr-4d-QJm"/>
+                <constraint firstItem="P8L-cg-occ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="Uid-Sp-c8z"/>
+                <constraint firstAttribute="trailing" secondItem="P8L-cg-occ" secondAttribute="trailing" constant="4" id="ksQ-yO-jM6"/>
+            </constraints>
+            <connections>
+                <outlet property="mainView" destination="P8L-cg-occ" id="ZkI-8z-Cur"/>
+                <outlet property="radioImgView" destination="qvv-Cj-itz" id="cBh-fn-Jpe"/>
+                <outlet property="radioSongCountLbl" destination="0bk-GN-h9d" id="jTc-WO-81M"/>
+                <outlet property="radioTitleLbl" destination="MKi-sV-qBM" id="s0i-tS-ebS"/>
+            </connections>
+            <point key="canvasLocation" x="131" y="154"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Illustration" width="360" height="359"/>
+    </resources>
+</document>

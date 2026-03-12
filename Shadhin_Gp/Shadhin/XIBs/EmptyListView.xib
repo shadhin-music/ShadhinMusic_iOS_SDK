@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyListView" customModule="Shadhin" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="YTX-Bg-C4k"/>
+                <outlet property="subtitleLabel" destination="eE3-xL-Rjd" id="5sP-E5-peV"/>
+                <outlet property="titleLabel" destination="V6Y-su-FmX" id="f7L-sL-Nsh"/>
+                <outlet property="topIcon" destination="Lfh-nh-MCn" id="uUD-EG-QKL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="504" height="270"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7B-Ud-vc1">
+                    <rect key="frame" x="0.0" y="44" width="504" height="192"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noartist" translatesAutoresizingMaskIntoConstraints="NO" id="Lfh-nh-MCn">
+                            <rect key="frame" x="202" y="20" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="I9w-vl-Gcc"/>
+                                <constraint firstAttribute="width" constant="100" id="xuj-Qe-ILi"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="o2s-7n-clL">
+                            <rect key="frame" x="0.0" y="135" width="504" height="43.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Artists Found!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6Y-su-FmX">
+                                    <rect key="frame" x="170" y="0.0" width="164.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This list is empty. Follow your favorite artists." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eE3-xL-Rjd">
+                                    <rect key="frame" x="125" y="29" width="254.5" height="14.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="o2s-7n-clL" firstAttribute="leading" secondItem="a7B-Ud-vc1" secondAttribute="leading" id="7bN-kb-IKL"/>
+                        <constraint firstAttribute="trailing" secondItem="o2s-7n-clL" secondAttribute="trailing" id="9gQ-aW-tA7"/>
+                        <constraint firstItem="Lfh-nh-MCn" firstAttribute="top" secondItem="a7B-Ud-vc1" secondAttribute="top" constant="20" id="Et8-0V-W8x"/>
+                        <constraint firstItem="Lfh-nh-MCn" firstAttribute="centerX" secondItem="a7B-Ud-vc1" secondAttribute="centerX" id="QUx-Nk-soD"/>
+                        <constraint firstItem="o2s-7n-clL" firstAttribute="top" secondItem="Lfh-nh-MCn" secondAttribute="bottom" constant="15" id="mZr-oR-Lq5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="a7B-Ud-vc1" secondAttribute="bottom" id="CUq-Fk-bt1"/>
+                <constraint firstItem="a7B-Ud-vc1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qe8-Hj-ARr"/>
+                <constraint firstItem="a7B-Ud-vc1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cgL-sO-EEi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="a7B-Ud-vc1" secondAttribute="trailing" id="qd9-rs-pLA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="202.89855072463769" y="-133.25892857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="noartist" width="138" height="138"/>
+    </resources>
+</document>

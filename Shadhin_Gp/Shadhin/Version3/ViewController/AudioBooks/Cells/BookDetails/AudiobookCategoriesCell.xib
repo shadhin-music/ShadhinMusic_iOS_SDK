@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AudiobookCategoriesCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="324"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="408" height="324"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A74-8p-10Q">
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="324"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3S-Nh-gAv">
+                                <rect key="frame" x="0.0" y="0.0" width="392" height="39"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Audiobook Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9r-yI-c7F">
+                                        <rect key="frame" x="16" y="8.6666666666666661" width="183" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="J9r-yI-c7F" firstAttribute="leading" secondItem="g3S-Nh-gAv" secondAttribute="leading" constant="16" id="j1s-Y9-7uz"/>
+                                    <constraint firstItem="J9r-yI-c7F" firstAttribute="centerY" secondItem="g3S-Nh-gAv" secondAttribute="centerY" id="nQq-mF-3h0"/>
+                                    <constraint firstAttribute="height" constant="39" id="plZ-sl-aR7"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7lL-S9-2Lj">
+                                <rect key="frame" x="0.0" y="39" width="392" height="269"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dVy-I0-z2x">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hY-Dv-R2I" customClass="FSPageControl" customModule="Shadhin" customModuleProvider="target">
+                                <rect key="frame" x="16" y="308" width="360" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="GRj-Gh-YWy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="audioBg"/>
+                        <constraints>
+                            <constraint firstItem="g3S-Nh-gAv" firstAttribute="top" secondItem="A74-8p-10Q" secondAttribute="top" id="2Me-Vn-A99"/>
+                            <constraint firstAttribute="trailing" secondItem="7lL-S9-2Lj" secondAttribute="trailing" id="R6B-IM-r03"/>
+                            <constraint firstItem="7lL-S9-2Lj" firstAttribute="top" secondItem="g3S-Nh-gAv" secondAttribute="bottom" id="Rlc-bw-gXx"/>
+                            <constraint firstAttribute="bottom" secondItem="9hY-Dv-R2I" secondAttribute="bottom" constant="8" id="Sqo-gl-SDf"/>
+                            <constraint firstAttribute="trailing" secondItem="g3S-Nh-gAv" secondAttribute="trailing" id="Tul-CE-Q7n"/>
+                            <constraint firstItem="7lL-S9-2Lj" firstAttribute="leading" secondItem="A74-8p-10Q" secondAttribute="leading" id="U3A-oy-bwU"/>
+                            <constraint firstAttribute="trailing" secondItem="9hY-Dv-R2I" secondAttribute="trailing" constant="16" id="d9g-3A-IXT"/>
+                            <constraint firstAttribute="bottom" secondItem="7lL-S9-2Lj" secondAttribute="bottom" constant="16" id="pYt-7W-wqq"/>
+                            <constraint firstItem="g3S-Nh-gAv" firstAttribute="leading" secondItem="A74-8p-10Q" secondAttribute="leading" id="t7K-qG-naz"/>
+                            <constraint firstItem="9hY-Dv-R2I" firstAttribute="leading" secondItem="A74-8p-10Q" secondAttribute="leading" constant="16" id="wRq-wR-dji"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="A74-8p-10Q" secondAttribute="bottom" id="0r5-dh-qt8"/>
+                <constraint firstItem="A74-8p-10Q" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Xp9-8K-Dj7"/>
+                <constraint firstItem="A74-8p-10Q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="nR7-QK-5px"/>
+                <constraint firstAttribute="trailing" secondItem="A74-8p-10Q" secondAttribute="trailing" constant="16" id="x68-js-b4V"/>
+            </constraints>
+            <size key="customSize" width="408" height="324"/>
+            <connections>
+                <outlet property="catagoriesView" destination="A74-8p-10Q" id="ZdH-LQ-rgU"/>
+                <outlet property="collectionView" destination="7lL-S9-2Lj" id="20Z-je-VIJ"/>
+                <outlet property="pagerControl" destination="9hY-Dv-R2I" id="cNY-yk-skD"/>
+                <outlet property="titleLbl" destination="J9r-yI-c7F" id="nmP-gn-Z7Z"/>
+            </connections>
+            <point key="canvasLocation" x="270.2290076335878" y="116.19718309859155"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="audioBg">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

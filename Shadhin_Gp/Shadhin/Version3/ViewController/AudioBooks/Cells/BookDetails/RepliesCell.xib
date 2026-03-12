@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RepliesCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="106"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="377" height="106"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user_1" translatesAutoresizingMaskIntoConstraints="NO" id="rJG-lo-IGO">
+                        <rect key="frame" x="16" y="16" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="2fw-sq-t0h"/>
+                            <constraint firstAttribute="height" constant="40" id="81b-fl-KHE"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wc2-UH-BqB">
+                        <rect key="frame" x="64" y="21.333333333333332" width="80" height="63.333333333333343"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rezwan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZi-G0-MdR">
+                                <rect key="frame" x="0.0" y="0.0" width="51.666666666666664" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNz-kx-MoL">
+                                <rect key="frame" x="0.0" y="25" width="80" height="16"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-filled-blue" translatesAutoresizingMaskIntoConstraints="NO" id="Sm2-nm-beJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="GIe-g2-aMs"/>
+                                            <constraint firstAttribute="height" constant="16" id="WCj-Y4-bNO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-filled-blue" translatesAutoresizingMaskIntoConstraints="NO" id="erV-Qw-mki">
+                                        <rect key="frame" x="16" y="0.0" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="PUO-tg-3kH"/>
+                                            <constraint firstAttribute="height" constant="16" id="dfK-9R-76y"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-filled-blue" translatesAutoresizingMaskIntoConstraints="NO" id="Jug-eM-mxj">
+                                        <rect key="frame" x="32" y="0.0" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="OSm-76-Bmd"/>
+                                            <constraint firstAttribute="width" constant="16" id="iPE-MW-cxY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-filled-blue" translatesAutoresizingMaskIntoConstraints="NO" id="H8k-It-k1w">
+                                        <rect key="frame" x="48" y="0.0" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="FU8-Ej-GGp"/>
+                                            <constraint firstAttribute="height" constant="16" id="bVt-uu-Srr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-filled-blue" translatesAutoresizingMaskIntoConstraints="NO" id="F6F-lL-Rqz">
+                                        <rect key="frame" x="64" y="0.0" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="8en-2y-eMb"/>
+                                            <constraint firstAttribute="width" constant="16" id="Qz1-yr-ZNR"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewN-W9-8lU">
+                                <rect key="frame" x="0.0" y="49" width="23.666666666666668" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 min ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hq-Lu-6H8">
+                        <rect key="frame" x="298" y="16" width="63" height="14.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Wc2-UH-BqB" firstAttribute="leading" secondItem="rJG-lo-IGO" secondAttribute="trailing" constant="8" id="2MT-I0-Qow"/>
+                <constraint firstItem="rJG-lo-IGO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="3CH-uN-exd"/>
+                <constraint firstItem="Wc2-UH-BqB" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="OYB-1O-S92"/>
+                <constraint firstItem="5Hq-Lu-6H8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="Waa-z3-KMz"/>
+                <constraint firstAttribute="trailing" secondItem="5Hq-Lu-6H8" secondAttribute="trailing" constant="16" id="bya-dp-rRn"/>
+                <constraint firstItem="rJG-lo-IGO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="mMs-9z-11D"/>
+            </constraints>
+            <size key="customSize" width="377" height="106"/>
+            <connections>
+                <outlet property="descriptionLbl" destination="ewN-W9-8lU" id="0Yt-4L-etB"/>
+                <outlet property="proPicImgView" destination="rJG-lo-IGO" id="T7c-su-pmK"/>
+                <outlet property="timeLbl" destination="5Hq-Lu-6H8" id="VQP-bl-KFv"/>
+                <outlet property="userNameLbl" destination="KZi-G0-MdR" id="x6u-q8-581"/>
+                <outletCollection property="reviewImgCount" destination="Sm2-nm-beJ" collectionClass="NSMutableArray" id="GML-i7-IvI"/>
+                <outletCollection property="reviewImgCount" destination="erV-Qw-mki" collectionClass="NSMutableArray" id="kNa-sV-lsm"/>
+                <outletCollection property="reviewImgCount" destination="Jug-eM-mxj" collectionClass="NSMutableArray" id="gg8-0X-x59"/>
+                <outletCollection property="reviewImgCount" destination="H8k-It-k1w" collectionClass="NSMutableArray" id="tT9-GU-BFf"/>
+                <outletCollection property="reviewImgCount" destination="F6F-lL-Rqz" collectionClass="NSMutableArray" id="1nu-9A-89Q"/>
+            </connections>
+            <point key="canvasLocation" x="286.25954198473283" y="37.323943661971832"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_user_1" width="96" height="96"/>
+        <image name="star-filled-blue" width="24" height="24"/>
+    </resources>
+</document>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="ChapterHeaderCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="517" height="110"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IL3-2K-d7Z">
+                    <rect key="frame" x="16" y="0.0" width="485" height="110"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obh-hL-S5p">
+                            <rect key="frame" x="0.0" y="41.333333333333336" width="90.333333333333329" height="27.333333333333336"/>
+                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="obh-hL-S5p" firstAttribute="centerY" secondItem="IL3-2K-d7Z" secondAttribute="centerY" id="07k-mT-AUG"/>
+                        <constraint firstItem="obh-hL-S5p" firstAttribute="leading" secondItem="IL3-2K-d7Z" secondAttribute="leading" id="0Pz-QU-q28"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="IL3-2K-d7Z" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="9SU-RC-gXF"/>
+                <constraint firstItem="IL3-2K-d7Z" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="16" id="D7i-EY-Sjc"/>
+                <constraint firstAttribute="bottom" secondItem="IL3-2K-d7Z" secondAttribute="bottom" id="HcM-cb-lEu"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="IL3-2K-d7Z" secondAttribute="trailing" constant="16" id="qTU-7z-VYe"/>
+            </constraints>
+            <connections>
+                <outlet property="chapterLbl" destination="obh-hL-S5p" id="kMD-si-blG"/>
+            </connections>
+            <point key="canvasLocation" x="170.22900763358777" y="44.366197183098592"/>
+        </collectionReusableView>
+    </objects>
+</document>

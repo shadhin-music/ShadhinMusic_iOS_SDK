@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StoryShareStepCellFour" customModule="Shadhin_Gp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="575" height="950"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="575" height="950"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbA-2E-4XG">
+                        <rect key="frame" x="0.0" y="0.0" width="575" height="950"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Top 5 Artists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFV-yM-oVi">
+                                <rect key="frame" x="163.66666666666663" y="208" width="248" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="rJ3-7w-aJ0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uBn-II-dC0">
+                                <rect key="frame" x="16" y="284" width="543" height="382"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B90-Tj-QtE">
+                                        <rect key="frame" x="0.0" y="0.0" width="543" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQ2-Ee-bW7">
+                                                <rect key="frame" x="0.0" y="25.333333333333314" width="24" height="19.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="bnh-kq-Ibg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hridoykhan" translatesAutoresizingMaskIntoConstraints="NO" id="xla-2w-SaI">
+                                                <rect key="frame" x="32" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="xla-2w-SaI" secondAttribute="height" multiplier="1:1" id="CdB-KT-2X9"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song name 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOU-GZ-rbL">
+                                                <rect key="frame" x="110" y="25.333333333333314" width="433" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="DM7-Qf-W22"/>
+                                            <constraint firstItem="xla-2w-SaI" firstAttribute="top" secondItem="B90-Tj-QtE" secondAttribute="top" id="wRF-HO-0Jh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5ry-a7-N8F">
+                                        <rect key="frame" x="0.0" y="78" width="543" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78Z-UL-iKn">
+                                                <rect key="frame" x="0.0" y="25.333333333333314" width="24" height="19.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="sZf-6I-Qtz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hridoykhan" translatesAutoresizingMaskIntoConstraints="NO" id="fi4-rh-agw">
+                                                <rect key="frame" x="32" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="fi4-rh-agw" secondAttribute="height" id="kMS-pG-u5B"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song name 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8Z-AM-1Qx">
+                                                <rect key="frame" x="110" y="25.333333333333314" width="433" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fi4-rh-agw" firstAttribute="top" secondItem="5ry-a7-N8F" secondAttribute="top" id="sj6-AN-wVt"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3ZP-Ks-YYw">
+                                        <rect key="frame" x="0.0" y="156" width="543" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXp-vX-5SP">
+                                                <rect key="frame" x="0.0" y="25.333333333333314" width="24" height="19.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="yaE-q4-EYS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hridoykhan" translatesAutoresizingMaskIntoConstraints="NO" id="WpJ-Jj-Yoh">
+                                                <rect key="frame" x="32" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="WpJ-Jj-Yoh" secondAttribute="height" id="aEj-tg-Ryc"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song name 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xib-aS-RX1">
+                                                <rect key="frame" x="110" y="25.333333333333314" width="433" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WpJ-Jj-Yoh" firstAttribute="top" secondItem="3ZP-Ks-YYw" secondAttribute="top" id="bbM-kw-Smd"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FjR-DB-xFo">
+                                        <rect key="frame" x="0.0" y="234" width="543" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHC-Fu-Xcj">
+                                                <rect key="frame" x="0.0" y="25.333333333333371" width="24" height="19.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="MBP-8T-8Wj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hridoykhan" translatesAutoresizingMaskIntoConstraints="NO" id="gld-px-l3t">
+                                                <rect key="frame" x="32" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gld-px-l3t" secondAttribute="height" id="WPX-EK-UhB"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Song name 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvr-uH-OBq">
+                                                <rect key="frame" x="110" y="25.333333333333371" width="433" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="gld-px-l3t" firstAttribute="top" secondItem="FjR-DB-xFo" secondAttribute="top" id="Lbc-0Z-gJe"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g4i-hu-aqg">
+                                        <rect key="frame" x="0.0" y="312" width="543" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWe-fP-kZP">
+                                                <rect key="frame" x="0.0" y="25.333333333333371" width="24" height="19.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="owQ-bg-sdc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hridoykhan" translatesAutoresizingMaskIntoConstraints="NO" id="BcU-dT-WuX">
+                                                <rect key="frame" x="32" y="0.0" width="70" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="BcU-dT-WuX" secondAttribute="height" id="Tba-No-ceA"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song name 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcV-EU-aJ0">
+                                                <rect key="frame" x="110" y="25.333333333333371" width="433" height="19.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="BcU-dT-WuX" firstAttribute="top" secondItem="g4i-hu-aqg" secondAttribute="top" id="XtA-CV-phc"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="B90-Tj-QtE" firstAttribute="top" secondItem="uBn-II-dC0" secondAttribute="top" id="M1H-0u-F5g"/>
+                                    <constraint firstItem="FjR-DB-xFo" firstAttribute="leading" secondItem="uBn-II-dC0" secondAttribute="leading" id="PLw-lx-Osl"/>
+                                    <constraint firstItem="g4i-hu-aqg" firstAttribute="leading" secondItem="uBn-II-dC0" secondAttribute="leading" id="Qf5-wy-gnA"/>
+                                    <constraint firstItem="3ZP-Ks-YYw" firstAttribute="leading" secondItem="uBn-II-dC0" secondAttribute="leading" id="aet-mX-dWA"/>
+                                    <constraint firstItem="5ry-a7-N8F" firstAttribute="leading" secondItem="uBn-II-dC0" secondAttribute="leading" id="emh-ho-VD8"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="BH0-XN-tP4">
+                                <rect key="frame" x="20" y="814" width="535" height="30"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadhinLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="FCS-IA-v1H">
+                                        <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="obI-Qx-ll3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#shadhinrewind2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCr-XL-Yh9">
+                                        <rect key="frame" x="392.66666666666669" y="0.0" width="142.33333333333331" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="gxV-Ta-hOP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25776204470000003" green="0.55788302420000002" blue="0.70982855560000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uBn-II-dC0" secondAttribute="trailing" constant="16" id="3vr-O7-iDt"/>
+                            <constraint firstItem="uBn-II-dC0" firstAttribute="centerY" secondItem="vbA-2E-4XG" secondAttribute="centerY" id="8up-Pj-XjJ"/>
+                            <constraint firstAttribute="trailing" secondItem="BH0-XN-tP4" secondAttribute="trailing" constant="20" id="AlB-9f-gjo"/>
+                            <constraint firstItem="BFV-yM-oVi" firstAttribute="centerX" secondItem="vbA-2E-4XG" secondAttribute="centerX" id="GKN-Qu-w53"/>
+                            <constraint firstItem="uBn-II-dC0" firstAttribute="top" secondItem="BFV-yM-oVi" secondAttribute="bottom" constant="16" id="T9z-1Q-6OZ"/>
+                            <constraint firstItem="BH0-XN-tP4" firstAttribute="leading" secondItem="vbA-2E-4XG" secondAttribute="leading" constant="20" id="dTA-ii-7ri"/>
+                            <constraint firstItem="uBn-II-dC0" firstAttribute="leading" secondItem="vbA-2E-4XG" secondAttribute="leading" constant="16" id="sKz-gZ-RLZ"/>
+                            <constraint firstItem="uBn-II-dC0" firstAttribute="centerX" secondItem="vbA-2E-4XG" secondAttribute="centerX" id="xWG-bh-2of"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="vbA-2E-4XG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4OX-LK-YaF"/>
+                <constraint firstAttribute="trailing" secondItem="vbA-2E-4XG" secondAttribute="trailing" id="9jR-zi-FJH"/>
+                <constraint firstItem="vbA-2E-4XG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="POP-3E-wQ9"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="BH0-XN-tP4" secondAttribute="bottom" constant="72" id="TxC-2d-WI7"/>
+                <constraint firstAttribute="bottom" secondItem="vbA-2E-4XG" secondAttribute="bottom" id="eBz-nf-v3b"/>
+                <constraint firstItem="vbA-2E-4XG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rnz-Pj-ebB"/>
+            </constraints>
+            <size key="customSize" width="575" height="950"/>
+            <connections>
+                <outletCollection property="artistNames" destination="zOU-GZ-rbL" collectionClass="NSMutableArray" id="eL8-1s-fqL"/>
+                <outletCollection property="artistNames" destination="b8Z-AM-1Qx" collectionClass="NSMutableArray" id="eu6-be-SLA"/>
+                <outletCollection property="artistNames" destination="xib-aS-RX1" collectionClass="NSMutableArray" id="oro-7K-nnN"/>
+                <outletCollection property="artistNames" destination="Uvr-uH-OBq" collectionClass="NSMutableArray" id="MTi-T4-cwZ"/>
+                <outletCollection property="artistNames" destination="QcV-EU-aJ0" collectionClass="NSMutableArray" id="Ji0-YJ-Wwa"/>
+                <outletCollection property="topArtistImageNames" destination="xla-2w-SaI" collectionClass="NSMutableArray" id="46V-84-tSB"/>
+                <outletCollection property="topArtistImageNames" destination="fi4-rh-agw" collectionClass="NSMutableArray" id="P6m-AR-pD9"/>
+                <outletCollection property="topArtistImageNames" destination="WpJ-Jj-Yoh" collectionClass="NSMutableArray" id="WFm-tX-4Ji"/>
+                <outletCollection property="topArtistImageNames" destination="gld-px-l3t" collectionClass="NSMutableArray" id="GQD-kW-29J"/>
+                <outletCollection property="topArtistImageNames" destination="BcU-dT-WuX" collectionClass="NSMutableArray" id="tlf-Jh-8yQ"/>
+                <outletCollection property="songNumbers" destination="SQ2-Ee-bW7" collectionClass="NSMutableArray" id="VNg-z0-Sop"/>
+                <outletCollection property="songNumbers" destination="78Z-UL-iKn" collectionClass="NSMutableArray" id="LH9-fr-ZTn"/>
+                <outletCollection property="songNumbers" destination="WXp-vX-5SP" collectionClass="NSMutableArray" id="yJt-8m-IRY"/>
+                <outletCollection property="songNumbers" destination="RHC-Fu-Xcj" collectionClass="NSMutableArray" id="3s4-X9-JPm"/>
+                <outletCollection property="songNumbers" destination="OWe-fP-kZP" collectionClass="NSMutableArray" id="nsF-hN-TKF"/>
+            </connections>
+            <point key="canvasLocation" x="351.90839694656489" y="335.21126760563379"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="hridoykhan" width="64" height="64"/>
+        <image name="shadhinLogoWhite" width="87" height="28"/>
+    </resources>
+</document>
