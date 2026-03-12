@@ -12,6 +12,7 @@ let package = Package(
         )
     ],
     targets: [
+
         .target(
             name: "ShadhinGP",
             dependencies: [
@@ -44,20 +45,44 @@ let package = Package(
                 "Library/AudioPlayer/CircularProgress.swift",
                 "Library/VGPlayer/MediaCache/VGPlayerCacheManager.swift",
             ],
+            sources: [
+                "Shadhin/CollectionViewCell",
+                "Shadhin/Controller",
+                "Shadhin/CustomViews",
+                "Shadhin/Database",
+                "Shadhin/DownloadManager",
+                "Shadhin/Extensions",
+                "Shadhin/Protocol & Extension",
+                "Shadhin/ShadhinCore",
+                "Shadhin/Supporting Files",
+                "Shadhin/TableViewCell",
+                "Shadhin/Utilities",
+                "Shadhin/Version3",
+                "Shadhin/XIBs",
+                "Library/Alamofire",
+                "Library/AudioPlayer",
+                "Library/Disk/Sources",
+                "Library/DropDown",
+                "Library/FSPagerView",
+                "Library/KRPullLoader",
+                "Library/Kingfisher",
+                "Library/LoadingButton",
+                "Library/PBPopupController",
+                "Library/PageCotrol",
+                "Library/SignalRClient",
+                "Library/SnapKit",
+                "Library/SwiftEntryKit",
+                "Library/VGPlayer",
+                "Library/Sources/CryptoSwift",
+            ],
             resources: [
                 .process("Shadhin/Resources"),
                 .process("Shadhin/Storyboard"),
                 .process("Shadhin/Localize"),
-                .process("Shadhin/CollectionViewCell"),
-                .process("Shadhin/Controller"),
-                .process("Shadhin/CustomViews"),
                 .process("Shadhin/Database"),
-                .process("Shadhin/TableViewCell"),
-                .process("Shadhin/XIBs"),
-                .process("Shadhin/Version3"),
-                .process("Library/DropDown/resources"),
             ]
         ),
+
         .target(
             name: "iCarousel",
             path: "Shadhin_Gp/Library/iCarousel",
@@ -69,12 +94,34 @@ let package = Package(
             exclude: ["Private"],
             publicHeadersPath: "."
         ),
-        .binaryTarget(name: "Vmax", path: "Shadhin_Gp/Library/Vmax/Vmax.xcframework"),
-        .binaryTarget(name: "VmaxVastHelper", path: "Shadhin_Gp/Library/Vmax/VmaxVastHelper.xcframework"),
-        .binaryTarget(name: "VmaxVideoHelper", path: "Shadhin_Gp/Library/Vmax/VmaxVideoHelper.xcframework"),
-        .binaryTarget(name: "VmaxNativeHelper", path: "Shadhin_Gp/Library/Vmax/VmaxNativeHelper.xcframework"),
-        .binaryTarget(name: "VmaxOM", path: "Shadhin_Gp/Library/Vmax/VmaxOM.xcframework"),
-        .binaryTarget(name: "VmaxDisplayHelper", path: "Shadhin_Gp/Library/Vmax/VmaxDisplayHelper.xcframework"),
-        .binaryTarget(name: "OMSDK_Vmax2", path: "Shadhin_Gp/Library/Vmax/OMSDK_Vmax2.xcframework"),
+
+        .binaryTarget(
+            name: "Vmax",
+            path: "Shadhin_Gp/Library/Vmax/Vmax.xcframework"
+        ),
+        .binaryTarget(
+            name: "VmaxVastHelper",
+            path: "Shadhin_Gp/Library/Vmax/VmaxVastHelper.xcframework"
+        ),
+        .binaryTarget(
+            name: "VmaxVideoHelper",
+            path: "Shadhin_Gp/Library/Vmax/VmaxVideoHelper.xcframework"
+        ),
+        .binaryTarget(
+            name: "VmaxNativeHelper",
+            path: "Shadhin_Gp/Library/Vmax/VmaxNativeHelper.xcframework"
+        ),
+        .binaryTarget(
+            name: "VmaxOM",
+            path: "Shadhin_Gp/Library/Vmax/VmaxOM.xcframework"
+        ),
+        .binaryTarget(
+            name: "VmaxDisplayHelper",
+            path: "Shadhin_Gp/Library/Vmax/VmaxDisplayHelper.xcframework"
+        ),
+        .binaryTarget(
+            name: "OMSDK_Vmax2",
+            path: "Shadhin_Gp/Library/Vmax/OMSDK_Vmax2.xcframework"
+        ),
     ]
 )
