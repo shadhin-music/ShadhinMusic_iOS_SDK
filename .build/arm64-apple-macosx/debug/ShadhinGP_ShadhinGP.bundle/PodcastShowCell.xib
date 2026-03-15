@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="244" id="KGk-i7-Jjw" customClass="PodcastShowCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="244"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="244"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app push img" translatesAutoresizingMaskIntoConstraints="NO" id="SS1-AI-KAF">
+                        <rect key="frame" x="16" y="6" width="304" height="184"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="184" id="qoU-h7-nzg"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEd-sW-KaM">
+                        <rect key="frame" x="16" y="198" width="304" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dF-zI-naX">
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="22"/>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqg-1b-RJa">
+                                <rect key="frame" x="0.0" y="22" width="304" height="18"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="33r-rN-nbj"/>
+                            <constraint firstItem="2dF-zI-naX" firstAttribute="top" secondItem="GEd-sW-KaM" secondAttribute="top" id="BFd-Tk-nk2"/>
+                            <constraint firstItem="Dqg-1b-RJa" firstAttribute="leading" secondItem="GEd-sW-KaM" secondAttribute="leading" id="RZm-D6-Aps"/>
+                            <constraint firstItem="Dqg-1b-RJa" firstAttribute="top" secondItem="2dF-zI-naX" secondAttribute="bottom" id="Zs3-FG-l65"/>
+                            <constraint firstAttribute="bottom" secondItem="Dqg-1b-RJa" secondAttribute="bottom" id="fE5-0U-OFG"/>
+                            <constraint firstAttribute="trailing" secondItem="2dF-zI-naX" secondAttribute="trailing" id="kax-nL-ynd"/>
+                            <constraint firstItem="2dF-zI-naX" firstAttribute="leading" secondItem="GEd-sW-KaM" secondAttribute="leading" id="sfk-rF-Axg"/>
+                            <constraint firstAttribute="trailing" secondItem="Dqg-1b-RJa" secondAttribute="trailing" id="v5e-mw-Yra"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GEd-sW-KaM" firstAttribute="top" secondItem="SS1-AI-KAF" secondAttribute="bottom" constant="8" id="IcB-dH-s0M"/>
+                    <constraint firstAttribute="trailing" secondItem="SS1-AI-KAF" secondAttribute="trailing" constant="16" id="KrH-GN-oOX"/>
+                    <constraint firstItem="GEd-sW-KaM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="UYy-7a-2P2"/>
+                    <constraint firstAttribute="bottom" secondItem="GEd-sW-KaM" secondAttribute="bottom" constant="6" id="a4x-OJ-sW4"/>
+                    <constraint firstAttribute="trailing" secondItem="GEd-sW-KaM" secondAttribute="trailing" constant="16" id="dTH-5k-HHc"/>
+                    <constraint firstItem="SS1-AI-KAF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="taB-VT-3Ql"/>
+                    <constraint firstItem="SS1-AI-KAF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="z58-4j-8zO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="-11.594202898550726" y="76.674107142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="app push img" width="312" height="124"/>
+    </resources>
+</document>

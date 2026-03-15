@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AlbumMyMusic" representedClassName="AlbumMyMusic" syncable="YES">
+        <attribute name="albumID" optional="YES" attributeType="String"/>
+        <attribute name="artist" optional="YES" attributeType="String"/>
+        <attribute name="artistID" optional="YES" attributeType="String"/>
+        <attribute name="contentID" optional="YES" attributeType="String"/>
+        <attribute name="contentType" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RecentlyPlayed" representedClassName="RecentlyPlayed" syncable="YES">
+        <attribute name="albumID" optional="YES" attributeType="String"/>
+        <attribute name="artist" optional="YES" attributeType="String"/>
+        <attribute name="artistID" optional="YES" attributeType="String"/>
+        <attribute name="contentID" optional="YES" attributeType="String"/>
+        <attribute name="contentType" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="duration" optional="YES" attributeType="String"/>
+        <attribute name="favs" optional="YES" attributeType="String"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="playURL" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SongsDownload" representedClassName="SongsDownload" syncable="YES">
+        <attribute name="albumID" optional="YES" attributeType="String"/>
+        <attribute name="artist" optional="YES" attributeType="String"/>
+        <attribute name="artistID" optional="YES" attributeType="String"/>
+        <attribute name="contentID" optional="YES" attributeType="String"/>
+        <attribute name="contentType" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="duration" optional="YES" attributeType="String"/>
+        <attribute name="favs" optional="YES" attributeType="String"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="msisdn" optional="YES" attributeType="String"/>
+        <attribute name="playURL" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="VideoHistoryAndWatchLater" representedClassName="VideoHistoryAndWatchLater" syncable="YES">
+        <attribute name="artist" optional="YES" attributeType="String"/>
+        <attribute name="contentID" optional="YES" attributeType="String"/>
+        <attribute name="contentType" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="duration" optional="YES" attributeType="String"/>
+        <attribute name="favs" optional="YES" attributeType="String"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="isHistory" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="playURL" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="VideosDownload" representedClassName="VideosDownload" syncable="YES">
+        <attribute name="albumID" optional="YES" attributeType="String"/>
+        <attribute name="artist" optional="YES" attributeType="String"/>
+        <attribute name="artistID" optional="YES" attributeType="String"/>
+        <attribute name="contentID" optional="YES" attributeType="String"/>
+        <attribute name="contentType" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="duration" optional="YES" attributeType="String"/>
+        <attribute name="favs" optional="YES" attributeType="String"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="msisdn" optional="YES" attributeType="String"/>
+        <attribute name="playURL" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="AlbumMyMusic" positionX="-258.65234375" positionY="-10.41015625" width="128" height="149"/>
+        <element name="RecentlyPlayed" positionX="-79.2880859375" positionY="-90.9605712890625" width="128" height="194"/>
+        <element name="SongsDownload" positionX="-261.00390625" positionY="174.69921875" width="128" height="209"/>
+        <element name="VideoHistoryAndWatchLater" positionX="-84.37890625" positionY="220.1640625" width="128" height="179"/>
+        <element name="VideosDownload" positionX="78.371826171875" positionY="203.6388549804688" width="128" height="209"/>
+    </elements>
+</model>

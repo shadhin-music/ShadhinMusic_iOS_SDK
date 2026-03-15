@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TomakeChaiCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="276" height="142"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="276" height="142"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Pew-13-JMz">
+                        <rect key="frame" x="0.0" y="0.0" width="276" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomake Chai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLt-v5-ee2">
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9e4-X3-JS8">
+                                <rect key="frame" x="228" y="0.0" width="48" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="SEE ALL"/>
+                                <connections>
+                                    <action selector="onSeeAllPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="hE3-na-dBn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="M2H-Fg-DTP"/>
+                        </constraints>
+                    </stackView>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HQd-fO-nGU">
+                        <rect key="frame" x="0.0" y="40" width="276" height="102"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tF5-A5-cWl">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Pew-13-JMz" secondAttribute="trailing" id="0zF-WG-mBt"/>
+                <constraint firstItem="HQd-fO-nGU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GqX-TP-e4Q"/>
+                <constraint firstItem="Pew-13-JMz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="NYS-VR-2TD"/>
+                <constraint firstItem="Pew-13-JMz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="d1L-xZ-og2"/>
+                <constraint firstItem="HQd-fO-nGU" firstAttribute="top" secondItem="Pew-13-JMz" secondAttribute="bottom" id="fOu-iH-6dB"/>
+                <constraint firstAttribute="trailing" secondItem="HQd-fO-nGU" secondAttribute="trailing" id="pTx-FI-oZz"/>
+                <constraint firstAttribute="bottom" secondItem="HQd-fO-nGU" secondAttribute="bottom" id="yKs-ym-vyT"/>
+            </constraints>
+            <size key="customSize" width="276" height="142"/>
+            <connections>
+                <outlet property="collectionView" destination="HQd-fO-nGU" id="Q8H-Ag-EBh"/>
+                <outlet property="seeAllButton" destination="9e4-X3-JS8" id="6Bp-hq-pxH"/>
+                <outlet property="titleLabel" destination="dLt-v5-ee2" id="UJX-We-0Kl"/>
+            </connections>
+            <point key="canvasLocation" x="233.84615384615384" y="38.388625592417057"/>
+        </collectionViewCell>
+    </objects>
+</document>

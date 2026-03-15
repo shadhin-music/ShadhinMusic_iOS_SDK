@@ -1,0 +1,10 @@
+module LNPopupController {
+    header "LNPopupBar.h"
+    header "LNPopupCloseButton.h"
+    header "LNPopupContentView.h"
+    header "LNPopupController.h"
+    header "LNPopupCustomBarViewController.h"
+    header "LNPopupItem.h"
+    header "UIViewController+LNPopupSupport.h"
+    export *
+}

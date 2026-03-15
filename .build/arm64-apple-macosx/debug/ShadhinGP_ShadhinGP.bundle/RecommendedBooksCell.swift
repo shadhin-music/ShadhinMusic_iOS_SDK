@@ -1,0 +1,88 @@
+//
+//  RecommendedBooksCell.swift
+//  Shadhin
+//
+//  Created by Maruf on 1/10/24.
+//  Copyright © 2024 Cloud 7 Limited. All rights reserved.
+//
+
+import UIKit
+
+class RecommendedBooksCell: UICollectionViewCell {
+    
+    // MARK: --- Outlets ---
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var btnSeeAll: UIButton!
+    
+
+    // MARK: --- Properties ---
+    var onSeeAll: (()->Void)?
+    var dataSource = [CommonContentProtocol]()
+    var audioBookHome = [AudioPatchContent]()
+    var onItemClick : (AudioPatchContent)-> Void = {_ in}
+
+    static var identifier: String {
+        String(describing: self)
+    }
+    
+    static var nib: UINib {
+        UINib(nibName: identifier, bundle: Bundle.ShadhinMusicSdk)
+    }
+    static var size: CGSize {
+        let aspectRatio = 360.0/344.0
+        let width = SCREEN_WIDTH - 32
+        let height = width/aspectRatio
+        return CGSize(width: width, height: height)
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(BookSubCell.nib, forCellWithReuseIdentifier: BookSubCell.identifier)
+        // Initialization code
+    }
+    func bind(title:String,with data : HomeV3Patch) {
+        titleLbl.text  = title
+        self.dataSource = data.contents
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func bindAudioBookRecommended(with patch:AudioPatchHome) {
+        audioBookHome = patch.contents
+        titleLbl.text = patch.patch.title
+        print("\(audioBookHome)")
+    }
+
+    @IBAction func seeAllClicked(_ sender: Any) {
+        if let onSeeAll {
+            onSeeAll()
+        }
+    }
+}
+
+extension RecommendedBooksCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        audioBookHome.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookSubCell.identifier, for: indexPath) as? BookSubCell else{
+            fatalError("more menu cell load failed")
+        }
+        cell.bindDataRecomnmendedBooks(content: audioBookHome[indexPath.item])
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        BookSubCell.size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onItemClick(audioBookHome[indexPath.item])
+        
+    }
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Product Sans Bold.ttf">
+            <string>ProductSans-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LyricsV4" id="gTV-IL-0wX" customClass="LyricsV4" customModule="Shadhin_Gp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="437" height="94"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="437" height="94"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VW4-lA-dsa">
+                        <rect key="frame" x="0.0" y="0.0" width="2" height="94"/>
+                        <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="CDF-TZ-wHX"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="This is text, this is text, this is text, this is text, this is text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGK-YY-2dD">
+                        <rect key="frame" x="10" y="0.0" width="424" height="94"/>
+                        <fontDescription key="fontDescription" name="ProductSans-Bold" family="Product Sans" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xGK-YY-2dD" secondAttribute="bottom" id="Cms-cb-cud"/>
+                <constraint firstItem="xGK-YY-2dD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Jax-1Q-fmh"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xGK-YY-2dD" secondAttribute="trailing" id="KQc-0Y-sMK"/>
+                <constraint firstItem="VW4-lA-dsa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dIc-cW-wgl"/>
+                <constraint firstItem="xGK-YY-2dD" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="gFh-Ko-6l6"/>
+                <constraint firstItem="VW4-lA-dsa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lN4-t6-QxL"/>
+                <constraint firstAttribute="bottom" secondItem="VW4-lA-dsa" secondAttribute="bottom" id="neI-Ac-ZDd"/>
+            </constraints>
+            <size key="customSize" width="437" height="138"/>
+            <connections>
+                <outlet property="lyricsLbl" destination="xGK-YY-2dD" id="Qnc-hX-N3e"/>
+                <outlet property="sideBar" destination="VW4-lA-dsa" id="aGL-Vu-g68"/>
+            </connections>
+            <point key="canvasLocation" x="385.49618320610688" y="50.70422535211268"/>
+        </collectionViewCell>
+    </objects>
+</document>

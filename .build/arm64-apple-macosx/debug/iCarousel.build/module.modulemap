@@ -1,0 +1,4 @@
+module iCarousel {
+    umbrella header "/Users/mrt/Desktop/ShadhinMusic_iOS_SDK/Shadhin_Gp/Library/iCarousel/iCarousel.h"
+    export *
+}

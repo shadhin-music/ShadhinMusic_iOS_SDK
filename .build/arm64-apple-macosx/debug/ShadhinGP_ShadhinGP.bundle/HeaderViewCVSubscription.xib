@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="HeaderViewCVSubscription" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="139" height="64"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Rq-fJ-57y">
+                    <rect key="frame" x="0.0" y="0.0" width="139" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpp-1h-QTj">
+                            <rect key="frame" x="0.0" y="39" width="92" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="qpp-1h-QTj" firstAttribute="leading" secondItem="1Rq-fJ-57y" secondAttribute="leading" id="A46-C2-gf8"/>
+                        <constraint firstAttribute="bottom" secondItem="qpp-1h-QTj" secondAttribute="bottom" constant="8" id="Jsx-kr-aPR"/>
+                        <constraint firstItem="qpp-1h-QTj" firstAttribute="leading" secondItem="1Rq-fJ-57y" secondAttribute="leading" id="dO1-pI-ktd"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="1Rq-fJ-57y" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="OsY-gu-3fR"/>
+                <constraint firstAttribute="bottom" secondItem="1Rq-fJ-57y" secondAttribute="bottom" id="Q8q-Mh-FLx"/>
+                <constraint firstAttribute="trailing" secondItem="1Rq-fJ-57y" secondAttribute="trailing" id="cSa-Xy-pmW"/>
+                <constraint firstItem="1Rq-fJ-57y" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="hKP-iO-Wk0"/>
+            </constraints>
+            <connections>
+                <outlet property="planTitleLbl" destination="qpp-1h-QTj" id="Jht-Wc-fng"/>
+            </connections>
+            <point key="canvasLocation" x="0.76335877862595414" y="23.943661971830988"/>
+        </collectionReusableView>
+    </objects>
+</document>

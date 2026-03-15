@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ChooseAPlanCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="329" height="159"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="329" height="159"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GoN-r0-6ds">
+                        <rect key="frame" x="0.0" y="0.0" width="329" height="159"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oA3-lO-exn">
+                                <rect key="frame" x="0.0" y="0.0" width="329" height="62"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daily_plan" translatesAutoresizingMaskIntoConstraints="NO" id="beM-LH-Y4C">
+                                        <rect key="frame" x="16" y="13" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="Vn9-lW-Xvn"/>
+                                            <constraint firstAttribute="height" constant="36" id="xJ5-9j-Jif"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="x8b-FA-MD2">
+                                        <rect key="frame" x="60.000000000000007" y="20" width="87.666666666666686" height="22"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Half Yearly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNB-Ni-gyv">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.666666666666671" height="22"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                                                <color key="textColor" red="0.30588235294117649" green="0.67843137254901964" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="grW-7M-1e2">
+                                        <rect key="frame" x="224.66666666666666" y="0.0" width="88.333333333333343" height="62"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1w-PL-fjT">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="18"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pda-Gi-BTQ">
+                                                        <rect key="frame" x="6.3333333333333393" y="2.333333333333333" width="62.666666666666657" height="13.666666666666668"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="10"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" name="mostPopular_bg"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="18" id="Hvx-S6-J1C"/>
+                                                    <constraint firstItem="pda-Gi-BTQ" firstAttribute="centerX" secondItem="R1w-PL-fjT" secondAttribute="centerX" id="KcO-ga-hjN"/>
+                                                    <constraint firstItem="pda-Gi-BTQ" firstAttribute="centerY" secondItem="R1w-PL-fjT" secondAttribute="centerY" id="bLR-Fc-9OK"/>
+                                                    <constraint firstAttribute="width" constant="75" id="qsM-td-VcC"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="D8x-47-le7">
+                                                <rect key="frame" x="0.0" y="22" width="88.333333333333329" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="৳99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVh-lD-H0a">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25.333333333333332" height="19.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/180 days" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7g-ig-jGb">
+                                                        <rect key="frame" x="25.333333333333343" y="0.0" width="63" height="19.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                                        <color key="textColor" red="0.55301058290000005" green="0.56052637100000002" blue="0.57647323610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="choosePlan_bg"/>
+                                <constraints>
+                                    <constraint firstItem="beM-LH-Y4C" firstAttribute="centerY" secondItem="oA3-lO-exn" secondAttribute="centerY" id="MIc-jB-7no"/>
+                                    <constraint firstAttribute="trailing" secondItem="grW-7M-1e2" secondAttribute="trailing" constant="16" id="P1W-lx-M3J"/>
+                                    <constraint firstItem="beM-LH-Y4C" firstAttribute="leading" secondItem="oA3-lO-exn" secondAttribute="leading" constant="16" id="SE0-fE-0mm"/>
+                                    <constraint firstItem="grW-7M-1e2" firstAttribute="centerY" secondItem="oA3-lO-exn" secondAttribute="centerY" id="ej3-Sd-PHc"/>
+                                    <constraint firstItem="x8b-FA-MD2" firstAttribute="centerY" secondItem="oA3-lO-exn" secondAttribute="centerY" id="gQX-j7-kta"/>
+                                    <constraint firstItem="grW-7M-1e2" firstAttribute="top" secondItem="oA3-lO-exn" secondAttribute="top" id="jtH-eR-U2g"/>
+                                    <constraint firstAttribute="height" constant="62" id="rmb-xc-Zyt"/>
+                                    <constraint firstItem="x8b-FA-MD2" firstAttribute="leading" secondItem="beM-LH-Y4C" secondAttribute="trailing" constant="8" id="uuA-F0-ihY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7e-RO-bW9">
+                                <rect key="frame" x="0.0" y="70" width="329" height="54"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional 1% charge (VAT, SD &amp; SC) will be applicable on this price plan only for Mobile Operator. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZu-Zo-Tf9">
+                                        <rect key="frame" x="16" y="2.3333333333333286" width="297" height="49.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                        <color key="textColor" red="0.55301058290000005" green="0.56052637100000002" blue="0.57647323610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="choosePlan_bg"/>
+                                <constraints>
+                                    <constraint firstItem="GZu-Zo-Tf9" firstAttribute="centerY" secondItem="j7e-RO-bW9" secondAttribute="centerY" id="5po-FG-t3h"/>
+                                    <constraint firstAttribute="height" constant="54" id="6PW-KB-YZj"/>
+                                    <constraint firstAttribute="trailing" secondItem="GZu-Zo-Tf9" secondAttribute="trailing" constant="16" id="FlN-JL-ONq"/>
+                                    <constraint firstItem="GZu-Zo-Tf9" firstAttribute="leading" secondItem="j7e-RO-bW9" secondAttribute="leading" constant="16" id="HzQ-b7-dGw"/>
+                                    <constraint firstItem="GZu-Zo-Tf9" firstAttribute="centerX" secondItem="j7e-RO-bW9" secondAttribute="centerX" id="nkv-bz-0qW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oA3-lO-exn" firstAttribute="top" secondItem="GoN-r0-6ds" secondAttribute="top" id="DtO-wU-3pZ"/>
+                            <constraint firstItem="j7e-RO-bW9" firstAttribute="top" secondItem="oA3-lO-exn" secondAttribute="bottom" constant="8" id="cTe-dh-Jap"/>
+                            <constraint firstAttribute="trailing" secondItem="oA3-lO-exn" secondAttribute="trailing" id="dAK-Yg-DFB"/>
+                            <constraint firstAttribute="trailing" secondItem="j7e-RO-bW9" secondAttribute="trailing" id="io9-Oe-Eia"/>
+                            <constraint firstItem="j7e-RO-bW9" firstAttribute="leading" secondItem="GoN-r0-6ds" secondAttribute="leading" id="stm-ty-APd"/>
+                            <constraint firstItem="oA3-lO-exn" firstAttribute="leading" secondItem="GoN-r0-6ds" secondAttribute="leading" id="yK9-15-P2f"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="GoN-r0-6ds" secondAttribute="bottom" id="Av3-M3-ogU"/>
+                <constraint firstItem="GoN-r0-6ds" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="YI7-U4-O9J"/>
+                <constraint firstItem="GoN-r0-6ds" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xk5-C5-Yn9"/>
+                <constraint firstAttribute="trailing" secondItem="GoN-r0-6ds" secondAttribute="trailing" id="ys9-1d-NcQ"/>
+            </constraints>
+            <size key="customSize" width="329" height="159"/>
+            <connections>
+                <outlet property="durationInDaysLabel" destination="n7g-ig-jGb" id="dCd-aa-iAx"/>
+                <outlet property="mostPopularView" destination="R1w-PL-fjT" id="k0u-ox-sRc"/>
+                <outlet property="planInPriceLabel" destination="kVh-lD-H0a" id="P6R-oC-Q3R"/>
+                <outlet property="planNameLabel" destination="dNB-Ni-gyv" id="MHs-HG-8Ab"/>
+            </connections>
+            <point key="canvasLocation" x="277.09923664122135" y="23.591549295774648"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="daily_plan" width="36" height="36"/>
+        <namedColor name="choosePlan_bg">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="mostPopular_bg">
+            <color red="1" green="0.80000001192092896" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

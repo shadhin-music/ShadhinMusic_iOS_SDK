@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="149" id="KGk-i7-Jjw" customClass="TracksHiddenSegmentTC" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="404" height="149"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="404" height="149"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4qO-IV-yVN">
+                        <rect key="frame" x="0.0" y="0.0" width="404" height="149"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VeY-MQ-ekc">
+                                <rect key="frame" x="0.0" y="0.0" width="404" height="72"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Crr-wE-Qpi" customClass="CircularShadowView" customModule="Shadhin" customModuleProvider="target">
+                                        <rect key="frame" x="196" y="12" width="48" height="48"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UG5-N9-7mW">
+                                                <rect key="frame" x="16" y="14.5" width="24" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="4hF-tn-ba5"/>
+                                            <constraint firstAttribute="height" constant="48" id="Ub3-MJ-oGY"/>
+                                            <constraint firstItem="UG5-N9-7mW" firstAttribute="centerX" secondItem="Crr-wE-Qpi" secondAttribute="centerX" constant="4" id="VQP-Kh-OG5"/>
+                                            <constraint firstItem="UG5-N9-7mW" firstAttribute="centerY" secondItem="Crr-wE-Qpi" secondAttribute="centerY" id="nKh-pD-E2O"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" systemColor="separatorColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="1.5" height="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a8S-9t-NDm" customClass="CircularImageView" customModule="Shadhin" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="12" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="DL6-bE-Ng0"/>
+                                            <constraint firstAttribute="width" constant="48" id="LxG-jM-cXd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.80000000000000004"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="1.5" height="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" systemColor="separatorColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="circularImage" value="nagad_popup"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="boderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="boderWidth">
+                                                <real key="value" value="2.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T2t-Sk-10F" customClass="CircularImageView" customModule="Shadhin" customModuleProvider="target">
+                                        <rect key="frame" x="124" y="12" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="TW4-Bz-Uz1"/>
+                                            <constraint firstAttribute="width" constant="48" id="h2c-f9-O3e"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.80000000000000004"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="1.5" height="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" systemColor="separatorColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="circularImage" value="nagad_popup"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="boderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="boderWidth">
+                                                <real key="value" value="2.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zWX-Nl-VMg" customClass="CircularImageView" customModule="Shadhin" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="12" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="GHu-wg-1QZ"/>
+                                            <constraint firstAttribute="width" constant="48" id="MLO-EO-iqh"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.80000000000000004"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="1.5" height="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" systemColor="separatorColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="circularImage" value="nagad_popup"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="boderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="boderWidth">
+                                                <real key="value" value="2.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R07-H1-lvY" customClass="CircularImageView" customModule="Shadhin" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="12" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="69v-i5-ovO"/>
+                                            <constraint firstAttribute="height" constant="48" id="y2d-qo-DoJ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.80000000000000004"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="1.5" height="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" systemColor="separatorColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="circularImage" value="nagad_popup"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="boderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="boderWidth">
+                                                <real key="value" value="2.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ewz-5E-kKQ" customClass="CircularImageView" customModule="Shadhin" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="12" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="XrV-Z1-HU9"/>
+                                            <constraint firstAttribute="width" constant="48" id="hKe-5n-f6f"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.80000000000000004"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="1.5" height="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" systemColor="separatorColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCircular" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="circularImage" value="nagad_popup"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="boderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="boderWidth">
+                                                <real key="value" value="2.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See all" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNK-UT-bP5">
+                                        <rect key="frame" x="346" y="8" width="42" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="zQA-Pg-VKj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="T2t-Sk-10F" firstAttribute="centerY" secondItem="VeY-MQ-ekc" secondAttribute="centerY" id="9vj-ns-z71"/>
+                                    <constraint firstItem="zWX-Nl-VMg" firstAttribute="centerY" secondItem="VeY-MQ-ekc" secondAttribute="centerY" id="Brl-i4-6rx"/>
+                                    <constraint firstItem="ewz-5E-kKQ" firstAttribute="leading" secondItem="VeY-MQ-ekc" secondAttribute="leading" constant="16" id="I6H-Jj-8wL"/>
+                                    <constraint firstItem="Crr-wE-Qpi" firstAttribute="centerY" secondItem="VeY-MQ-ekc" secondAttribute="centerY" id="Ifz-Xz-Qu0"/>
+                                    <constraint firstItem="R07-H1-lvY" firstAttribute="leading" secondItem="ewz-5E-kKQ" secondAttribute="trailing" constant="-12" id="LlP-IV-3I3"/>
+                                    <constraint firstItem="R07-H1-lvY" firstAttribute="centerY" secondItem="VeY-MQ-ekc" secondAttribute="centerY" id="NPb-ge-qsG"/>
+                                    <constraint firstItem="ewz-5E-kKQ" firstAttribute="centerY" secondItem="VeY-MQ-ekc" secondAttribute="centerY" id="PWl-k4-w9G"/>
+                                    <constraint firstItem="Crr-wE-Qpi" firstAttribute="leading" secondItem="a8S-9t-NDm" secondAttribute="trailing" constant="-12" id="Vzb-9u-DBb"/>
+                                    <constraint firstAttribute="height" constant="72" id="WFy-Sw-qTP"/>
+                                    <constraint firstItem="a8S-9t-NDm" firstAttribute="centerY" secondItem="VeY-MQ-ekc" secondAttribute="centerY" id="cNW-Zj-lcS"/>
+                                    <constraint firstItem="T2t-Sk-10F" firstAttribute="leading" secondItem="zWX-Nl-VMg" secondAttribute="trailing" constant="-12" id="d0C-l4-Eht"/>
+                                    <constraint firstItem="a8S-9t-NDm" firstAttribute="leading" secondItem="T2t-Sk-10F" secondAttribute="trailing" constant="-12" id="ftm-LJ-xJN"/>
+                                    <constraint firstItem="zWX-Nl-VMg" firstAttribute="leading" secondItem="R07-H1-lvY" secondAttribute="trailing" constant="-12" id="uTD-li-yD4"/>
+                                    <constraint firstAttribute="trailing" secondItem="XNK-UT-bP5" secondAttribute="trailing" constant="16" id="vW0-VY-3Qw"/>
+                                    <constraint firstItem="XNK-UT-bP5" firstAttribute="centerY" secondItem="VeY-MQ-ekc" secondAttribute="centerY" id="yjG-19-2My"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lK-m6-aOl">
+                                <rect key="frame" x="0.0" y="72" width="404" height="77"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dM5-Ty-SGg">
+                                        <rect key="frame" x="16" y="8" width="372" height="61"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dM5-Ty-SGg" secondAttribute="bottom" constant="8" id="Ov4-Ds-QXb"/>
+                                    <constraint firstAttribute="trailing" secondItem="dM5-Ty-SGg" secondAttribute="trailing" constant="16" id="Xjr-Nk-vC8"/>
+                                    <constraint firstItem="dM5-Ty-SGg" firstAttribute="leading" secondItem="6lK-m6-aOl" secondAttribute="leading" constant="16" id="mdz-WL-FUF"/>
+                                    <constraint firstItem="dM5-Ty-SGg" firstAttribute="top" secondItem="6lK-m6-aOl" secondAttribute="top" constant="8" id="st3-Bk-Raj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="4qO-IV-yVN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1Zr-Uq-PLt"/>
+                    <constraint firstAttribute="trailing" secondItem="4qO-IV-yVN" secondAttribute="trailing" id="8jR-df-ylY"/>
+                    <constraint firstItem="4qO-IV-yVN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="C97-8y-OlT"/>
+                    <constraint firstAttribute="bottom" secondItem="4qO-IV-yVN" secondAttribute="bottom" id="jeg-qB-4Ye"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="descriptionLbl" destination="dM5-Ty-SGg" id="d8N-cW-A0a"/>
+                <outlet property="moreTrackHolder" destination="Crr-wE-Qpi" id="AR0-Qe-pQR"/>
+                <outlet property="moreTrackLbl" destination="UG5-N9-7mW" id="zyr-dO-wjy"/>
+                <outlet property="seeAll" destination="XNK-UT-bP5" id="wB3-Qf-U3u"/>
+                <outletCollection property="trackImgCollection" destination="ewz-5E-kKQ" collectionClass="NSMutableArray" id="K9X-Ak-oir"/>
+                <outletCollection property="trackImgCollection" destination="R07-H1-lvY" collectionClass="NSMutableArray" id="V1V-UN-nMU"/>
+                <outletCollection property="trackImgCollection" destination="zWX-Nl-VMg" collectionClass="NSMutableArray" id="ppe-A9-kQo"/>
+                <outletCollection property="trackImgCollection" destination="T2t-Sk-10F" collectionClass="NSMutableArray" id="tjg-Vd-LXa"/>
+                <outletCollection property="trackImgCollection" destination="a8S-9t-NDm" collectionClass="NSMutableArray" id="ixL-OU-ZZ2"/>
+            </connections>
+            <point key="canvasLocation" x="400.00000000000006" y="84.709821428571431"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="R07-H1-lvY">
+            <size key="intrinsicContentSize" width="312" height="124"/>
+        </designable>
+        <designable name="T2t-Sk-10F">
+            <size key="intrinsicContentSize" width="312" height="124"/>
+        </designable>
+        <designable name="a8S-9t-NDm">
+            <size key="intrinsicContentSize" width="312" height="124"/>
+        </designable>
+        <designable name="ewz-5E-kKQ">
+            <size key="intrinsicContentSize" width="312" height="124"/>
+        </designable>
+        <designable name="zWX-Nl-VMg">
+            <size key="intrinsicContentSize" width="312" height="124"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="nagad_popup" width="1080" height="720"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

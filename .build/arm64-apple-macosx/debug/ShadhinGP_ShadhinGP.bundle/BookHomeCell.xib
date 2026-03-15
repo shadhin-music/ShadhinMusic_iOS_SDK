@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BookHomeCell" customModule="Shadhin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="306" height="400"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="306" height="400"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rc2-hh-dQl">
+                        <rect key="frame" x="0.0" y="0.0" width="306" height="39"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latest Audiobook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0l-XH-wf2">
+                                <rect key="frame" x="0.0" y="7.3333333333333339" width="158.33333333333334" height="24.666666666666664"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VF3-Kl-4SW">
+                                <rect key="frame" x="262" y="5" width="44" height="29"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="SEE ALL">
+                                    <color key="titleColor" name="tintColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="seeAllClicked:" destination="gTV-IL-0wX" eventType="touchUpInside" id="hIN-tn-ZMK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="39" id="3XW-ep-R6y"/>
+                            <constraint firstItem="VF3-Kl-4SW" firstAttribute="centerY" secondItem="rc2-hh-dQl" secondAttribute="centerY" id="Rjf-38-RHq"/>
+                            <constraint firstItem="e0l-XH-wf2" firstAttribute="leading" secondItem="rc2-hh-dQl" secondAttribute="leading" id="d5m-I0-oCp"/>
+                            <constraint firstItem="e0l-XH-wf2" firstAttribute="centerY" secondItem="rc2-hh-dQl" secondAttribute="centerY" id="gXd-aR-oqJ"/>
+                            <constraint firstAttribute="trailing" secondItem="VF3-Kl-4SW" secondAttribute="trailing" id="oNQ-mN-Uxj"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Slm-c0-RYA">
+                        <rect key="frame" x="0.0" y="39" width="306" height="361"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tZu-Q7-M5g">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rc2-hh-dQl" secondAttribute="trailing" id="Cxx-6K-j3A"/>
+                <constraint firstItem="Slm-c0-RYA" firstAttribute="top" secondItem="rc2-hh-dQl" secondAttribute="bottom" id="Neo-TN-jVW"/>
+                <constraint firstItem="rc2-hh-dQl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TPR-hk-h7b"/>
+                <constraint firstAttribute="trailing" secondItem="Slm-c0-RYA" secondAttribute="trailing" id="d4L-dn-SzZ"/>
+                <constraint firstItem="Slm-c0-RYA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hUh-Vl-pHi"/>
+                <constraint firstAttribute="bottom" secondItem="Slm-c0-RYA" secondAttribute="bottom" id="zYx-uU-tmX"/>
+                <constraint firstItem="rc2-hh-dQl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zbw-LG-0Hz"/>
+            </constraints>
+            <size key="customSize" width="317" height="255"/>
+            <connections>
+                <outlet property="collectionView" destination="Slm-c0-RYA" id="6zY-iH-JJd"/>
+                <outlet property="headerLebel" destination="e0l-XH-wf2" id="uAr-w3-ake"/>
+                <outlet property="seeAllButton" destination="VF3-Kl-4SW" id="1nh-TT-oQ8"/>
+            </connections>
+            <point key="canvasLocation" x="236.64122137404578" y="91.549295774647888"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="tintColor">
+            <color red="0.0" green="0.68999999761581421" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
