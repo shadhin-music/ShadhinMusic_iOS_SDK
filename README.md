@@ -14,6 +14,25 @@ An iOS SDK that embeds the full Shadhin Music experience — streaming, download
 
 ---
 
+## Package Version
+
+**Current version: `1.0.4`**
+
+| Component | Version |
+|---|---|
+| ShadhinGP SDK | 1.0.4 |
+| Vmax Ad SDK | Bundled |
+| VmaxVastHelper | Bundled |
+| VmaxVideoHelper | Bundled |
+| VmaxNativeHelper | Bundled |
+| VmaxOM | Bundled |
+| VmaxDisplayHelper | Bundled |
+| OMSDK_Vmax2 | Bundled |
+
+> All dependencies are pre-built and bundled as XCFrameworks. No additional package dependencies are required.
+
+---
+
 ## Installation
 
 ### Swift Package Manager (Recommended)
@@ -30,7 +49,7 @@ An iOS SDK that embeds the full Shadhin Music experience — streaming, download
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/shadhin-music/ShadhinMusic_iOS_SDK", from: "1.0.2")
+    .package(url: "https://github.com/shadhin-music/ShadhinMusic_iOS_SDK", from: "1.0.4")
 ],
 targets: [
     .target(
@@ -242,12 +261,11 @@ ShadhinCore.instance.defaults.fcmToken = fcmToken
 
 **Build fails with missing xcframework symbols**
 
-The Vmax ad SDK ships as binary `.xcframework` files. Make sure Git LFS is installed and you have pulled all LFS objects:
+All XCFrameworks are distributed as pre-built binaries via GitHub Releases (no Git LFS required). If Xcode cannot resolve the package, try:
 
-```bash
-git lfs install
-git lfs pull
-```
+1. In Xcode: **File → Packages → Reset Package Caches**
+2. Clean the build folder: **Product → Clean Build Folder** (`Cmd+Shift+K`)
+3. Re-resolve packages: **File → Packages → Resolve Package Versions**
 
 **Audio does not play in background**
 
