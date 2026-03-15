@@ -8,8 +8,15 @@ let package = Package(
     products: [
         .library(
             name: "ShadhinGP",
-            targets: [
-                "ShadhinGP",
+            targets: ["ShadhinGP"]
+        )
+    ],
+    targets: [
+        // Wrapper source target — required for Xcode SPM compatibility
+        .target(
+            name: "ShadhinGP",
+            dependencies: [
+                "ShadhinGPBinary",
                 "Vmax",
                 "VmaxVastHelper",
                 "VmaxVideoHelper",
@@ -17,12 +24,13 @@ let package = Package(
                 "VmaxOM",
                 "VmaxDisplayHelper",
                 "OMSDK_Vmax2",
-            ]
-        )
-    ],
-    targets: [
+            ],
+            path: "Sources/ShadhinGP"
+        ),
+
+        // Binary targets
         .binaryTarget(
-            name: "ShadhinGP",
+            name: "ShadhinGPBinary",
             url: "https://github.com/shadhin-music/ShadhinMusic_iOS_SDK/releases/download/1.0.4/ShadhinGP.xcframework.zip",
             checksum: "e82d3eda76f184a139900d2dc21ca37ed937aee8063af1b4c52c7da1013b484e"
         ),
