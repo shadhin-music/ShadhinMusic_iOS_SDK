@@ -16,11 +16,11 @@ An iOS SDK that embeds the full Shadhin Music experience — streaming, download
 
 ## Package Version
 
-**Current version: `1.0.4`**
+**Current version: `1.0.5`**
 
 | Component | Version |
 |---|---|
-| ShadhinGP SDK | 1.0.4 |
+| ShadhinGP SDK | 1.0.5 |
 | Vmax Ad SDK | Bundled |
 | VmaxVastHelper | Bundled |
 | VmaxVideoHelper | Bundled |
@@ -49,7 +49,7 @@ An iOS SDK that embeds the full Shadhin Music experience — streaming, download
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/shadhin-music/ShadhinMusic_iOS_SDK", from: "1.0.4")
+    .package(url: "https://github.com/shadhin-music/ShadhinMusic_iOS_SDK", from: "1.0.5")
 ],
 targets: [
     .target(
