@@ -1,1 +1,1 @@
-@_exported import ShadhinGPBinary
+@_exported import Shadhin_Gp
